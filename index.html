@@ -32,7 +32,7 @@
         left: 0;
         right: 0;
         margin: auto;
-	padding: 5px 5px 5px 5px;
+	      padding: 5px 5px 5px 5px;
         border: 3px solid #292a2e;
       }
       .header {
@@ -49,10 +49,30 @@
       .parallax {
         background-image: url("https://github.com/VoxelPrismatic/prizm.xyz/blob/master/src/F6DD0BBF-5AEC-4B7C-AAD6-78C96BA4A0A3.jpeg?raw=true");
         height=500vh;
-	background-position: center;
+       	background-position: center;
         transform-style: preserve-3d;
-	background-repeat: no-repeat;
-	background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+	    .collapsible {
+        background-color: #088;
+        background-opacity: 90%;
+        color: #0ff;
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        outline: none;
+      }
+      .active, .collapsible:hover {
+        background-color: #033;
+      }
+      .sect {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease-out;
+        background-color: #00ffff;
+        background-opacity: 90%;
       }
     </style>
     <title>
