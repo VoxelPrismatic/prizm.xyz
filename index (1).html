@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Ubuntu+Mono"/>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Ubuntu"/>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Ubuntu+Bold"/>
+        <link rel="shortcut icon" type="image/png"
+              href="https://github.com/VoxelPrismatic/prizm.xyz/blob/master/src/285CA6A7-BDC1-41BD-9329-B7E7D5491389.png?raw=true"/>
+        <meta property="og:title" content="PRIZM ;]" />
+        <meta property="og:url" content="https://sites.google.com/view/prizm-by-priz/prizm" />
+        <meta property="og:description" content="The official site for the bot, PRIZM ;]" />
+        <meta property="og:image" 
+              content="https://github.com/VoxelPrismatic/prizm_site/blob/master/src/208D7015-2978-4786-8E85-F2BC6D9DF3E0.png?raw=true"/>
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="256" />
+        <meta property="og:image:height" content="256" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            div {
+                width: 90vw;
+                padding: 5px 5px 5px 5px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                word-wrap: break-all;
+            }
+            
+            html, body {
+                overflow: auto;
+                width: 100%;
+                height: 100%;
+            }
+            
+            body {
+                font-family: 'Ubuntu';
+                font-size: 4vw;
+                perspective: 1px;
+            }
+
+            a {
+                color: #00ffffff;
+            }
+
+            .code {
+                font-family: 'Ubuntu Mono';
+                font-size: 2vw;
+                width: 90vw;
+                background-color: #303136dd;
+                left: 0;
+                right: 0;
+                margin: auto;
+                padding: 5px 5px 5px 5px;
+                border: 3px solid #292a2eee;
+            }
+
+            .header {
+                font-family: 'Ubuntu';
+                font-size: 2vw;
+                color: #ffffffff;
+                weight: 60;
+                word-wrap: break-all;
+            }
+
+            .content {
+                font-family: 'Ubuntu';
+                font-size: 1vw;
+                color: #ffffffff;
+                word-wrap: break-all;
+            }
+
+            .parallax {
+                background-image: url(
+                    "https://github.com/VoxelPrismatic/prizm.xyz/blob/master/src/FC6D2269-A432-46E4-9FF6-244500BB3A83.png?raw=true"
+                );
+                background-color: #00000055;
+                background-repeat: repeat;
+                background-size: cover;
+                translate: translateZ(.25px) translateX(50%) scale(0.1);
+            }
+
+            .sect {
+                max-height: 0;
+                font-size: 1.5vw;
+                padding: 5px 5px 5px 5px;
+                width: 75vw;
+                overflow: hidden;
+                transition: max-height .5s ease-out;
+                background-color: #00666644;
+                text-align: left;
+                vertical-align: bottom;
+                color: #ffffffff;
+                word-wrap: break-all;
+            }
+
+            .clicky {
+                position: relative;
+                border: none;
+                color: #ffffffff;
+                padding: 5px 5px 5px 5px;
+                -webkit-transition-duration: 1s; /* Safari */
+                transition-duration: 1s;
+                text-decoration: none;
+                font-family: "Ubuntu";
+                font-size: 2vw;
+                font-weight: 600;
+                width: 80vw;
+                overflow: hidden;
+                background-color: #00888866;
+                cursor: pointer;
+                border: none;
+                text-align: center;
+                outline: none;
+                left: 0;
+                right: 0;
+                margin: auto;
+                word-wrap: break-word;
+            }
+
+            .clicky:after {
+                content: " V";
+                background: #f1f1f1;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -20px !important;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 1s;
+            }
+
+            .clicky:active:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s;
+            }
+            @media only screen and (max-width: 600px) {
+                /* TABLET / PHONE */
+
+                .code {
+                    font-family: 'Ubuntu Mono';
+                    font-size: 3vw;
+                    width: 90vw;
+                    background-color: #303136dd;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    padding: 5px 5px 5px 5px;
+                    border: 3px solid #292a2eee;
+                }
+                
+                .header {
+                    font-family: 'Ubuntu';
+                    font-size: 4vw;
+                    color: #ffffffff;
+                    weight: 60;
+                    word-wrap: break-all;
+                }
+                .content {
+                    font-family: 'Ubuntu';
+                    font-size: 3vw;
+                    color: #ffffffff;
+                    word-wrap: break-all;
+                }
+                .sect {
+                    max-height: 0;
+                    font-size: 3vw;
+                    padding: 5px 5px 5px 5px;
+                    width: 75vw;
+                    overflow: hidden;
+                    transition: max-height .5s ease-out;
+                    background-color: #00666644;
+                    text-align: left;
+                    color: #ffffffff;
+                    word-wrap: break-all;
+                }
+                .clicky {
+                    position: relative;
+                    border: none;
+                    color: #ffffffff;
+                    padding: 5px 5px 5px 5px;
+                    -webkit-transition-duration: 1s; /* Safari */
+                    transition-duration: 1s;
+                    text-decoration: none;
+                    font-family: "Ubuntu";
+                    font-size: 4vw;
+                    font-weight: 600;
+                    width: 80vw;
+                    overflow: hidden;
+                    background-color: #00888866;
+                    cursor: pointer;
+                    border: none;
+                    text-align: center;
+                    outline: none;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    word-wrap: break-word;
+                }
+            }
+        </style>
+        <title>
+            PRIZM ;]
+        </title>
+    </head>
+    <body class="parallax"></body>
+    <body>
+        <div style="text-align: center; color: #ffffffff; font-size:10vw;">
+            <div>
+                PRIZM ;]
+            </div>
+            <div style="font-size: 20%;">
+                <i> ~VERSION 3.7.3~ </i>
+            </div>
+        </div>
+        <div class="code">
+            <div style="color: #00ffffff;">
+                <b> #] PRIZM ;]</b>
+            </div>
+            <div style="color: #839597ff;">
+                ] A bot with machine learning!
+            </div>
+            <div style="color: #586f75ff;">
+                > It uses TensorFlow to mix images! <br>
+                > It uses NLTK to chat with you!
+            </div>
+            <div style="color: #00ffffff;">
+                <b>#] FEATURES ;]</b>
+            </div>
+            <div style="color: #586f75ff;">
+                > A noise generator<br>
+                > An actually decent chat AI<br>
+                > Tags / Custom commands<br>
+                > Great logging features<br>
+                > Has cool custom emoji<br>
+                > Moderation commands ---- [ ban, kick, log, etc.. ]<br>
+                > Gaming commands -------- [ slots, rng, 2048, etc ]<br>
+                > Interactive commands --- [ hug, slap, throw, etc ]<br>
+                > Helps you with math ---- [ rpn, graph, calc, etc ]<br>
+                > Other enjoyable things - [ mock, poll, spam, etc ]<br>
+                > See how I work --------- [ os, ping, info, etc.. ]<br>
+                > An open source repo ---- [ so you see my code... ]<br>
+                > Music commands --------- [ play, pause & youtube ]<br>
+                > A bug reporting system<br>
+                > A really cool help command
+            </div>
+            <div style="color: #00ffffff;">
+                <b>#] USE ';]hlep' TO SEE MORE!!!</b>
+            </div>
+        </div>
+        <div class="header" style="text-align: center;">
+            <a href="https://discordapp.com/oauth2/authorize?client_id=555862187403378699&permissions=473296118&scope=bot">
+                <button class="clicky" style="width:20vw;">BOT ;]</button></a>
+            <a href="https://discordapp.com/invite/Z84Nm6n"><button class="clicky" style="width:20vw;">GUILD ;]</button></a>
+            <a href="https://github.com/VoxelPrismatic/prizm"><button class="clicky" style="width:20vw;">GIT ;]</button></a>
+            <a href="https://discordbots.org/bot/555862187403378699/vote"><button class="clicky" style="width:20vw;">VOTE ;]</button></a>
+        </div>
+        <div style="text-align: center;">
+            <button class="clicky" style="float: center;">ABOUT ;]</button>
+            <div class="sect">
+                <div class="header">
+                    DEVS ;]
+                </div>
+                <div class="content">
+                    PRIZ ;]#9244 - Literally does everything with the bot
+                </div>
+                <div class="header">
+                    UPTIME
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. 
+                    This is normal because this bot is under development.<br>
+                    <br>
+                    In case of longer downtimes [~ a day], that means the bot decided to kill itself and 
+                    I am not there to turn it back on UwU
+                </div>
+                <div class="header">
+                    WHAT IT RUNS ON
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    This bot runs on a laptop about 5 years old, an HP ProBook. I love it greatly, 
+                    and it sacrificed its OS and time just to run this bot.
+                    It actually runs pretty well for 8GB of RAM, 2GB of SWAP [Virtual Ram], 
+                    and a 2.5GHz processor [it's stable at 2.9GHz which is very surprising for a laptop of any sort]
+                </div>
+                <div class="header">
+                    ASCIIMOJI AND CUSTOM EMOJI
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    I made all of these by myself, fyi
+                    Too find many cool faces that the bot uses, please visit this 
+                    <a href="https://discord.gg/NHqbnyc">link</a> ;]<br>
+                    If you have Discord Nitro and want to use the sick emoji this bot comes with, 
+                    please visit the 
+                    <a href="https://discord.gg/eYMyfcd">emoji server</a> ;]
+                </div>
+                <div class="header">
+                    WTF IS THAT LOGO?
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    That logo is something that I made quite a while ago, 
+                    except that version was much worse. This is iteration 3, with shiny colors and more glow.
+                    It should be a prism of light, except it actually looks more like the Minecraft Prismarine shard,
+                    <s>which was definitely not what I was trying to improve in any way, shape or form</s>
+                </div>
+                <div class="header">
+                    WHO EVEN ARE YOU?
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    I'm 15 and live somewhere in this universe.<br>
+                    I tought myself Python on Nov 11, 2018 and have been learning more ever since.
+                    There are some bad habits I've picked up from programming on the TI84+, 
+                    specifically making code as short as possible because every byte counted.
+                    I am in the middle of changing my ways but because it's ugly and unreadable.<br>
+                    I don't really know why I made this bot, but I did, and now it's public. 
+                    One major issue: I don't actually have a server, only an old laptop. <br>
+                    I somehow managed to kill 2 laptops in one day, as they won't turn on.<br>
+                    Neither of them were as decent as the one I'm using rn.
+                    The HP ProBook actually has a fan good enough to cool off the desktop CPU it has,
+                    which allows it to turbo to 2.9Hz and be stable, <br>
+                    while its base clock is 2.5GHz.<br>
+                    <br>
+                    I'm an enthusiast, a programmer, and also alive. I'm confused and don't know what to do, but this seems cool, 
+                    so I'll continue doing it. I am not a professional, so don't make fun of me or make me seem like a god.
+                </div>
+            </div>
+            <button class="clicky" style="float: center;">CHANGE LOG ;]</button>
+            <div class="sect">
+                <div class="header">
+                    NOTE: All dates are quoted in [M-D-Y] format, and this log started in 08-13-2019
+                </div>
+                <div class="header">
+                    08-26-2019
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Cleaned up files and code to make it more readable<br>
+                    > Added help text for the clrin command<br>
+                    > Added the clrto command, it clears all messages to a given message ID<br>
+                    > > Useful if you don't know the exact amount of kessages to clear<br>
+                    > Updated the graph command so you can now graph on the y axis too [x=y^2, y=x^2]<br>
+                    > > Support for xy functions [x^2+y^2=4] has not been added yet, I'm working on it tho
+                </div>
+                <div class="header">
+                    08-23-2019
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Fixed the text AI<br>
+                    > Other bug fixes<br>
+                    > Now you don't need to use ';]text', just ';] {message}' or 
+                    ';]{message}' as long as it isn't a command
+                </div>
+                <div class="header">
+                    08-22-2019 [MASSIVE]
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Added an actually decent AI [ ;]text hello ]<br>
+                    > Fixed a bug where "no" would register as a bool and break it <br>
+                    > Fixed a bug where smart quotes [‘’ “”] would register as a bool break it<br>
+                    > Fixed a bug where any colons would register as a dict and break it<br>
+                    > Now responds before it re-analyses<br>
+                    > New logic will come soon, it currently only chooses the best response<br>
+                    > Removed old files<br>
+                    > Updated GitHub<br>
+                    > Removed old AIs because they were trash<br>
+                    > Updated main file to not be trash<br>
+                    > Cleaned up so much code it's not even funny<br>
+                    > Added docs to other things<br>
+                    > Added a learning command<br>
+                    > Updated more files<br>
+                    > Updated the inv command to be dynamic<br>
+                    > Working on a better audit command<br>
+                    > Fixed bugs and things
+                </div>
+                <div class="header">
+                    08-20-2019
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Added the reddit command<br>
+                    > Fixed some bugs with that<br>
+                    > Added the captcha command<br>
+                    > Added the 8ball command
+                </div>
+                <div class="header">
+                    08-19-2019
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Fixed the 2048 command<br>
+                    > > Now groups properly when not moving right<br>
+                    > > Now doesn't break when there are multiple instances<br>
+                    > > Doesn't edit twice<br>
+                    > > Now ends the game properly, whereas before it would end if it couldn't add any new tiles
+                </div>
+                <div class="header">
+                    08-18-2019
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Added 2048<br>
+                    > Fixed bugs with the 2048 command<br>
+                    > Added 2048 to the help command<br>
+                    > Updated the help command to change the prefix in the page<br>
+                    > Fixed bugs with the above<br>
+                    > Updated the ;]inv command to comply with new permission requirements<br>
+                    > Added this site link to the inv command
+                </div>
+                <div class="header">
+                    08-13-2019
+                </div>
+                <div class="content" style="width: 75vw;" width=75vw>
+                    > Updated the help command to be automatic documentation<br>
+                    > Updated the help command so you can now do ';]help {command name}'<br>
+                    > Added new interactive commands [cuddle, kiss, throw]<br>
+                    > Added music capabilities
+                </div>
+            </div>
+            <button class="clicky" style="float: center;">FAQ ;]</button>
+            <div class="sect">
+                <div class="header">
+                    OwO WHAT IS THIS?
+                </div>
+                <div class="content">
+                    This is an empty FAQ because nobody asked any questions yet UwU
+                </div>
+            </div>
+        </div>
+        <div class="content" style="text-align: center; color: #ffffff; font-size: 1vw;">
+            GG M8, you made it to the bottom of the web page, are you proud of yourself for the astounding achievement? >;]<br>
+            Your prize is scrolling back to the top or moving your mouse to the X button to close this page :D
+        </div>
+        <script>
+            var obj = document.getElementsByClassName("clicky");
+            var i;
+            for (i = 0; i < obj.length; i++) {
+                obj[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
