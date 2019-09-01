@@ -78,7 +78,7 @@
                 background-color: #00000055;
                 background-repeat: repeat;
                 background-size: cover;
-                top: 0px
+                background-position: 0px center;
             }
 
             .sect {
@@ -446,7 +446,7 @@
             
             window.onscroll = function() {bgparallax()};
             function bgparallax() {
-                document.body.style.top = document.body.scrollTop/2;
+                document.body.style.backgroundPosition = (document.body.scrollTop/3)+"px center";
             }
         </script>
     </body>
