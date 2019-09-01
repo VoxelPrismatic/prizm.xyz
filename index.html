@@ -78,7 +78,7 @@
                 background-color: #00000055;
                 background-repeat: repeat;
                 background-size: cover;
-                translate: translateZ(.25px) translateX(50%) scale(0.1);
+                top: 0px
             }
 
             .sect {
@@ -207,8 +207,7 @@
             PRIZM ;]
         </title>
     </head>
-    <body class="parallax"></body>
-    <body>
+    <body class="parallax">
         <div style="text-align: center; color: #ffffffff; font-size:10vw;">
             <div>
                 PRIZM ;]
@@ -443,6 +442,11 @@
                         content.style.maxHeight = content.scrollHeight + "px";
                     }
                 });
+            }
+            
+            window.onscroll = function() {bgparallax()};
+            function bgparallax() {
+                document.body.style.top = document.body.scrollTop/2;
             }
         </script>
     </body>
