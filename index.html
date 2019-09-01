@@ -72,7 +72,7 @@
                 background-color: #00000055;
                 background-repeat: repeat;
                 background-size: cover;
-                background-position: 0px center;
+                background-position: center 0px;
             }
 
             .sect {
@@ -437,10 +437,10 @@
                     }
                 });
             }
-            
+            var factor = 5; /* Scroll Factor */
             window.onscroll = function() {bgparallax()};
             function bgparallax() {
-                document.body.style.backgroundPosition = (document.body.scrollTop/3)+"px center";
+                document.body.style.backgroundPosition = "center "+(document.body.scrollTop/factor)+"px";
             }
         </script>
     </body>
