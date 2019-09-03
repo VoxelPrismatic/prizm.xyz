@@ -1,77 +1,97 @@
-body {
-    font-family: 'Ubuntu';
-    font-size: 4vw;
-    perspective: 1px;
-    box-sizing: border-box;
-}
-a {
-    color: #00ffffff;
-}
+/*# -=BASE CLASSES=- #*/
 .horz {
     left: 0;
     right: 0;
     margin: auto;
 }
-.code {
-    class: horz;
+.pad {
+    padding: 5px 10px 5px 10px;
+}
+.hard {
+    box-sizing: border-box;
+    word-wrap: break-all;
+}
+.vert {
+    display: table-cell; 
+    text-align: center;
+    vertical-align: middle;
+}
+.white {
+    color: #ffffffff;
+}
+.textL {
+    text-align: left;
+}
+.textR {
+    text-align: right;
+}
+.textC {
+    text-align: center;
+}
+.card {
+    height: 100vh;
+    width: 100vw;
+}
+/*# -=ELEMENTS=- #*/
+body {
+    .hard;
+    font-family: 'Ubuntu';
+    font-size: 4vw;
+    perspective: 1px;
+}
+a {
+    color: #00ffffff;
+}
+
+/*# -=DYNAMIC CLASSES=- #*/
+
+._code {
+    .horz;
+    .hard;
     font-family: 'Ubuntu Mono';
     font-size: 2vw;
     width: 90vw;
     background-color: #303136dd;
     padding: 5px;
     border: 3px solid #292a2eee;
-    box-sizing: border-box;
 }
-.header {
+._header {
+    .white;
+    .pad;
+    .textL;
     font-family: 'Ubuntu';
     font-size: 2vw;
-    color: #ffffffff;
     weight: 600;
-    padding: 5px;
-    word-wrap: break-all;
-    box-sizing: border-box;
-    text-align: left;
 }
-.content {
+._content {
+    .pad;
+    .hard;
+    .textL;
+    .white;
     font-family: 'Ubuntu';
     font-size: 1vw;
-    color: #ffffffff;
-    padding: 5px 10px 5px 10px;
-    word-wrap: break-all;
-    box-sizing: border-box;
-    text-align: left;
 }
-.parallax {
-    background-image: url(
-        "https://github.com/VoxelPrismatic/prizm.xyz/blob/master/src/FC6D2269-A432-46E4-9FF6-244500BB3A83.png?raw=true"
-    );
-    background-color: #00000055;
-    background-repeat: repeat;
-    background-size: 100% auto;
-    background-position: 0px 0px;
-}
-.sect {
+._sect {
+    .horz;
+    .pad;
+    .hard;
+    .white;
+    .textC;
     max-height: 0;
     font-size: 1.5vw;
-    padding: 5px 10px 5px 10px;
     width: 78vw;
     overflow: hidden;
     transition: max-height .5s ease-out;
     background-color: #00666644;
-    text-align: center;
-    vertical-align: bottom;
-    box-sizing: border-box;
-    color: #ffffffff;
-    word-wrap: break-all;
-    left: 0;
-    right: 0;
-    margin: auto;
 }
-.clicky {
+._clicky {
+    .horz;
+    .hard;
+    .white;
+    .pad;
+    .textC;
     position: relative;
     border: none;
-    color: #ffffffff;
-    padding: 5px;
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
     text-decoration: none;
@@ -83,13 +103,75 @@ a {
     background-color: #00888866;
     cursor: pointer;
     border: none;
-    text-align: center;
     outline: none;
-    left: 0;
-    right: 0;
-    margin: auto;
-    word-wrap: break-all;
-    box-sizing: border-box;
+}
+._title {
+    .white;
+    .hard;
+    .textC;
+    font-size:13vw;
+}
+._foot {
+    .white;
+    .hard;
+    .pad;
+    .textC;
+    font-family: 'Ubuntu';
+    font-size: 1vw;
+}
+._consect {
+    style: "width: 76vw;";
+    width: 76vw;
+}
+._warn {
+    .horz;
+    .white;
+    .pad;
+    .hard;
+    .textL;
+    font-family: 'Ubuntu';
+    font-size: 1vw;
+    width: 90vw;
+    background-color: #ff000088;
+}
+/*# -=ACTUAL CLASSES=- #*/
+
+.code {
+    ._code;
+}
+.header {
+    ._header;
+}
+.content {
+    ._content;
+}
+.sect {
+    ._sect;
+}
+.clicky {
+    ._clicky;
+}
+.title {
+    ._title;
+}
+.foot {
+    ._foot;
+}
+.consect {
+    ._consect;
+}
+.warn {
+    ._warn;
+}
+/*# -=STATIC CLASSES=- #*/
+.parallax {
+    background-image: url(
+        "https://github.com/VoxelPrismatic/prizm.xyz/blob/master/src/FC6D2269-A432-46E4-9FF6-244500BB3A83.png?raw=true"
+    );
+    background-color: #00000055;
+    background-repeat: repeat;
+    background-size: 100% auto;
+    background-position: 0px 0px;
 }
 .clicky:after {
     content: " V";
@@ -109,153 +191,45 @@ a {
     opacity: 1;
     transition: 0s;
 }
-.title {
-    text-align: center; 
-    color: #ffffff;
-    font-size:13vw;box-sizing: border-box;
-}
-.vert {
-    display: table-cell; 
-    text-align: center; 
-    vertical-align: middle;
-}
-.card {
-    height: 100vh;
-    width: 100vw;
-}
-.foot {
-    font-family: 'Ubuntu';
-    font-size: 1vw;
-    color: #ffffffff;
-    word-wrap: break-all;
-    padding: 5px 10px 5px 10px;
-    box-sizing: border-box;
-    text-align: center;
-}
-.consect {
-    style: "width: 76vw;";
-    width: 76vw;
-}
 .sep {
     height: 5px;
 }
-.warn {
-    font-family: 'Ubuntu';
-    font-size: 1vw;
-    color: #ffffffff;
-    padding: 5px 10px 5px 10px;
-    word-wrap: break-all;
-    box-sizing: border-box;
-    text-align: left;
-    width: 90vw;
-    background-color: #ff000088;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
+
 @media only screen and (max-width: 600px) {
     /* TABLET / PHONE */
     .code {
-        font-family: 'Ubuntu Mono';
+        ._code;
         font-size: 3vw;
-        width: 90vw;
-        background-color: #303136dd;
-        left: 0;
-        right: 0;
-        margin: auto;
-        padding: 5px;
-        border: 3px solid #292a2eee;
-        box-sizing: border-box;
     }
     .header {
-        font-family: 'Ubuntu';
+        ._header;
         font-size: 4vw;
-        color: #ffffffff;
-        weight: 60;
-        word-wrap: break-all;
-        padding: 5px;
-        text-align: left;
     }
     .content {
-        font-family: 'Ubuntu';
+        ._content;
         font-size: 3vw;
-        color: #ffffffff;
-        word-wrap: break-all;
-        padding: 5px 10px 5px 10px;
-        box-sizing: border-box;
-        text-align: left;
     }
     .warn {
-        font-family: 'Ubuntu';
-        font-size: 3vw;
-        color: #ffffffff;
-        word-wrap: break-all;
-        padding: 5px 10px 5px 10px;
-        box-sizing: border-box;
-        text-align: left;
-        width: 90vw;
-        background-color: #ff000088;
-        left: 0;
-        right: 0;
-        margin: auto;
+        ._warn;
+        font-size: 2vw;
     }
     .foot {
-        font-family: 'Ubuntu';
+        ._foot;
         font-size: 2vw;
-        color: #ffffffff;
-        word-wrap: break-all;
-        padding: 5px 10px 5px 10px;
-        box-sizing: border-box;
-        text-align: center;
     }
     .sect {
-        max-height: 0;
+        ._sect;
         font-size: 2.5vw;
-        padding: 5px 10px 5px 10px;
-        width: 75vw;
-        overflow: hidden;
-        transition: max-height .5s ease-out;
-        background-color: #00666644;
-        text-align: center;
-        color: #ffffffff;
-        word-wrap: break-all;
-        box-sizing: border-box;
-        left: 0;
-        right: 0;
-        margin: auto;
     }
     .clicky {
-        position: relative;
-        border: none;
-        color: #ffffffff;
-        padding: 5px;
-        -webkit-transition-duration: 1s; /* Safari */
-        transition-duration: 1s;
-        text-decoration: none;
-        font-family: "Ubuntu";
+        ._clicky;
         font-size: 3vw;
-        font-weight: 600;
-        width: 80vw;
-        overflow: hidden;
-        background-color: #00888866;
-        cursor: pointer;
-        border: none;
-        text-align: center;
-        outline: none;
-        left: 0;
-        right: 0;
-        margin: auto;
-        word-wrap: break-word;
-        box-sizing: border-box;
     }
     .title {
-        text-align: center; 
-        color: #ffffffff; 
-        font-size:19vw;
-        box-sizing: border-box;
+        ._title: 20vw;
     }
     .card {
-        width: 100vw;
+        ._card;
         height: 50vh;
     }
     .consect {
