@@ -229,7 +229,7 @@ a {
         ._title: 20vw;
     }
     .card {
-        ._card;
+        width: 100vw;
         height: 50vh;
     }
     .consect {
