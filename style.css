@@ -152,3 +152,114 @@ a {
     right: 0;
     margin: auto;
 }
+@media only screen and (max-width: 600px) {
+    /* TABLET / PHONE */
+    .code {
+        font-family: 'Ubuntu Mono';
+        font-size: 3vw;
+        width: 90vw;
+        background-color: #303136dd;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 5px;
+        border: 3px solid #292a2eee;
+        box-sizing: border-box;
+    }
+    .header {
+        font-family: 'Ubuntu';
+        font-size: 4vw;
+        color: #ffffffff;
+        weight: 60;
+        word-wrap: break-all;
+        padding: 5px;
+        text-align: left;
+    }
+    .content {
+        font-family: 'Ubuntu';
+        font-size: 3vw;
+        color: #ffffffff;
+        word-wrap: break-all;
+        padding: 5px 10px 5px 10px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .warn {
+        font-family: 'Ubuntu';
+        font-size: 3vw;
+        color: #ffffffff;
+        word-wrap: break-all;
+        padding: 5px 10px 5px 10px;
+        box-sizing: border-box;
+        text-align: left;
+        width: 90vw;
+        background-color: #ff000088;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .foot {
+        font-family: 'Ubuntu';
+        font-size: 2vw;
+        color: #ffffffff;
+        word-wrap: break-all;
+        padding: 5px 10px 5px 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .sect {
+        max-height: 0;
+        font-size: 2.5vw;
+        padding: 5px 10px 5px 10px;
+        width: 75vw;
+        overflow: hidden;
+        transition: max-height .5s ease-out;
+        background-color: #00666644;
+        text-align: center;
+        color: #ffffffff;
+        word-wrap: break-all;
+        box-sizing: border-box;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .clicky {
+        position: relative;
+        border: none;
+        color: #ffffffff;
+        padding: 5px;
+        -webkit-transition-duration: 1s; /* Safari */
+        transition-duration: 1s;
+        text-decoration: none;
+        font-family: "Ubuntu";
+        font-size: 3vw;
+        font-weight: 600;
+        width: 80vw;
+        overflow: hidden;
+        background-color: #00888866;
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        outline: none;
+        left: 0;
+        right: 0;
+        margin: auto;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+    .title {
+        text-align: center; 
+        color: #ffffffff; 
+        font-size:19vw;
+        box-sizing: border-box;
+    }
+    .card {
+        width: 100vw;
+        height: 50vh;
+    }
+    .consect {
+        style: "width: 73vw;";
+        width: 73vw;
+    }
+}
+                
