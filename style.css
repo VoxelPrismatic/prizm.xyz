@@ -7,6 +7,11 @@ body {
 a {
     color: #00ffffff;
 }
+.midH {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 .code {
     font-family: 'Ubuntu Mono';
     font-size: 2vw;
@@ -111,39 +116,39 @@ a {
     color: #ffffff;
     font-size:13vw;box-sizing: border-box;
 }
-            .vert {
-                display: table-cell; 
-                text-align: center; 
-                vertical-align: middle;
-            }
-            .card {
-                height: 100vh;
-                width: 100vw;
-            }
-            .foot {
-                font-family: 'Ubuntu';
-                font-size: 1vw;
-                color: #ffffffff;
-                word-wrap: break-all;
-                padding: 5px 10px 5px 10px;
-                box-sizing: border-box;
-                text-align: center;
-            }
-            .consect {
-                style: "width: 76vw;";
-                width: 76vw;
-            }
-            .warn {
-                font-family: 'Ubuntu';
-                font-size: 1vw;
-                color: #ffffffff;
-                padding: 5px 10px 5px 10px;
-                word-wrap: break-all;
-                box-sizing: border-box;
-                text-align: left;
-                width: 90vw;
-                background-color: #ff000088;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
+.vert {
+    display: table-cell; 
+    text-align: center; 
+    vertical-align: middle;
+}
+.card {
+    height: 100vh;
+    width: 100vw;
+}
+.foot {
+    font-family: 'Ubuntu';
+    font-size: 1vw;
+    color: #ffffffff;
+    word-wrap: break-all;
+    padding: 5px 10px 5px 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.consect {
+    style: "width: 76vw;";
+    width: 76vw;
+}
+.warn {
+    font-family: 'Ubuntu';
+    font-size: 1vw;
+    color: #ffffffff;
+    padding: 5px 10px 5px 10px;
+    word-wrap: break-all;
+    box-sizing: border-box;
+    text-align: left;
+    width: 90vw;
+    background-color: #ff000088;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
