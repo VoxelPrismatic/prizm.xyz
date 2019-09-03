@@ -10,10 +10,6 @@ for (var i = 0; i < obj.length; i++) {
         }
     });
 }
-/*if ((navigator.appVersion).contains("Edge")) {
-    alert("Hey there Edge user! This page doesn't actually work in EdgeHTML due to heavy reliance on classes,"
-        +"\nplease switch to an actual browser to experience this site fully ;] [or close this message, I don't care]");
-}*/
 var factor = 3; /* Scroll Factor */
 window.onscroll = function() {bgparallax()};
 function bgparallax() {
