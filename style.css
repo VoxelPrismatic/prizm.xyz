@@ -7,19 +7,17 @@ body {
 a {
     color: #00ffffff;
 }
-.midH {
+.horz {
     left: 0;
     right: 0;
     margin: auto;
 }
 .code {
+    class: "horz";
     font-family: 'Ubuntu Mono';
     font-size: 2vw;
     width: 90vw;
     background-color: #303136dd;
-    left: 0;
-    right: 0;
-    margin: auto;
     padding: 5px;
     border: 3px solid #292a2eee;
     box-sizing: border-box;
@@ -137,6 +135,9 @@ a {
 .consect {
     style: "width: 76vw;";
     width: 76vw;
+}
+.sep {
+    height: 5px;
 }
 .warn {
     font-family: 'Ubuntu';
