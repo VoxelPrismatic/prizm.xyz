@@ -13,7 +13,7 @@ a {
     margin: auto;
 }
 .code {
-    class: "horz";
+    class: horz;
     font-family: 'Ubuntu Mono';
     font-size: 2vw;
     width: 90vw;
