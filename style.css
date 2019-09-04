@@ -46,8 +46,8 @@ a {
 /*# -=DYNAMIC CLASSES=- #*/
 
 ._code {
-    .horz();
-    .hard();
+    @extend .horz;
+    @extend .hard;
     font-family: 'Ubuntu Mono';
     font-size: 2vw;
     width: 90vw;
@@ -137,7 +137,7 @@ a {
 /*# -=ACTUAL CLASSES=- #*/
 
 .code {
-    ._code();
+    @extend ._code;
 }
 .header {
     ._header();
