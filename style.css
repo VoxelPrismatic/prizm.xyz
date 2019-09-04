@@ -56,27 +56,27 @@ a {
     border: 3px solid #292a2eee;
 }
 ._header {
-    .white();
-    .pad();
-    .textL();
+    @extend .white;
+    @extend .pad;
+    @extend .textL;
     font-family: 'Ubuntu';
     font-size: 2vw;
     weight: 600;
 }
 ._content {
-    .pad();
-    .hard();
-    .textL();
-    .white();
+    @extend .pad;
+    @extend .hard;
+    @extend .textL;
+    @extend .white;
     font-family: 'Ubuntu';
     font-size: 1vw;
 }
 ._sect {
-    .horz();
-    .pad();
-    .hard();
-    .white();
-    .textC();
+    @extend .horz;
+    @extend .pad;
+    @extend .hard;
+    @extend .white;
+    @extend .textC;
     max-height: 0;
     font-size: 1.5vw;
     width: 78vw;
@@ -85,11 +85,11 @@ a {
     background-color: #00666644;
 }
 ._clicky {
-    .horz();
-    .hard();
-    .white();
-    .pad();
-    .textC();
+    @extend .horz;
+    @extend .hard;
+    @extend .white;
+    @extend .pad;
+    @extend .textC;
     position: relative;
     border: none;
     -webkit-transition-duration: 1s; /* Safari */
@@ -106,16 +106,16 @@ a {
     outline: none;
 }
 ._title {
-    .white();
-    .hard();
-    .textC();
+    @extend .white;
+    @extend .hard;
+    @extend .textC;
     font-size:13vw;
 }
 ._foot {
-    .white();
-    .hard();
-    .pad();
-    .textC();
+    @extend .white;
+    @extend .hard;
+    @extend .pad;
+    @extend .textC;
     font-family: 'Ubuntu';
     font-size: 1vw;
 }
@@ -124,11 +124,11 @@ a {
     width: 76vw;
 }
 ._warn {
-    .horz();
-    .white();
-    .pad();
-    .hard();
-    .textL();
+    @extend .horz;
+    @extend .white;
+    @extend .pad;
+    @extend .hard;
+    @extend .textL;
     font-family: 'Ubuntu';
     font-size: 1vw;
     width: 90vw;
@@ -140,28 +140,28 @@ a {
     @extend ._code;
 }
 .header {
-    ._header();
+    @extend ._header;
 }
 .content {
-    ._content();
+    @extend ._content;
 }
 .sect {
-    ._sect();
+    @extend ._sect;
 }
 .clicky {
-    ._clicky();
+    @extend ._clicky;
 }
 .title {
-    ._title();
+    @extend ._title;
 }
 .foot {
-    ._foot();
+    @extend ._foot;
 }
 .consect {
-    ._consect();
+    @extend ._consect;
 }
 .warn {
-    ._warn();
+    @extend ._warn;
 }
 /*# -=STATIC CLASSES=- #*/
 .parallax {
@@ -198,35 +198,35 @@ a {
 @media only screen and (max-width: 600px) {
     /* TABLET / PHONE */
     .code {
-        ._code();
+        @extend ._code;
         font-size: 3vw;
     }
     .header {
-        ._header();
+        @extend ._header;
         font-size: 4vw;
     }
     .content {
-        ._content();
+        @extend ._content;
         font-size: 3vw;
     }
     .warn {
-        ._warn();
+        @extend ._warn;
         font-size: 2vw;
     }
     .foot {
-        ._foot();
+        @extend ._foot;
         font-size: 2vw;
     }
     .sect {
-        ._sect();
+        @extend ._sect;
         font-size: 2.5vw;
     }
     .clicky {
-        ._clicky();
+        @extend ._clicky;
         font-size: 3vw;
     }
     .title {
-        ._title();
+        @extend ._title;
         font-size: 20vw;
     }
     .card {
