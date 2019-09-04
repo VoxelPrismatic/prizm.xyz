@@ -32,17 +32,20 @@
     height: 100vh;
     width: 100vw;
 }
+.font {
+    font-family: 'Ubuntu';
+}
 /*# -=ELEMENTS=- #*/
 body {
     .hard();
-    font-family: 'Ubuntu';
+    .font();
     font-size: 4vw;
     perspective: 1px;
 }
 a {
     color: #00ffffff;
 }
-
+    
 /*# -=DYNAMIC CLASSES=- #*/
 
 ._code {
@@ -59,7 +62,7 @@ a {
     .white();
     .pad();
     .textL();
-    font-family: 'Ubuntu';
+    .font();
     font-size: 2vw;
     weight: 600;
 }
@@ -68,7 +71,7 @@ a {
     .hard();
     .textL();
     .white();
-    font-family: 'Ubuntu';
+    .font();
     font-size: 1vw;
 }
 ._sect {
@@ -90,33 +93,32 @@ a {
     .white();
     .pad();
     .textC();
+    .font();
     position: relative;
     border: none;
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
     text-decoration: none;
-    font-family: "Ubuntu";
     font-size: 2vw;
     font-weight: 600;
     width: 80vw;
     overflow: hidden;
     background-color: #00888866;
     cursor: pointer;
-    border: none;
     outline: none;
 }
 ._title {
     .white();
     .hard();
     .textC();
-    font-size:13vw;
+    font-size: 13vw;
 }
 ._foot {
     .white();
     .hard();
     .pad();
     .textC();
-    font-family: 'Ubuntu';
+    .font();
     font-size: 1vw;
 }
 ._consect {
@@ -129,40 +131,23 @@ a {
     .pad();
     .hard();
     .textL();
-    font-family: 'Ubuntu';
+    .font();
     font-size: 1vw;
     width: 90vw;
     background-color: #ff000088;
 }
 /*# -=ACTUAL CLASSES=- #*/
 
-.code {
-    ._code();
-}
-.header {
-    ._header();
-}
-.content {
-    ._content();
-}
-.sect {
-    ._sect();
-}
-.clicky {
-    ._clicky();
-}
-.title {
-    ._title();
-}
-.foot {
-    ._foot();
-}
-.consect {
-    ._consect();
-}
-.warn {
-    ._warn();
-}
+.code {._code();}
+.header {._header();}
+.content {._content();}
+.sect {._sect();}
+.clicky {._clicky();}
+.title {._title();}
+.foot {._foot();}
+.consect {._consect();}
+.warn {._warn();}
+
 /*# -=STATIC CLASSES=- #*/
 .parallax {
     background-image: url(
