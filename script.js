@@ -3,8 +3,8 @@ for (var i = 0; i < tap.length; i++) {
     tap[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-            content.style.maxHeight = null;
+        if (content.style.height){
+            content.style.height = null;
         } else {
             content.style.height = content.scrollHeight + "px";
         }
