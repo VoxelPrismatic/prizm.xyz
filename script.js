@@ -10,7 +10,8 @@ for (var i = 0; i < tap.length; i++) {
         }
     });
 }
+var parallax = document.body.style;
 window.onscroll = function() {
-    document.body.style.backgroundPosition = 
+    parallax.backgroundPosition = 
         "center "+((window.pageYOffset || document.body.scrollTop)/3)+"px";
 }
