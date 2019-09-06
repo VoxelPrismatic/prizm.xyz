@@ -6,7 +6,7 @@ for (var i = 0; i < tap.length; i++) {
         if (content.style.maxHeight){
             content.style.maxHeight = null;
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.height = content.scrollHeight + "px";
         }
     });
 }
