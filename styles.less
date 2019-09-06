@@ -150,7 +150,6 @@ a {color: #00ffffff;}
     transition: all 1s;
 }
 .btn_activeafter {
-    .select();
     padding: 0;
     margin: 0;
     opacity: 1;
@@ -172,6 +171,7 @@ a {color: #00ffffff;}
 /*# -=LISTENERS=- #*/
 .clicky:after {.btn_after(); .bordT();}
 .clicky:active:after {.btn_activeafter(); .bordT();}
+.clicky:active {.select();}
 .clicky:hover {.hover();}
 .linky:hover {.hover();}
 .linky:after {.btn_after(); .round();}
