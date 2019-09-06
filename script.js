@@ -1,7 +1,3 @@
-window.onscroll = function() {bgparallax()};
-
-/*--------------------------------------*/
-
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].addEventListener("click", function() {
@@ -14,8 +10,8 @@ for (var i = 0; i < tap.length; i++) {
         }
     });
 }
-var factor = 3;
-function bgparallax() {
+window.onscroll = function() {
+    var factor = 3;
     document.body.style.backgroundPosition = ((document.body.scrollLeft || window.pageXOffset)/factor)+"px "
                                            + ((document.body.scrollTop || window.pageYOffset)/factor)+"px";
 }
