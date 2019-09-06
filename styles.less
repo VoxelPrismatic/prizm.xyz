@@ -23,10 +23,10 @@
 .bordTL {border-top-left-radius: 5px;}
 .bordBR {border-bottom-right-radius: 5px;}
 .bordBL {border-bottom-left-radius: 5px;}
-.bordB {.bordBL();.bordBR();}
-.bordT {.bordTL();.bordTR();}
-.bordR {.bordBR();.bordTR();}
-.bordL {.bordBL();.bordTL();}
+.bordB {.bordBL(); .bordBR();}
+.bordT {.bordTL(); .bordTR();}
+.bordR {.bordBR(); .bordTR();}
+.bordL {.bordBL(); .bordTL();}
 .full {height: 100vh;width: 100vw;}
 .font {font-family: 'Ubuntu';}
 /*# -=ELEMENTS=- #*/
@@ -121,9 +121,7 @@ a {color: #00ffffff;}
     .font();
     font-size: 1vw;
 }
-._consect {
-    width: 78vw;
-}
+._consect {width: 78vw;}
 ._warn {
     .horz();
     .white();
@@ -168,49 +166,21 @@ a {color: #00ffffff;}
     opacity: 1;
     transition: 0s;
 }
+.clicky:hover {border: 5px solid #00ffffff;}
+.linky:hover {border: 5px solid #00ffffff;}
 .sep {height: 5px;}
 
 @media only screen and (max-width: 600px) {
     /* TABLET / PHONE */
-    .code {
-        ._code();
-        font-size: 3vw;
-    }
-    .header {
-        ._header();
-        font-size: 4vw;
-    }
-    .content {
-        ._content();
-        font-size: 3vw;
-    }
-    .warn {
-        ._warn();
-        font-size: 2vw;
-    }
-    .foot {
-        ._foot();
-        font-size: 2vw;
-    }
-    .sect {
-        ._sect();
-        font-size: 2.5vw;
-    }
-    .clicky {
-        ._clicky();
-        font-size: 3vw;
-    }
-    .linky {
-        ._linky();
-        font-size: 3vw;
-    }
-    .headtitle {
-        ._title();
-        font-size: 20vw;
-    }
-    .full {
-        width: 100vw;
-        height: 50vh;
-    }
+    .code {._code(); font-size: 3vw;}
+    .header {._header(); font-size: 4vw;}
+    .content {._content(); font-size: 3vw;}
+    .warn {._warn(); font-size: 2vw;}
+    .foot {._foot(); font-size: 2vw;}
+    .sect {._sect(); font-size: 2.5vw;}
+    .clicky {._clicky(); font-size: 3vw;}
+    .linky {._linky(); font-size: 3vw;}
+    .headtitle {._title(); font-size: 20vw;}
+    .full {width: 100vw; height: 50vh;}
 }
                 
