@@ -13,5 +13,5 @@ for (var i = 0; i < tap.length; i++) {
 window.onscroll = function() {
     var factor = 3;
     document.body.style.backgroundPosition = 
-        ((document.body.scrollLeft || window.pageXOffset)/factor)+"px center";
+        "center "+((document.body.scrollTop || window.pageYOffset)/factor)+"px";
 }
