@@ -152,6 +152,7 @@ a {color: #00ffffff;}
 /*# -=STATIC CLASSES=- #*/
 .clicky:after {
     content: "";
+    .bordT();
     background: #f1f1f1;
     display: block;
     position: absolute;
@@ -170,6 +171,25 @@ a {color: #00ffffff;}
 }
 .clicky:hover {.hover();}
 .linky:hover {.hover();}
+.linky:after {
+    .round();
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 1s;
+}
+.linky:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
 .sep {height: 5px;}
 
 @media only screen and (max-width: 600px) {
