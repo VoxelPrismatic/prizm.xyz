@@ -12,6 +12,10 @@ for (var i = 0; i < tap.length; i++) {
 }
 window.onscroll = function() {
     var factor = 3;
-    document.body.style.backgroundPosition = 
-        "center "+((document.body.scrollTop || window.pageYOffset)/factor)+"px";
+    if (window.pageYOffset) {
+        var pos = "center "+(window.pageYOffset/factor)+"px";
+    } else {
+        var pos = "center "+(document.body.scrollTop/factor)+"px";
+    }
+    document.body.style.backgroundPosition = pos;
 }
