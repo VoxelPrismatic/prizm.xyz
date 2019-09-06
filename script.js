@@ -11,11 +11,6 @@ for (var i = 0; i < tap.length; i++) {
     });
 }
 window.onscroll = function() {
-    var factor = 3;
-    if (window.pageYOffset) {
-        var pos = "center "+(window.pageYOffset/factor)+"px";
-    } else {
-        var pos = "center "+(document.body.scrollTop/factor)+"px";
-    }
-    document.body.style.backgroundPosition = pos;
+    document.body.style.backgroundPosition = 
+        "center "+((window.pageYOffset || document.body.scrollTop)/3)+"px";
 }
