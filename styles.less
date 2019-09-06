@@ -128,6 +128,7 @@ a {
     .pad();
     .textC();
     .font();
+    .bordT();
     position: relative;
     border: none;
     -webkit-transition-duration: 1s; /* Safari */
@@ -140,6 +141,10 @@ a {
     background-color: #00888866;
     cursor: pointer;
     outline: none;
+}
+._linky {
+    ._clicky();
+    .round();
 }
 ._title {
     .white();
@@ -177,6 +182,7 @@ a {
 .content {._content();}
 .sect {._sect();}
 .clicky {._clicky();}
+.linky {._linky();}
 .headtitle {._title();}
 .foot {._foot();}
 .consect {._consect();}
@@ -235,6 +241,10 @@ a {
     }
     .clicky {
         ._clicky();
+        font-size: 3vw;
+    }
+    .linky {
+        ._linky();
         font-size: 3vw;
     }
     .headtitle {
