@@ -20,8 +20,9 @@
 .font {font-family: 'Ubuntu';}
 .hover {border: 2px solid #00ffffff;}
 .nohover {border: 2px solid #00ffff00;}
-.grid3 {display: grid; grid-template-columns: auto auto auto; grid-gap: 10px; width: 80vw;}
-.grid2 {display: grid; grid-template-columns: auto auto; grid-gap: 10px; width: 80vw;}
+.grid {.horz(); display: grid; grid-gap: 5px; width: 80vw;}
+.grid3 {.grid(); grid-template-columns: auto auto auto;}
+.grid2 {.grid(); grid-template-columns: auto auto}
 /*# -=ELEMENTS=- #*/
 body {
     .hard();
