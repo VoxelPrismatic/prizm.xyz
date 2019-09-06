@@ -31,7 +31,7 @@ rather than me having to make mistakes wondering what is what.
 .grid {.horz(); display: grid; grid-gap: 10px; width: 80vw;}
 .grid3 {.grid(); grid-template-columns: auto auto auto;}
 .grid2 {.grid(); grid-template-columns: auto auto}
-.fullW {width: 100%;}
+.fullW {width: 100vw;}
 /*# -=ELEMENTS=- #*/
 body {
     .hard();
@@ -97,19 +97,18 @@ a {color: #00ffffff;}
     position: relative;
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
-    text-decoration: none;
     font-size: 2vw;
     font-weight: 600;
     width: 80vw;
     overflow: hidden;
     background-color: #00888866;
-    cursor: pointer;
     outline: none;
+    box-shadow: 0 12px 16px 0 #00000018, 0 17px 50px 0 #00000013;
 }
 ._linky {
     ._clicky();
     .round();
-    width: 100%;
+    .fullW();
 }
 ._title {
     .white();
@@ -138,6 +137,24 @@ a {color: #00ffffff;}
     width: 90vw;
     background-color: #ff000088;
 }
+.btn_after {
+    content: "";
+    background: #88ffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 1s;
+}
+.btn_activeafter {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
 /*# -=ACTUAL CLASSES=- #*/
 
 .code {._code();}
@@ -152,48 +169,12 @@ a {color: #00ffffff;}
 .warn {._warn();}
 
 /*# -=STATIC CLASSES=- #*/
-.clicky:after {
-    content: "";
-    .bordT();
-    background: #88ffff;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 1s;
-}
-.clicky:active:after {
-    .bordT();
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s;
-}
+.clicky:after {.btn_after(); .bordT();}
+.clicky:active:after {.btn_activeafter(); .bordT();}
 .clicky:hover {.hover();}
 .linky:hover {.hover();}
-.linky:after {
-    .round();
-    content: "";
-    background: #88ffff;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 1s;
-}
-.linky:active:after {
-    .round();
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s;
-}
+.linky:after {.btn_after(); .round();}
+.linky:active:after {.btn_activeafter(); .round();}
 .sep {height: 5px;}
 
 @media only screen and (max-width: 600px) {
