@@ -5,7 +5,7 @@ thus making my code cleaner and also one change changes everything
 rather than me having to make mistakes wondering what is what.
 */
 
-/*# -=BASE CLASSES=- #*/
+/*# -=BASE & STATIC CLASSES=- #*/
 /* horribly formatted to save scoll time */
 .horz {left: 0; right: 0; margin: auto;}
 .hard {box-sizing: border-box; word-wrap: break-all;}
@@ -24,7 +24,7 @@ rather than me having to make mistakes wondering what is what.
 .bordT {.bordTL(); .bordTR();}
 .bordR {.bordBR(); .bordTR();}
 .bordL {.bordBL(); .bordTL();}
-.full {height: 100vh;width: 100vw;}
+.full {height: 100vh; width: 100vw;}
 .font {font-family: 'Ubuntu';}
 .hover {border: 2px solid #00ffffff;}
 .nohover {border: 2px solid #00ffff00;}
@@ -32,6 +32,7 @@ rather than me having to make mistakes wondering what is what.
 .grid3 {.grid(); grid-template-columns: auto auto auto;}
 .grid2 {.grid(); grid-template-columns: auto auto}
 .fullW {width: 100%;}
+.sep {height: 5px;}
 /*# -=ELEMENTS=- #*/
 body {
     .hard();
@@ -39,7 +40,6 @@ body {
     font-size: 4vw;
 }
 a {color: #00ffffff;}
-    
 /*# -=DYNAMIC CLASSES=- #*/
 
 ._code {
@@ -94,8 +94,8 @@ a {color: #00ffffff;}
     .bordT();
     .nohover();
     position: relative;
-    -webkit-transition-duration: .5s; /* Safari */
-    transition-duration: .5s;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
     font-size: 2vw;
     font-weight: 600;
     width: 80vw;
@@ -178,14 +178,12 @@ a {color: #00ffffff;}
 .consect {._consect();}
 .warn {._warn();}
 
-/*# -=STATIC CLASSES=- #*/
+/*# -=LISTENERS=- #*/
 .clicky:after {.btn_after(); .bordT();}
 .clicky:active:after {.btn_activeafter(); .bordT();}
 .clicky:hover {.hover();}
 .linky:hover {.hover();}
-.linky:after {.btn_after(); .round();}
-.linky:active:after {.btn_activeafter(); .round();}
-.sep {height: 5px;}
+.clicky:after {.btn_after(); .round();}
 
 @media only screen and (max-width: 600px) {
     /* TABLET / PHONE */
