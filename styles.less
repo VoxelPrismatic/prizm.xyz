@@ -82,11 +82,10 @@ a {
     .textC();
     max-height: 0;
     font-size: 1.5vw;
-    width: 78vw;
+    width: 80vw;
     overflow: hidden;
     transition: max-height .5s ease-out;
     background-color: #00666644;
-    border-left: 5px solid #00ffffff;
 }
 ._clicky {
     .horz(); 
@@ -151,7 +150,7 @@ a {
 
 /*# -=STATIC CLASSES=- #*/
 .clicky:after {
-    content: " V";
+    content: "";
     background: #f1f1f1;
     display: block;
     position: absolute;
@@ -161,12 +160,14 @@ a {
     margin-top: -120%;
     opacity: 0;
     transition: all 1s;
+    border-left: 5px solid #00ffffff;
 }
 .clicky:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s;
+    border-left: 5px solid #00ffffff;
 }
 .sep {
     height: 5px;
