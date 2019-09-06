@@ -31,6 +31,34 @@
 .textC {
     text-align: center;
 }
+.bordTR {
+    border-top-right-radius: 5px;
+}
+.bordTL {
+    border-top-left-radius: 5px;
+}
+.bordBR {
+    border-bottom-right-radius: 5px;
+}
+.bordBL {
+    border-bottom-left-radius: 5px;
+}
+.bordB {
+    .bordBL();
+    .bordBR();
+}
+.bordT {
+    .bordTL();
+    .bordTR();
+}
+.bordR {
+    .bordBR();
+    .bordTR();
+}
+.bordL {
+    .bordBL();
+    .bordTL();
+}
 .full {
     height: 100vh;
     width: 100vw;
@@ -54,6 +82,7 @@ a {
 ._code {
     .horz();
     .hard();
+    .round();
     font-family: 'Ubuntu Mono';
     font-size: 2vw;
     width: 90vw;
@@ -83,7 +112,8 @@ a {
     .hard();
     .white();
     .textC();
-    .round();
+    .bordBL();
+    .bordBR();
     max-height: 0;
     font-size: 1.5vw;
     width: 80vw;
