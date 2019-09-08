@@ -26,6 +26,7 @@ rather than me having to make mistakes wondering what is what.
 .bordL {.bordBL(); .bordTL();}
 .full {height: 100vh; width: 100vw;}
 .font {font-family: 'Ubuntu';}
+.mono {font-family: 'Ubuntu Mono';}
 .hover {border: 2px solid #00ffffff;}
 .select {border: 2px solid #aaffffff;}
 .nohover {border: 2px solid #00ffff00;}
@@ -48,7 +49,7 @@ a {color: #00ffffff;}
     .horz();
     .hard();
     .round();
-    font-family: 'Ubuntu Mono';
+    .mono();
     font-size: 2vw;
     width: 90vw;
     background-color: #303136dd;
@@ -83,7 +84,7 @@ a {color: #00ffffff;}
     font-size: 1.5vw;
     width: 80vw;
     overflow: hidden;
-    transition: height 1s ease-out;
+    transition: height 1s ease;
     background-color: #00666644;
 }
 ._clicky {
@@ -96,8 +97,8 @@ a {color: #00ffffff;}
     .bordT();
     .nohover();
     position: relative;
-    -webkit-transition-duration: 1s; /* Safari */
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s ease; /* Safari */
+    transition-duration: 1s ease;
     font-size: 2vw;
     font-weight: 600;
     width: 80vw;
@@ -148,13 +149,13 @@ a {color: #00ffffff;}
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 1s;
+    transition: all 1s ease;
 }
 .btn_activeafter {
     padding: 0;
     margin: 0;
     opacity: 1;
-    transition: 0s;
+    transition: 0s ease;
 }
 /*# -=ACTUAL CLASSES=- #*/
 
