@@ -41,7 +41,7 @@
             <div style="text-align: center;">
                 PRIZM ;]
                 <div style="font-size: 20%;">
-                    <i> ~VERSION 3.7.3~ </i>
+                    <i> ~VERSION 3.8.1~ </i>
                 </div>
             </div>
         </div>
@@ -185,113 +185,9 @@
                 </div>
             </div>
             <button class="clicky" style="float: center;">CHANGE LOG ;]</button>
-            <div class="sect">
+            <div class="sect" id="changes">
                 <div class="header">
                     NOTE: All dates are quoted in [M-D-Y] format, and this log started in 08-13-2019
-                </div>
-
-                <div class="header">09-12-2019</div>
-                <div class="content consect">
-                    > Added a public exec command<br>
-                    > > Fixed a bug where newlines wouldn't actually go through<br>
-                    > > I heard about some issues with encoding but I can't verify that rn<br>
-                    > Fixed the aliases of the help command [again]<br>
-                    > Fixed very minor bugs with the simplify command<br>
-                    > Updated the graph command<br>
-                    > > The graph command now supports both-axis graphing [x^2+y^2=4, etc]<br>
-                    > > It should now actually graph faster when using more equations<br>
-                    > > Uses a new pallette that overall looks nicer<br>
-                    > > Fixed a couple bugs<br>
-                    > > Now is higher resolution<br>
-                    > > Now has X and Y axes<br>
-                    > > Now won't break when the vars are uppercase<br>
-                    > > Should actually parse faster and break less when doing so
-                </div>
-                
-                <div class="header">09-09-2019</div>
-                <div class="content consect">
-                    > Added the simplify command<br>
-                    > Added more features to that command<br>
-                    > Fixed bugs with the help command<br>
-                    > > All aliases after the first one would have a '.' in front<br>
-                    > Added the calc command<br>
-                    > > Added more functions<br>
-                    > ] Why did it take so long? I was trying to prevent injection, and I'm fairly certain I succeeded
-                </div>
-                
-                <div class="header">08-26-2019</div>
-                <div class="content consect">
-                    > Cleaned up files and code to make it more readable<br>
-                    > Added help text for the clrin command<br>
-                    > Added the clrto command, it clears all messages to a given message ID<br>
-                    > > Useful if you don't know the exact amount of kessages to clear<br>
-                    > Updated the graph command so you can now graph on the y axis too [x=y^2, y=x^2]<br>
-                    > > Support for xy functions [x^2+y^2=4] has not been added yet, I'm working on it tho
-                </div>
-
-                <div class="header">08-23-2019</div>
-                <div class="content consect">
-                    > Fixed the text AI<br>
-                    > Other bug fixes<br>
-                    > Now you don't need to use ';]text', just ';] {message}' or 
-                    ';]{message}' as long as it isn't a command
-                </div>
-
-                <div class="header">08-22-2019 [MASSIVE]</div>
-                <div class="content consect">
-                    > Added an actually decent AI [ ;]text hello ]<br>
-                    > Fixed a bug where "no" would register as a bool and break it <br>
-                    > Fixed a bug where smart quotes [‘’ “”] would register as a bool break it<br>
-                    > Fixed a bug where any colons would register as a dict and break it<br>
-                    > Now responds before it re-analyses<br>
-                    > New logic will come soon, it currently only chooses the best response<br>
-                    > Removed old files<br>
-                    > Updated GitHub<br>
-                    > Removed old AIs because they were trash<br>
-                    > Updated main file to not be trash<br>
-                    > Cleaned up so much code it's not even funny<br>
-                    > Added docs to other things<br>
-                    > Added a learning command<br>
-                    > Updated more files<br>
-                    > Updated the inv command to be dynamic<br>
-                    > Working on a better audit command<br>
-                    > Fixed bugs and things
-                </div>
-
-                <div class="header">08-20-2019</div>
-                <div class="content consect">
-                    > Added the reddit command<br>
-                    > Fixed some bugs with that<br>
-                    > Added the captcha command<br>
-                    > Added the 8ball command
-                </div>
-
-                <div class="header">08-19-2019</div>
-                <div class="content consect">
-                    > Fixed the 2048 command<br>
-                    > > Now groups properly when not moving right<br>
-                    > > Now doesn't break when there are multiple instances<br>
-                    > > Doesn't edit twice<br>
-                    > > Now ends the game properly, whereas before it would end if it couldn't add any new tiles
-                </div>
-
-                <div class="header">08-18-2019</div>
-                <div class="content consect">
-                    > Added 2048<br>
-                    > Fixed bugs with the 2048 command<br>
-                    > Added 2048 to the help command<br>
-                    > Updated the help command to change the prefix in the page<br>
-                    > Fixed bugs with the above<br>
-                    > Updated the ;]inv command to comply with new permission requirements<br>
-                    > Added this site link to the inv command
-                </div>
-
-                <div class="header">08-13-2019</div>
-                <div class="content consect">
-                    > Updated the help command to be automatic documentation<br>
-                    > Updated the help command so you can now do ';]help {command name}'<br>
-                    > Added new interactive commands [cuddle, kiss, throw]<br>
-                    > Added music capabilities
                 </div>
             </div>
             <button class="clicky" style="float: center;">FAQ ;]</button>
@@ -320,6 +216,7 @@
             Your prize is scrolling back to the top or moving your mouse to the X button to close this page :D<br>
             <i>~last backup of PRIZM was made on 09-02-2019~</i>
         </div>
-        <script src="script.js"></script>
+        <script type="text/python" src="updates.py"></script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
