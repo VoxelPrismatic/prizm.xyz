@@ -83,15 +83,15 @@ changelog = document.getElementById("changes")
 for key in changes:
     date = document.createElement("DIV")
     text = document.createTextNode(key)
-    date.class = "header"
+    date.class_name = "header"
     date.append(text)
-    changelog.append(date)
+    changelog.appendChild(date)
     
     changed = document.createElement("DIV")
     text = document.createTextNode("")
-    changed.class = "content consect"
-    changed.append(text)
+    changed.class_name = "content consect"
+    changed.appendChild(text)
     changed.innerHTML = changes[key].replace('\n','<br>')
-    changelog.append(changed)
+    changelog.appendChild(changed)
     
     
