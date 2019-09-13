@@ -6,7 +6,7 @@ changes = {"09-12-2019 [BIG]":"""\
 > Fixed the aliases of the help command [again]
 > Fixed very minor bugs with the simplify command
 > Updated the graph command
-> > The graph command now supports both-axis graphing [<span class="mono">x^2+y^2=4</span>]
+> > The graph command now supports both-axis graphing [<span class="mono dark">x^2+y^2=4</span>]
 > > It should now actually graph faster when using more equations
 > > Uses a new pallette that overall looks nicer
 > > Fixed a couple bugs
@@ -14,7 +14,7 @@ changes = {"09-12-2019 [BIG]":"""\
 > > Now has X and Y axes clearly marked
 > > Now won't break when the vars are uppercase
 > > Should actually parse faster and break less when doing so
-> > Shouldn't break with <span class="mono">x=...</span> or <span class="mono">y=...</span>""",
+> > Shouldn't break with <span class="mono dark">x=...</span> or <span class="mono dark">y=...</span>""",
            
            "09-09-2019":"""\
 > Added the simplify command
@@ -31,13 +31,13 @@ changes = {"09-12-2019 [BIG]":"""\
 > Added the clrto command, it clears all messages to a given message ID
 > > Useful if you don't know the exact amount of kessages to clear
 > Updated the graph command so you can now graph on the y axis too 
-> > [<span class="mono">x=y^2</span> and <span class="mono">y=x^2</span> are supported]
+> > [<span class="mono">x=y^2</span> and <span class="mono dark">y=x^2</span> are supported]
 > > Support for xy functions [<span class="mono">x^2+y^2=4</span>] has not been added yet, I'm working on it tho""",
            
            "08-22-2019 [MASSIVE]":"""\
-> Added an actually decent AI [<span class="mono">;]text hello</span>]
+> Added an actually decent AI [<span class="mono dark">;]text hello</span>]
 > Fixed a bug where "no" would register as a bool and break it 
-> Fixed a bug where smart quotes [<span class="mono">‘’“”</span>] would register as a bool break it
+> Fixed a bug where smart quotes [<span class="mono dark">‘’“”</span>] would register as a bool break it
 > Fixed a bug where any colons would register as a dict and break it
 > Now responds before it re-analyses
 > New logic will come soon, it currently only chooses the best response
@@ -77,7 +77,7 @@ changes = {"09-12-2019 [BIG]":"""\
            
            "08-13-2019":"""\
 > Updated the help command to be automatic documentation
-> Updated the help command so you can now do ';]help {command name}'
+> Updated the help command so you can now do <span class="mono dark">;]help {command name}</span>
 > Added new interactive commands [cuddle, kiss, throw]
 > Added music capabilities"""}
 
