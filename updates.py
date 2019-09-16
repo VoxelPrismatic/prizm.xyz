@@ -1,12 +1,20 @@
 from browser import document
-changes = {"09-12-2019 [BIG]":"""\
+changes = {"09-15-2019":"""\
+> Switched the database from <code>JSON</code> to <code>SQLITE3</code>
+> > This is a pretty big change, please submit any and all bugs via the <code>;]bug</code> command or via DMs
+> The <code>;]audit</code> has been refreshed
+> All commands have been updated to use the new database
+> Removed the guild listener because it was useless
+> Fixed several bugs
+""",
+           "09-12-2019 [BIG]":"""\
 > Added a public exec command
 > > Fixed a bug where newlines wouldn't actually go through
 > > I heard about some issues with encoding but I can't verify that rn
 > Fixed the aliases of the help command [again]
 > Fixed very minor bugs with the simplify command
 > Updated the graph command
-> > The graph command now supports both-axis graphing [<span class="mono dark">x^2+y^2=4</span>]
+> > The graph command now supports both-axis graphing [<code>x^2+y^2=4</code>]
 > > It should now actually graph faster when using more equations
 > > Uses a new pallette that overall looks nicer
 > > Fixed a couple bugs
@@ -14,7 +22,7 @@ changes = {"09-12-2019 [BIG]":"""\
 > > Now has X and Y axes clearly marked
 > > Now won't break when the vars are uppercase
 > > Should actually parse faster and break less when doing so
-> > Shouldn't break with <span class="mono dark">x=...</span> or <span class="mono dark">y=...</span>""",
+> > Shouldn't break with <code>x=...</code> or <code>y=...</code>""",
            
            "09-09-2019":"""\
 > Added the simplify command
@@ -31,13 +39,13 @@ changes = {"09-12-2019 [BIG]":"""\
 > Added the clrto command, it clears all messages to a given message ID
 > > Useful if you don't know the exact amount of kessages to clear
 > Updated the graph command so you can now graph on the y axis too 
-> > [<span class="mono">x=y^2</span> and <span class="mono dark">y=x^2</span> are supported]
-> > Support for xy functions [<span class="mono">x^2+y^2=4</span>] has not been added yet, I'm working on it tho""",
+> > [<code>x=y^2</code> and <code>y=x^2</code> are supported]
+> > Support for xy functions [<code>x^2+y^2=4</code>] has not been added yet, I'm working on it tho""",
            
            "08-22-2019 [MASSIVE]":"""\
-> Added an actually decent AI [<span class="mono dark">;]text hello</span>]
+> Added an actually decent AI [<code>;]text hello</code>]
 > Fixed a bug where "no" would register as a bool and break it 
-> Fixed a bug where smart quotes [<span class="mono dark">‘’“”</span>] would register as a bool break it
+> Fixed a bug where smart quotes [<code>‘’“”</code>] would register as a bool break it
 > Fixed a bug where any colons would register as a dict and break it
 > Now responds before it re-analyses
 > New logic will come soon, it currently only chooses the best response
@@ -72,12 +80,12 @@ changes = {"09-12-2019 [BIG]":"""\
 > Added 2048 to the help command
 > Updated the help command to change the prefix in the page
 > Fixed bugs with the above
-> Updated the <span class="mono dark">;]inv</span> command to comply with new permission requirements
+> Updated the <code>;]inv</code> command to comply with new permission requirements
 > Added this site link to the inv command""",
            
            "08-13-2019":"""\
 > Updated the help command to be automatic documentation
-> Updated the help command so you can now do <span class="mono dark">;]help {command name}</span>
+> Updated the help command so you can now do <code>;]help {command name}</code>
 > Added new interactive commands [cuddle, kiss, throw]
 > Added music capabilities"""}
 
@@ -93,7 +101,12 @@ for key in changes:
     text = document.createTextNode("")
     changed.class_name = "content consect"
     changed.appendChild(text)
-    changed.innerHTML = changes[key].replace('\n','<br>')
+    replace = {'\n':'<br>',
+               '<code>':'<span class="mono dark">',
+               '</code>':'</span>'}
+    for re in replace:
+        changes[key] = changes[key].replace(re, replace[re])
+    changed.innerHTML = changes[key]
     changelog.appendChild(changed)
     
     
