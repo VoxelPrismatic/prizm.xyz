@@ -127,7 +127,7 @@ your feedback over at <a href="https://github.com/VoxelPrismatic/prizm.xyz/issue
 faq = {"OwO WHAT IS THIS?": "This is an empty FAQ because nobody asked any questions yet UwU"}
 
 def addSect(content, element):
-    for key in changes:
+    for key in content:
         title = document.createElement("DIV")
         text = document.createTextNode(key)
         title.class_name = "header"
