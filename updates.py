@@ -1,5 +1,10 @@
 from browser import document
-changes = {"09-15-2019":"""\
+changes = {"09-16-2019":"""\
+> Fixed the <code>;]mng</code> command
+> > The logging section now actually loads
+> > The moderator section now doesn't throw an error
+""",
+           "09-15-2019":"""\
 > Switched the database from <code>JSON</code> to <code>SQLITE3</code>
 > > This is a pretty big change, please submit any and all bugs via the <code>;]bug</code> command or via DMs
 > The <code>;]audit</code> has been refreshed
