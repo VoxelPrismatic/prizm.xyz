@@ -100,12 +100,12 @@ Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1
 This is normal because this bot is under development.
 In case of longer downtimes [~ a day], that means the bot decided to kill itself \
 and I am not there to turn it back on UwU""",
-          "WHAT IT RUNS ON": """
+          "WHAT IT RUNS ON": """\
 This bot runs on a laptop about 5 years old, an HP ProBook. \
 I love it greatly, and it sacrificed its OS and time just to run this bot. \
 It actually runs pretty well for 8GB of RAM, 2GB of SWAP [Virtual Ram], and a 2.5GHz processor \
 [it's stable at 2.9GHz which is very surprising for a laptop of any sort]""",
-          "ASCIIMOJI AND CUSTOM EMOJI": """
+          "ASCIIMOJI AND CUSTOM EMOJI": """\
 I made all of these by myself, fyi 
 Too find many cool faces that the bot uses, please visit this <a href="https://discord.gg/NHqbnyc">link</a> ;]
 If you have Discord Nitro and want to use the sick emoji this bot comes with, please visit the \
@@ -113,7 +113,7 @@ If you have Discord Nitro and want to use the sick emoji this bot comes with, pl
           "WTF IS THAT LOGO?":"""\
 That logo is something that I made quite a while ago, except that version was much worse. \
 This is iteration 3, with shiny colors and more glow. It should be a prism of light, \
-except it actually looks more like the Minecraft Prismarine shard, 
+except it actually looks more like the Minecraft Prismarine shard, \
 <s>which was definitely not what I was trying to improve in any way, shape or form</s>""",
           "WHO EVEN ARE YOU?":"""\
 Absolutely nobody. I don't exist and I never made anything.
@@ -144,7 +144,8 @@ def addSect(content, element):
         for re in replace:
             content[key] = content[key].replace(re, replace[re])
         stuff.innerHTML = changes[key]
-        content.appendChild(stuff)
+        element.appendChild(stuff)
+        #return title, stuff
 changelog = document.getElementById("changes")
 aboutlog = document.getElementById("about")
 faqs = document.getElementById("faq")
