@@ -124,5 +124,5 @@ for key in content:
                '</code>':'</span>'}
     for re in replace:
         content[key] = content[key].replace(re, replace[re])
-        stuff.innerHTML = changes[key]
-        element.appendChild(stuff)
+    stuff.innerHTML = changes[key]
+    element.appendChild(stuff)
