@@ -1,5 +1,12 @@
 from browser import document
-changes = {"09-16-2019":"""\
+changes = {"09-18-2019":"""\
+> Things that don't actually work rn
+> > All <code>logging</code> features
+> > Some <code>;]mng</code> things
+> > All <code>;]tag</code> features [adding, editing, deleting, sending]
+> > I actually do not know the full list of issues, I'll need to test everything
+""",
+           "09-16-2019":"""\
 > Fixed the <code>;]mng</code> command
 > > The logging section now actually loads
 > > The moderator section now doesn't throw an error
