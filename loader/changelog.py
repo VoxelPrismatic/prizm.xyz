@@ -1,5 +1,5 @@
 from browser import document
-changes = {"09-18-2019":"""\
+content = {"09-18-2019":"""\
 > Things that don't actually work rn
 > > All <code>logging</code> features
 > > Some <code>;]mng</code> things
@@ -34,7 +34,8 @@ changes = {"09-18-2019":"""\
 > > Now has X and Y axes clearly marked
 > > Now won't break when the vars are uppercase
 > > Should actually parse faster and break less when doing so
-> > Shouldn't break with <code>x=...</code> or <code>y=...</code>""",
+> > Shouldn't break with <code>x=...</code> or <code>y=...</code>
+""",
            
            "09-09-2019":"""\
 > Added the simplify command
@@ -43,7 +44,8 @@ changes = {"09-18-2019":"""\
 > > All aliases after the first one would have a '.' in front
 > Added the calc command
 > > Added more functions
-> ] Why did it take so long? I was trying to prevent injection, and I'm fairly certain I succeeded""",
+> ] Why did it take so long? I was trying to prevent injection, and I'm fairly certain I succeeded
+""",
            
            "08-26-2019":"""\
 > Cleaned up files and code to make it more readable
@@ -52,7 +54,8 @@ changes = {"09-18-2019":"""\
 > > Useful if you don't know the exact amount of kessages to clear
 > Updated the graph command so you can now graph on the y axis too 
 > > [<code>x=y^2</code> and <code>y=x^2</code> are supported]
-> > Support for xy functions [<code>x^2+y^2=4</code>] has not been added yet, I'm working on it tho""",
+> > Support for xy functions [<code>x^2+y^2=4</code>] has not been added yet, I'm working on it tho
+""",
            
            "08-22-2019 [MASSIVE]":"""\
 > Added an actually decent AI [<code>;]text hello</code>]
@@ -71,20 +74,23 @@ changes = {"09-18-2019":"""\
 > Updated more files
 > Updated the inv command to be dynamic
 > Working on a better audit command
-> Fixed bugs and things""",
+> Fixed bugs and things
+""",
            
            "08-20-2019":"""\
 > Added the reddit command
 > Fixed some bugs with that
 > Added the captcha command
-> Added the 8ball command""",
+> Added the 8ball command
+""",
            
            "08-19-2019":"""\
 > Fixed the 2048 command
 > > Now groups properly when not moving right
 > > Now doesn't break when there are multiple instances
 > > Doesn't edit twice
-> > Now ends the game properly, whereas before it would end if it couldn't add any new tiles""",
+> > Now ends the game properly, whereas before it would end if it couldn't add any new tiles
+""",
            
            "08-18-2019":"""\
 > Added 2048
@@ -93,7 +99,8 @@ changes = {"09-18-2019":"""\
 > Updated the help command to change the prefix in the page
 > Fixed bugs with the above
 > Updated the <code>;]inv</code> command to comply with new permission requirements
-> Added this site link to the inv command""",
+> Added this site link to the inv command
+""",
            
            "08-13-2019":"""\
 > Updated the help command to be automatic documentation
@@ -101,25 +108,21 @@ changes = {"09-18-2019":"""\
 > Added new interactive commands [cuddle, kiss, throw]
 > Added music capabilities"""}
 
-def addSect(content, element):
-    for key in content:
-        title = document.createElement("DIV")
-        text = document.createTextNode(key)
-        title.class_name = "header"
-        title.append(text)
-        element.appendChild(title)
-    
-        stuff = document.createElement("DIV")
-        text = document.createTextNode("")
-        stuff.class_name = "content consect"
-        stuff.appendChild(text)
-        replace = {'\n':'<br>',
-                   '<code>':'<span class="mono dark">',
-                   '</code>':'</span>'}
-        for re in replace:
-            content[key] = content[key].replace(re, replace[re])
+element = document.getElementById("changes")
+for key in content:
+    title = document.createElement("DIV")
+    text = document.createTextNode(key)
+    title.class_name = "header"
+    title.append(text)
+    element.appendChild(title)
+    stuff = document.createElement("DIV")
+    text = document.createTextNode("")
+    stuff.class_name = "content consect"
+    stuff.appendChild(text)
+    replace = {'\n':'<br>',
+               '<code>':'<span class="mono dark">',
+               '</code>':'</span>'}
+    for re in replace:
+        content[key] = content[key].replace(re, replace[re])
         stuff.innerHTML = changes[key]
         element.appendChild(stuff)
-        #return title, stuff
-changelog = document.getElementById("changes")
-addSect(changes, changelog)
