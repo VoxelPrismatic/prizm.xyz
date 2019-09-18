@@ -1,7 +1,17 @@
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        var clicky = document.getElementsByClassName("clicky");
+        for (var j = 0; j < clicky.length; j++) {
+            if (clicky[j].id != this.id) {
+                clicky[j].classList.toggle("active", clicky[j].style.height != null);
+                var ct2 = clicky[j].nextElementSibling;
+                if (ct2.style.height){
+                    ct2.style.height = null;
+                }
+            }
+        }
+        this.classList.toggle("active")
         var content = this.nextElementSibling;
         if (content.style.height){
             content.style.height = null;
