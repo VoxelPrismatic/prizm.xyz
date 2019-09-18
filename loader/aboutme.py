@@ -1,5 +1,5 @@
 from browser import document
-contwnt = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
+content = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
           "UPTIME": """\
 Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. \
 This is normal because this bot is under development.
@@ -37,13 +37,13 @@ for key in content:
     title.append(text)
     element.appendChild(title)
     stuff = document.createElement("DIV")
-    text = document.createTextNode("")
+    text = document.createTextNode(changes[key])
     stuff.class_name = "content consect"
+    stuff.id = key
     stuff.appendChild(text)
-    replace = {'\n':'<br>',
+    element.appendChild(stuff)
+    rep = {'\n':'<br>',
                '<code>':'<span class="mono dark">',
                '</code>':'</span>'}
     for re in replace:
-        content[key] = content[key].replace(re, replace[re])
-    stuff.innerHTML = changes[key]
-    element.appendChild(stuff)
+        document.getElementById(key).innerHTML = document.getElementById(key).innerHTML.replace(re, rep[re])
