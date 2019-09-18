@@ -114,13 +114,13 @@ for key in content:
     text = document.createTextNode(key)
     title.class_name = "header"
     title.append(text)
-    element.appendChild(title)
+    element.append(title)
     stuff = document.createElement("DIV")
     text = document.createTextNode(changes[key])
     stuff.class_name = "content consect"
     stuff.id = key
-    stuff.appendChild(text)
-    element.appendChild(stuff)
+    stuff.append(text)
+    element.append(stuff)
     rep = {'\n':'<br>',
                '<code>':'<span class="mono dark">',
                '</code>':'</span>'}
