@@ -115,14 +115,13 @@ for key in content:
     title.class_name = "header"
     title.append(text)
     element.append(title)
-    d = """stuff = document.createElement("DIV")
+    rep = {'\n':'<br>',
+           '<code>':'<span class="mono dark">',
+           '</code>':'</span>'}
+    for re in rep:
+        changes[key] = changes[key].replace(re,rep[re])
+    stuff = document.createElement("DIV")
     text = document.createTextNode(changes[key])
     stuff.class_name = "content consect"
-    stuff.id = key
     stuff.append(text)
     element.append(stuff)
-    rep = {'\n':'<br>',
-               '<code>':'<span class="mono dark">',
-               '</code>':'</span>'}
-    for re in replace:
-        document.getElementById(key).innerHTML = document.getElementById(key).innerHTML.replace(re, rep[re])"""
