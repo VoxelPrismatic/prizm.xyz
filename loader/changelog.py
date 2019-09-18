@@ -109,19 +109,19 @@ content = {"09-18-2019":"""\
 > Added music capabilities"""}
 
 element = document.getElementById("changes")
+rep = {'\n':'<br>',
+       '<code>':'<span class="mono dark">',
+       '</code>':'</span>'}
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
     title.class_name = "header"
     title.append(text)
     element.append(title)
-    rep = {'\n':'<br>',
-           '<code>':'<span class="mono dark">',
-           '</code>':'</span>'}
     for re in rep:
-        changes[key] = changes[key].replace(re,rep[re])
+        content[key] = content[key].replace(re,rep[re])
     stuff = document.createElement("DIV")
-    text = document.createTextNode(changes[key])
+    text = document.createTextNode(content[key])
     stuff.class_name = "content consect"
     stuff.append(text)
     element.append(stuff)
