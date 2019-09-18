@@ -39,10 +39,11 @@ for key in content:
     title.class_name = "header"
     title.append(text)
     element.append(title)
-    for re in rep:
-        content[key] = content[key].replace(re,rep[re])
     stuff = document.createElement("DIV")
-    text = document.createTextNode(content[key])
+    text = document.createTextNode('~loading~')
     stuff.class_name = "content consect"
     stuff.append(text)
+    for re in rep:
+        content[key] = content[key].replace(re,rep[re])
+    stuff.innerHTML = content[key]
     element.append(stuff)
