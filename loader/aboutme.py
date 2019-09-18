@@ -30,20 +30,19 @@ Actually, it's because I don't know how to web design. I just asked for opinions
 your feedback over at <a href="https://github.com/VoxelPrismatic/prizm.xyz/issues/new">this link</a> ;]"""}
 
 element = document.getElementById("about")
+rep = {'\n':'<br>',
+       '<code>':'<span class="mono dark">',
+       '</code>':'</span>'}
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
     title.class_name = "header"
     title.append(text)
-    element.appendChild(title)
+    element.append(title)
+    for re in rep:
+        content[key] = content[key].replace(re,rep[re])
     stuff = document.createElement("DIV")
-    text = document.createTextNode(changes[key])
+    text = document.createTextNode(content[key])
     stuff.class_name = "content consect"
-    stuff.id = key
-    stuff.appendChild(text)
-    element.appendChild(stuff)
-    rep = {'\n':'<br>',
-               '<code>':'<span class="mono dark">',
-               '</code>':'</span>'}
-    for re in replace:
-        document.getElementById(key).innerHTML = document.getElementById(key).innerHTML.replace(re, rep[re])
+    stuff.append(text)
+    element.append(stuff)
