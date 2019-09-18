@@ -1,5 +1,5 @@
 from browser import document
-abouts = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
+contwnt = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
           "UPTIME": """\
 Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. \
 This is normal because this bot is under development.
@@ -29,25 +29,21 @@ Please keep in mind that I have no idea what I'm actually doing, so bugs will oc
 Actually, it's because I don't know how to web design. I just asked for opinions, and you can always submit \
 your feedback over at <a href="https://github.com/VoxelPrismatic/prizm.xyz/issues/new">this link</a> ;]"""}
 
-def addSect(content, element):
-    for key in content:
-        title = document.createElement("DIV")
-        text = document.createTextNode(key)
-        title.class_name = "header"
-        title.append(text)
-        element.appendChild(title)
-    
-        stuff = document.createElement("DIV")
-        text = document.createTextNode("")
-        stuff.class_name = "content consect"
-        stuff.appendChild(text)
-        replace = {'\n':'<br>',
-                   '<code>':'<span class="mono dark">',
-                   '</code>':'</span>'}
-        for re in replace:
-            content[key] = content[key].replace(re, replace[re])
-        stuff.innerHTML = changes[key]
-        element.appendChild(stuff)
-        #return title, stuff
-aboutlog = document.getElementById("about")
-addSect(abouts, aboutlog)
+element = document.getElementById("about")
+for key in content:
+    title = document.createElement("DIV")
+    text = document.createTextNode(key)
+    title.class_name = "header"
+    title.append(text)
+    element.appendChild(title)
+    stuff = document.createElement("DIV")
+    text = document.createTextNode("")
+    stuff.class_name = "content consect"
+    stuff.appendChild(text)
+    replace = {'\n':'<br>',
+               '<code>':'<span class="mono dark">',
+               '</code>':'</span>'}
+    for re in replace:
+        content[key] = content[key].replace(re, replace[re])
+    stuff.innerHTML = changes[key]
+    element.appendChild(stuff)
