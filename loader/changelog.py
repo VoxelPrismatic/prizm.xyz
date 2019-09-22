@@ -1,10 +1,8 @@
 from browser import document
-content = {"09-18-2019":"""\
-> Things that don't actually work rn
-> > All <code>logging</code> features
-> > Some <code>;]mng</code> things
-> > All <code>;]tag</code> features [adding, editing, deleting, sending]
-> > I actually do not know the full list of issues, I'll need to test everything
+content = {"09-22-2019":"""\
+> Logging now actually works
+> You can now create, edit, delete, and view tags with no issues
+> All <code>;]mng</code> features now work
 """,
            "09-16-2019":"""\
 > Fixed the <code>;]mng</code> command
