@@ -1,18 +1,26 @@
 from browser import document
-content = {"09-22-2019":"""\
+content = {"09-23-2019":"""\
+> The !>;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
+> > >!;]graph x!< - ymin, ymax, xmin, xmax = -10, 10, -10, 10
+> > >!;]graph -3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 10
+> > >!;]graph -3 3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 3
+> > >!;]graph -3 3 -5 x!< - ymin, ymax, xmin, xmax = -5, 10, -3, 3
+> > >!;]graph -3 3 -5 5 x!< - ymin, ymax, xmin, xmax = -5, 5, -3, 3
+""",
+           "09-22-2019":"""\
 > Logging now actually works
 > You can now create, edit, delete, and view tags with no issues
-> All <code>;]mng</code> features now work
+> All >!;]mng!< features now work
 """,
            "09-16-2019":"""\
-> Fixed the <code>;]mng</code> command
+> Fixed the >!;]mng!< command
 > > The logging section now actually loads
 > > The moderator section now doesn't throw an error
 """,
            "09-15-2019":"""\
-> Switched the database from <code>JSON</code> to <code>SQLITE3</code>
-> > This is a pretty big change, please submit any and all bugs via the <code>;]bug</code> command or via DMs
-> The <code>;]audit</code> has been refreshed
+> Switched the database from >!JSON!< to >!SQLITE3!<
+> > This is a pretty big change, please submit any and all bugs via the >!;]bug!< command or via DMs
+> The >!;]audit!< command has been refreshed
 > All commands have been updated to use the new database
 > Removed the guild listener because it was useless
 > Fixed several bugs
@@ -24,7 +32,7 @@ content = {"09-22-2019":"""\
 > Fixed the aliases of the help command [again]
 > Fixed very minor bugs with the simplify command
 > Updated the graph command
-> > The graph command now supports both-axis graphing [<code>x^2+y^2=4</code>]
+> > The graph command now supports both-axis graphing [>!x^2+y^2=4!<]
 > > It should now actually graph faster when using more equations
 > > Uses a new pallette that overall looks nicer
 > > Fixed a couple bugs
@@ -32,7 +40,7 @@ content = {"09-22-2019":"""\
 > > Now has X and Y axes clearly marked
 > > Now won't break when the vars are uppercase
 > > Should actually parse faster and break less when doing so
-> > Shouldn't break with <code>x=...</code> or <code>y=...</code>
+> > Shouldn't break with >!x=...!< or >!y=...!<
 """,
            
            "09-09-2019":"""\
@@ -51,14 +59,14 @@ content = {"09-22-2019":"""\
 > Added the clrto command, it clears all messages to a given message ID
 > > Useful if you don't know the exact amount of kessages to clear
 > Updated the graph command so you can now graph on the y axis too 
-> > [<code>x=y^2</code> and <code>y=x^2</code> are supported]
-> > Support for xy functions [<code>x^2+y^2=4</code>] has not been added yet, I'm working on it tho
+> > [>!x=y^2!< and >!y=x^2!< are supported]
+> > Support for xy functions [>!x^2+y^2=4!<] has not been added yet, I'm working on it tho
 """,
            
            "08-22-2019 [MASSIVE]":"""\
-> Added an actually decent AI [<code>;]text hello</code>]
+> Added an actually decent AI [>!;]text hello!<]
 > Fixed a bug where "no" would register as a bool and break it 
-> Fixed a bug where smart quotes [<code>‘’“”</code>] would register as a bool break it
+> Fixed a bug where smart quotes [>!‘’“”!<] would register as a bool break it
 > Fixed a bug where any colons would register as a dict and break it
 > Now responds before it re-analyses
 > New logic will come soon, it currently only chooses the best response
@@ -76,14 +84,14 @@ content = {"09-22-2019":"""\
 """,
            
            "08-20-2019":"""\
-> Added the reddit command
+> Added the >!;]reddit!< command
 > Fixed some bugs with that
-> Added the captcha command
-> Added the 8ball command
+> Added the >!;]captcha!< command
+> Added the >!;]8ball!< command
 """,
            
            "08-19-2019":"""\
-> Fixed the 2048 command
+> Fixed the >!;]2048!< command
 > > Now groups properly when not moving right
 > > Now doesn't break when there are multiple instances
 > > Doesn't edit twice
@@ -96,20 +104,22 @@ content = {"09-22-2019":"""\
 > Added 2048 to the help command
 > Updated the help command to change the prefix in the page
 > Fixed bugs with the above
-> Updated the <code>;]inv</code> command to comply with new permission requirements
+> Updated the >!;]inv!< command to comply with new permission requirements
 > Added this site link to the inv command
 """,
            
            "08-13-2019":"""\
 > Updated the help command to be automatic documentation
-> Updated the help command so you can now do <code>;]help {command name}</code>
+> Updated the help command so you can now do >!;]help {command name}!<
 > Added new interactive commands [cuddle, kiss, throw]
 > Added music capabilities"""}
 
 element = document.getElementById("changes")
 rep = {'\n':'<br>',
        '<code>':'<span class="mono dark">',
-       '</code>':'</span>'}
+       '</code>':'</span>',
+       '>!':'<span class="mono dark">',
+       '!<': '</span>'}
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
