@@ -1,6 +1,6 @@
 from browser import document
 content = {"09-23-2019":"""\
-> The !>;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
+> The >!;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
 > > >!;]graph x!< - ymin, ymax, xmin, xmax = -10, 10, -10, 10
 > > >!;]graph -3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 10
 > > >!;]graph -3 3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 3
