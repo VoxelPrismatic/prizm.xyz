@@ -12,7 +12,7 @@ content = {"09-29-2019":"""\
 > > Allows you to substitute {num} in for X in {eq}
 > > Example ] >!;]sub 206 x^2+34!<
 > The >!;]calc!< command now actually loads on startup
-"""
+""",
            "09-23-2019":"""\
 > The >!;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
 > > >!;]graph x!< - ymin, ymax, xmin, xmax = -10, 10, -10, 10
