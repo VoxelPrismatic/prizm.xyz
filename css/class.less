@@ -1,0 +1,143 @@
+@import "colors";
+@import "base";
+@import "style";
+/*# -=ELEMENTS=- #*/
+body {
+    .hard();
+    .font();
+    .v40();
+}
+a {.blue();}
+/*# -=DYNAMIC CLASSES=- #*/
+
+._code {
+    .hard();
+    .round();
+    .mono();
+    .v20();
+    width: 90vw;
+    background-color: #303136dd;
+    padding: 5px;
+    border: 3px solid #292a2eee;
+}
+._header {
+    .white();
+    .pad();
+    .textL();
+    .font();
+    .v20();
+    weight: 600;
+}
+._content {
+    .pad();
+    .hard();
+    .textL();
+    .white();
+    .font();
+    .v10();
+}
+._sect {
+    .horz();
+    .pad();
+    .hard();
+    .white();
+    .textC();
+    .bordBL();
+    .bordBR();
+    height: 0;
+    .v15();
+    width: 80vw;
+    overflow: hidden;
+    transition: height 1s ease;
+    background-color: #00666644;
+}
+._clicky {
+    .horz(); 
+    .hard(); 
+    .white();
+    .pad();
+    .textC();
+    .font();
+    .bordT();
+    .nohover();
+    position: relative;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
+    .v20();
+    font-weight: 600;
+    width: 80vw;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #00888866;
+    outline: none;
+}
+._linky {
+    ._clicky();
+    .round();
+    .fullW();
+}
+._title {
+    .white();
+    .hard();
+    .textC();
+    font-size: 13vw;
+}
+._foot {
+    .white();
+    .hard();
+    .pad();
+    .textC();
+    .font();
+    .v10();
+}
+._consect {width: 78vw;}
+._warn {
+    .horz();
+    .white();
+    .pad();
+    .hard();
+    .textL();
+    .font();
+    .round();
+    .v20();
+    width: 90vw;
+    background-color: #ff000088;
+}
+.btn_after {
+    background-color: #88ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 1s;
+}
+.btn_activeafter {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+/*# -=ACTUAL CLASSES=- #*/
+
+.code {._code();}
+.header {._header();}
+.content {._content();}
+.sect {._sect();}
+.clicky {._clicky();}
+.linky {._linky();}
+.headtitle {._title();}
+.foot {._foot();}
+.consect {._consect();}
+.warn {._warn();}
+
+/*# -=LISTENERS=- #*/
+.clicky:after {.btn_after(); .bordT();}
+.clicky:active:after {.btn_activeafter(); .bordT();}
+.clicky:active {.select();}
+.clicky:hover {.hover();}
+.linky:hover {.hover();}
+.linky:after {.btn_after(); .round();}
+.linky:active:after {.btn_activeafter(); .round();}
