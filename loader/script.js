@@ -7,6 +7,7 @@ for (var i = 0; i < tap.length; i++) {
             content.style.height = null;
         } else {
             content.style.height = (content.scrollHeight + 5) + "px";
+            content.style.transition = ((content.scrollHeight + 5)/10)+"s"
         }
     });
 }
