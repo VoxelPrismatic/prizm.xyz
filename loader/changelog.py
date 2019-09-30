@@ -1,5 +1,19 @@
 from browser import document
-content = {"09-23-2019":"""\
+content = {"09-29-2019":"""\
+> The >!;]graph!< command now has been refreshed
+> > The new syntax ] >!;]graph {?window} {eq1} | {eq2} | {eq3} | {eqX}!<
+> > Adding >!--max!< to the end of the equation should give you the maximum coordinates shown
+> > Adding >!--min!< to the end of the equation should give you the minimum coordinates shown
+> > Adding >!--zero!< should give you the coordinates for when >!y = 0!<
+> The >!;]sym!< command has been updated
+> > Doing something like >!;]sym 2x^2!< shouldn't break it
+> Added the >!;]sub!< command
+> > Syntax ] >!;]sub {num} {eq}!<
+> > Allows you to substitute {num} in for X in {eq}
+> > Example ] >!;]sub 206 x^2+34!<
+> The >!;]calc!< command now actually loads on startup
+"""
+           "09-23-2019":"""\
 > The >!;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
 > > >!;]graph x!< - ymin, ymax, xmin, xmax = -10, 10, -10, 10
 > > >!;]graph -3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 10
