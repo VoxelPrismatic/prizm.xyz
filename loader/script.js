@@ -14,5 +14,5 @@ for (var i = 0; i < tap.length; i++) {
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
-        `center ${window.pageYOffset || document.body.scrollTop)/3}px`;
+        `center ${(window.pageYOffset || document.body.scrollTop)/4}px`;
 }
