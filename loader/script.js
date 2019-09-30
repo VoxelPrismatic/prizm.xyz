@@ -6,13 +6,13 @@ for (var i = 0; i < tap.length; i++) {
         if (content.style.height){
             content.style.height = null;
         } else {
-            content.style.height = (content.scrollHeight + 5) + "px";
-            content.style.transition = ((content.scrollHeight + 5)/1000)+"s"
+            content.style.height = `${content.scrollHeight + 5}px`;
+            content.style.transition = `height ${(content.scrollHeight + 5)/1000}s`
         }
     });
 }
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
-        "center "+((window.pageYOffset || document.body.scrollTop)/3)+"px";
+        `center ${window.pageYOffset || document.body.scrollTop)/3}px`;
 }
