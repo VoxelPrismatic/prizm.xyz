@@ -9,7 +9,7 @@ rather than me having to make mistakes wondering what is what.
 /* horribly formatted to save scoll time */
 /*# -=ELEMENT ALIGNS=- #*/
 .vert {display: table-cell;  text-align: center; vertical-align: middle;}
-.horz {left: 0; right: 0; margin: auto;}
+.horz {display: block; margin-left: auto; margin-right: auto;}
 .full {height: 100vh; width: 100vw;}
 .full2 {height: 100vh; width: 100vw;}
 .hard {box-sizing: border-box; word-wrap: break-all;}
@@ -65,8 +65,10 @@ rather than me having to make mistakes wondering what is what.
 .f30 {font-size: 30%;}
 .f25 {font-size: 25%;}
 .f15 {font-size: 15%;}
+
 /*# -=GRIDS=- #*/
 .grid {.horz(); display: grid; grid-gap: 5px; width: 80vw;}
+.grid7 {.grid(); grid-template-columns: auto auto auto auto auto auto auto;}
 .grid6 {.grid(); grid-template-columns: auto auto auto auto auto auto;}
 .grid5 {.grid(); grid-template-columns: auto auto auto auto auto;}
 .grid4 {.grid(); grid-template-columns: auto auto auto auto;}
@@ -176,7 +178,7 @@ a {.blue();}
     background-color: #ff000088;
 }
 .btn_after {
-    background: #88ffff;
+    background-color: #88ffffff;
     display: block;
     position: absolute;
     padding-top: 300%;
