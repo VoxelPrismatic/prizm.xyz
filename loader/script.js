@@ -19,7 +19,7 @@ function changeLog(itm, date) {
     for (var i = 0; i < tabcontent.length; i++) {
         sects[i].style.display = "none";
     }
-    var lnks = document.getElementsByClassName("tablinks");
+    var lnks = document.getElementsByClassName("tabby_link");
     for (var i = 0; i < tablinks.length; i++) {
         lnks[i].className = lnks[i].className.replace(" active", "");
     }
