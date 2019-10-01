@@ -14,3 +14,22 @@ window.onscroll = function() {
     parallax.backgroundPosition = 
         `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
 }
+function changeLog(ex, date) {
+    var sects = document.getElementsByClassName("tabby_sect");
+    for (var i = 0; i < tabcontent.length; i++) {
+        sects[i].style.display = "none";
+    }
+    var lnks = document.getElementsByClassName("tablinks");
+    for (var i = 0; i < tablinks.length; i++) {
+        lnks[i].className = lnks[i].className.replace(" active", "");
+    }
+    document.getElementById(date).style.display = "block";
+    ex.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+var tab = document.getElementsByClassName("tabby");
+for (var i = 0; i < tab.length; i++) {
+    tab[i].onclick = function() {changeLog(ex, tab[i].id)}
+}
