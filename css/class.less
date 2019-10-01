@@ -15,7 +15,7 @@ a {.blue();}
     .round();
     .mono();
     .v20();
-    width: 90vw;
+    .w90vw();
     background-color: #303136dd;
     padding: 5px;
     border: 3px solid #292a2eee;
@@ -100,7 +100,7 @@ a {.blue();}
     .font();
     .round();
     .v20();
-    width: 90vw;
+    .w90vw();
     background-color: #ff000088;
 }
 .btn_after {
@@ -120,24 +120,3 @@ a {.blue();}
     opacity: 1;
     transition: 0s;
 }
-/*# -=ACTUAL CLASSES=- #*/
-
-.code {._code();}
-.header {._header();}
-.content {._content();}
-.sect {._sect();}
-.clicky {._clicky();}
-.linky {._linky();}
-.headtitle {._title();}
-.foot {._foot();}
-.consect {._consect();}
-.warn {._warn();}
-
-/*# -=LISTENERS=- #*/
-.clicky:after {.btn_after(); .bordT();}
-.clicky:active:after {.btn_activeafter(); .bordT();}
-.clicky:active {.select();}
-.clicky:hover {.hover();}
-.linky:hover {.hover();}
-.linky:after {.btn_after(); .round();}
-.linky:active:after {.btn_activeafter(); .round();}
