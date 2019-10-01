@@ -134,7 +134,7 @@ content = {"10-01-2019":"""\
 > Added music capabilities"""}
 
 element = document.getElementById("changes")
-lists = document.getElementById("lists")
+lists = document.getElementById("tabby")
 rep = {'\n':'<br>',
        '<code>':'<span class="mono dark">',
        '</code>':'</span>',
@@ -143,7 +143,7 @@ rep = {'\n':'<br>',
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
-    title.class_name = "tabby"
+    title.class_name = "tabby_link"
     title.append(text)
     title.id = key
     lists.append(title)
