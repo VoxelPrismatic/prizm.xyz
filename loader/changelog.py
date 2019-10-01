@@ -141,7 +141,7 @@ rep = {'\n':'<br>',
        '>!':'<span class="mono dark">',
        '!<': '</span>'}
 for key in content:
-    title = document.createElement("DIV")
+    title = document.createElement("BUTTON")
     text = document.createTextNode(key)
     title.class_name = "tabby_link"
     title.append(text)
