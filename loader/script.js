@@ -1,15 +1,14 @@
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
-    tap[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+    tap[i].nextElementSibling.style.transition = `${(content.scrollHeight + 5)/1000}s`;
+    tap[i]onclick = function() {
         var content = this.nextElementSibling;
-        content.style.transition = `${(content.scrollHeight + 5)/1000}s`
-        if (content.style.height){
-            content.style.height = null;
+        if (this.classList.toggle("active")) {
+            content.style.height = `${content.scrollHeight + 5}px`
         } else {
-            content.style.height = `${content.scrollHeight + 5}px`;
+            content.style.height = "0px";
         }
-    });
+    }
 }
 var parallax = document.body.style;
 window.onscroll = function() {
