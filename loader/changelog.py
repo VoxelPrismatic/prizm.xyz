@@ -145,13 +145,13 @@ for key in content:
     text = document.createTextNode(key)
     title.class_name = "tabby"
     title.append(text)
-    title.id = str(content)
+    title.id = key
     lists.append(title)
     stuff = document.createElement("DIV")
     text = document.createTextNode('~loading~')
     stuff.class_name = "tabby_sect content consect"
     stuff.append(text)
-    stuff.id = content+"-"
+    stuff.id = key+"-"
     for re in rep:
         content[key] = content[key].replace(re,rep[re])
     stuff.innerHTML = content[key]
