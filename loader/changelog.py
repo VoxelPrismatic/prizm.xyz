@@ -134,7 +134,7 @@ content = {"10-01-2019":"""\
 > Added music capabilities"""}
 
 element = document.getElementById("changes")
-lists = document.getElementById("changes")
+lists = document.getElementById("lists")
 rep = {'\n':'<br>',
        '<code>':'<span class="mono dark">',
        '</code>':'</span>',
