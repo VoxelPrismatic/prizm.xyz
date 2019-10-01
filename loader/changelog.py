@@ -1,5 +1,10 @@
 from browser import document
-content = {"09-29-2019":"""\
+content = {"10-01-2019":"""\
+> The >!;]graph!< command now actually works [mostly]
+> > Fixed >!--max!< and >!--min!< to not show up with >![nan, nan]!<
+> > Fixed >!--zero!< to actually show some zeros, except not the correct ones...
+""",
+           "09-29-2019":"""\
 > The >!;]graph!< command now has been refreshed
 > > The new syntax ] >!;]graph {?window} {eq1} | {eq2} | {eq3} | {eqX}!<
 > > Adding >!--max!< to the end of the equation should give you the maximum coordinates shown
