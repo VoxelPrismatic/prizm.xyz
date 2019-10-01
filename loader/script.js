@@ -1,6 +1,7 @@
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].onclick = function() {
+        this.classList.toggle("select");
         if (this.classList.toggle("active")) {
             this.nextElementSibling.style.height = `${this.nextElementSibling.scrollHeight + 5}px`
         } else {
