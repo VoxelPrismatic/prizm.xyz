@@ -134,6 +134,7 @@ content = {"10-01-2019":"""\
 > Added music capabilities"""}
 
 element = document.getElementById("changes")
+lists = document.getElementById("changes")
 rep = {'\n':'<br>',
        '<code>':'<span class="mono dark">',
        '</code>':'</span>',
@@ -142,13 +143,15 @@ rep = {'\n':'<br>',
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
-    title.class_name = "header"
+    title.class_name = "tabby"
     title.append(text)
-    element.append(title)
+    title.id = str(content)
+    lists.append(title)
     stuff = document.createElement("DIV")
     text = document.createTextNode('~loading~')
-    stuff.class_name = "content consect"
+    stuff.class_name = "tabby_sect content consect"
     stuff.append(text)
+    stuff.id = content+"-"
     for re in rep:
         content[key] = content[key].replace(re,rep[re])
     stuff.innerHTML = content[key]
