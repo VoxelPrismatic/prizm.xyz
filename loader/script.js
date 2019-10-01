@@ -31,5 +31,5 @@ function changeLog(itm, date) {
 document.getElementById("defaultOpen").click();
 var tab = document.getElementsByClassName("tabby");
 for (var i = 0; i < tab.length; i++) {
-    tab[i].onclick = function() {changeLog(this, tab[i].id)}
+    tab[i].onclick = function() {changeLog(this, tab[i].id+"-")}
 }
