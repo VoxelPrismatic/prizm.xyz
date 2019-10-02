@@ -1,4 +1,3 @@
-console.log("GRABBING CLICKIES");
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].onclick = function() {
@@ -29,4 +28,5 @@ function chng() {
         }
     }
 }
+console.log("Wait");
 window.setTimeout(chng, 500);
