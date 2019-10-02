@@ -1,11 +1,12 @@
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].onclick = function() {
-        var tap = document.getElementsByClassName("clicky");
-        for (var i = 0; i < tap.length; i++) {
-            if (tap[i].id != this.id) {
-                tap[i].classList = tap[i].classList.replace(" select", "");
-                tap[i].classList = tap[i].classList.replace(" active", "");
+        var taq = document.getElementsByClassName("clicky");
+        for (var i = 0; i < taq.length; i++) {
+            if (taq[i].id != this.id) {
+                taq[i].classList = taq[i].classList.replace(" select", "");
+                taq[i].classList = taq[i].classList.replace(" active", "");
+                taq[i].nextElementSibling.style.height = "0px";
             }
         }
         this.classList.toggle("select");
