@@ -154,6 +154,7 @@ for key in content:
     stuff = document.createElement("DIV")
     text = document.createTextNode('~loading~')
     stuff.class_name = "tabby_sect"
+    stuff.style.display = "none"
     stuff.append(text)
     stuff.id = key+"-"
     for re in rep:
