@@ -9,12 +9,21 @@ for (var i = 0; i < tap.length; i++) {
         }
     }
 }
+var tab = document.getElementsByClassName("tabby_link");
+for (var i = 0; i < tab.length; i++) {
+    tab[i].onclick = function() {changeLog(tab[i].id+"-");}
+}
+var tab = document.getElementsByClassName("tabby_sect");
+for (var i = 0; i < tab.length; i++) {
+    tab[i].style.display="none"
+}
+
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
         `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
 }
-function changeLog(itm, date) {
+function changeLog(date) {
     var sects = document.getElementsByClassName("tabby_sect content consect");
     for (var i = 0; i < tabcontent.length; i++) {
         sects[i].style.display = "none";
@@ -24,14 +33,5 @@ function changeLog(itm, date) {
         lnks[i].className = lnks[i].className.replace(" active", "");
     }
     document.getElementById(date).style.display = "block";
-    itm.currentTarget.className += " active";
-}
-
-var tab = document.getElementsByClassName("tabby_link");
-for (var i = 0; i < tab.length; i++) {
-    tab[i].onclick = function() {changeLog(this, tab[i].id+"-")}
-}
-var tab = document.getElementsByClassName("tabby_sect");
-for (var i = 0; i < tab.length; i++) {
-    tab[i].style.display="none"
+    document.getElementById(date.substring(0,date.length()-1)).className += " active";
 }
