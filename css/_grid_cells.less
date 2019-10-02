@@ -1,9 +1,12 @@
-@import "_elem_align"
+@import (optional, reference) "elem_align";
+@import (optional, reference) "base/elem_align";
+@import (optional, reference) "elem_size";
+@import (optional, reference) "base/elem_size";
 .grid {
     .horz(); 
     display: grid; 
     grid-gap: 5px; 
-    width: 80vw;
+    .w80vw();
 }
 .grid4 {
     .grid(); 
