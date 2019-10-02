@@ -94,9 +94,12 @@ content = {"10-02-2019":"""\
            
            "08-26-2019":"""\
 > Cleaned up files and code to make it more readable
+
 > Added help text for the clrin command
+
 > Added the clrto command, it clears all messages to a given message ID
 > > Useful if you don't know the exact amount of kessages to clear
+
 > Updated the graph command so you can now graph on the y axis too 
 > > [>!x=y^2!< and >!y=x^2!< are supported]
 > > Support for xy functions [>!x^2+y^2=4!<] has not been added yet, I'm working on it tho
@@ -104,28 +107,46 @@ content = {"10-02-2019":"""\
            
            "08-22-2019":"""\
 > Added an actually decent AI [>!;]text hello!<]
+
 > Fixed a bug where "no" would register as a bool and break it 
+
 > Fixed a bug where smart quotes [>!‘’“”!<] would register as a bool break it
+
 > Fixed a bug where any colons would register as a dict and break it
+
 > Now responds before it re-analyses
+
 > New logic will come soon, it currently only chooses the best response
+
 > Removed old files
+
 > Updated GitHub
+
 > Removed old AIs because they were trash
+
 > Updated main file to not be trash
+
 > Cleaned up so much code it's not even funny
+
 > Added docs to other things
+
 > Added a learning command
+
 > Updated more files
+
 > Updated the inv command to be dynamic
+
 > Working on a better audit command
+
 > Fixed bugs and things
 """,
            
            "08-20-2019":"""\
 > Added the >!;]reddit!< command
-> Fixed some bugs with that
+> > Fixed some bugs with that
+
 > Added the >!;]captcha!< command
+
 > Added the >!;]8ball!< command
 """,
            
@@ -139,19 +160,42 @@ content = {"10-02-2019":"""\
            
            "08-18-2019":"""\
 > Added 2048
-> Fixed bugs with the 2048 command
-> Added 2048 to the help command
+> > Fixed some bugs
+> > Added to the help command
+
 > Updated the help command to change the prefix in the page
-> Fixed bugs with the above
+> > Fixed bugs
+
 > Updated the >!;]inv!< command to comply with new permission requirements
 > Added this site link to the inv command
 """,
            
            "08-13-2019":"""\
 > Updated the help command to be automatic documentation
+
 > Updated the help command so you can now do >!;]help {command name}!<
+
 > Added new interactive commands [cuddle, kiss, throw]
-> Added music capabilities"""}
+
+> Added music capabilities""",
+           "00-00-0000":"""\
+> This bit here was lost in time...
+> > Rest assured, the bot was being developed :D
+""",
+           "06-26-2019":"""\
+> Added the >!embedify!< utility
+
+> Moved module loading to a seperate file
+
+> Removed some useless things
+> > Like >!bot.lock = False!< which I literally never used
+
+> Moved custom faces and texts into a different file
+
+> Moved command re/un/loading to a different file
+
+> Added a paginator
+"""}
 
 document.getElementById("labels").innerHTML = '|'.join(list(content))
 element = document.getElementById("changes")
