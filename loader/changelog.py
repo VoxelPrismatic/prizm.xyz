@@ -1,5 +1,9 @@
 from browser import document
-content = {"10-01-2019":"""\
+content = {"10-02-2019":"""\
+> Just realized, the logging features are broken again
+> > All >!;]mng!< features should still be funtional though
+""",
+           "10-01-2019":"""\
 > The >!;]graph!< command now actually works [mostly]
 > > Fixed >!--max!< and >!--min!< to not show up with >![nan, nan]!<
 > > Fixed >!--zero!< to actually show some zeros, except not the correct ones...
