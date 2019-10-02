@@ -4,8 +4,8 @@ for (var i = 0; i < tap.length; i++) {
         var taq = document.getElementsByClassName("clicky");
         for (var i = 0; i < taq.length; i++) {
             if (taq[i].id != this.id) {
-                taq[i].classList = taq[i].classList.replace(" select", "");
-                taq[i].classList = taq[i].classList.replace(" active", "");
+                taq[i].classList = taq[i].className.replace(" select", "");
+                taq[i].classList = taq[i].className.replace(" active", "");
                 taq[i].nextElementSibling.style.height = "0px";
             }
         }
@@ -36,4 +36,4 @@ function chng() {
         }
     }
 }
-window.setTimeout(chng, 1500);
+window.setTimeout(chng, 2500);
