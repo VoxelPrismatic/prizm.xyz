@@ -29,4 +29,4 @@ function chng() {
         }
     }
 }
-window.setTimeout(chng, 0.25);
+window.setTimeout(chng, 1);
