@@ -188,20 +188,6 @@
         <script type="text/python" src="loader/changelog.py" async></script>
         <script type="text/python" src="loader/faqs.py" async></script>
         <script type="text/python" src="loader/aboutme.py" async></script>
+        <script type="text/javascript" src="loader/script.js" defer></script>
     </body>
-    <script type="text/javascript" src="loader/script.js" defer></script>
-    <script type="text/javascript" defer>
-        var tab = document.getElementsByClassName("tabby_link");
-        console.log(tab)
-        for (var i = 0; i < tab.length; i++) {
-            tab[i].onclick = function() {
-            var tag = document.getElementsByClassName("tabby_link");
-            for (var i = 0; i < tag.length; i++) {
-                tag[i].className = tag[i].className.replace(" active", "");
-            }
-            document.getElementById("blocky").innerHTML = document.getElementById(this.id+"-").innerHTML;
-            this.className += " active"
-        }
-    }
-    </script>
 </html>
