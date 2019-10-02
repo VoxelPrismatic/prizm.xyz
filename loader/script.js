@@ -31,7 +31,7 @@ var tab = document.getElementsByClassName("tabby_link");
 for (var i = 0; i < tab.length; i++) {
     tab[i].onclick = function() {changeLog(this, tab[i].id+"-")}
 }
-var tab = document.getElementsByClassName("tabby_sect content consect");
+var tab = document.getElementsByClassName("tabby_sect");
 for (var i = 0; i < tab.length; i++) {
     tab[i].style.display="none"
 }
