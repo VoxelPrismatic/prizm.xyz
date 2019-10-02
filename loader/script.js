@@ -1,3 +1,4 @@
+console.log("GRABBING CLICKIES");
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].onclick = function() {
@@ -9,17 +10,19 @@ for (var i = 0; i < tap.length; i++) {
         }
     }
 }
+console.log("GRABBING LINKS");
 var tab = document.getElementsByClassName("tabby_link");
 for (var i = 0; i < tab.length; i++) {
     tab[i].onclick = function() {changeLog(this);}
     console.log(tab[i]);
 }
+console.log("GRABBING SECTS");
 var tab = document.getElementsByClassName("tabby_sect");
 for (var i = 0; i < tab.length; i++) {
     tab[i].style.display="none";
     console.log(tab[i]);
 }
-
+console.log(tab);
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
