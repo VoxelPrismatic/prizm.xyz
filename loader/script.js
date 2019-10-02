@@ -27,7 +27,7 @@ window.onscroll = function() {
 }
 function changeLog(itm) {
     nxt = itm.id+"-";
-    console.log("Loading changes '"+next+"'");
+    console.log("Loading changes '"+nxt+"'");
     var sects = document.getElementsByClassName("tabby_sect content consect");
     for (var i = 0; i < sects.length; i++) {
         sects[i].style.display = "none";
