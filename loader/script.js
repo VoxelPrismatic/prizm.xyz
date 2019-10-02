@@ -10,36 +10,20 @@ for (var i = 0; i < tap.length; i++) {
         }
     }
 }
-console.log("GRABBING LINKS");
-var tab = document.getElementsByClassName("tabby_link");
-for (var i = 0; i < tab.length; i++) {
-    tab[i].onclick = function() {changeLog(this);}
-    console.log(tab[i]);
-}
-console.log("GRABBING SECTS");
-var tab = document.getElementsByClassName("tabby_sect");
-for (var i = 0; i < tab.length; i++) {
-    tab[i].style.display="none";
-    console.log(tab[i]);
-}
 console.log(tab);
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
         `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
 }
-function changeLog(itm) {
-    nxt = itm.id+"-";
-    console.log("Loading changes '"+nxt+"'");
-    var sects = document.getElementsByClassName("tabby_sect");
-    for (var i = 0; i < sects.length; i++) {
-        sects[i].style.display = "none";
+var tab = document.getElementsByClassName("tabby_link");
+console.log(tab)
+for (var i = 0; i < tab.length; i++) {
+    tab[i].onclick = function() {
+        var tab + document.getElementsByClassName("tabby_link");
+        for (var i = 0; i < tab.length; i++) {
+            tab[i].className = tab[i].className.replace(" active", "");
+        }
+        document.getElementById("blocky").innerHTML = document.getElementById(this.id+"-").innerHTML;
     }
-    var lnks = document.getElementsByClassName("tabby_link");
-    for (var i = 0; i < lnks.length; i++) {
-        lnks[i].className = lnks[i].className.replace(" active", "");
-    }
-    document.getElementById(nxt).style.display = "block";
-    itm.className += " active";
-    console.log("done");
 }
