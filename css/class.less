@@ -1,12 +1,11 @@
-@import (reference) "_basics";
-@import (reference) "_boarders";
-@import (reference) "_elem_size";
-@import (reference) "_elem_align";
-@import (reference) "_text_size";
-@import (reference) "_text_align";
-@import (reference) "_grid_cells";
-@import (reference) "_color";
-@import (reference) "_misc";
+@import (reference) "base/basics";
+@import (reference) "base/boarders";
+@import (reference) "base/elem_size";
+@import (reference) "base/elem_align";
+@import (reference) "base/text_size";
+@import (reference) "base/text_align";
+@import (reference) "base/grid_cells";
+@import (reference) "base/color";
 /*# -=ELEMENTS=- #*/
 body {
     .hard();
@@ -72,14 +71,14 @@ a {.blue();}
     .v20();
     font-weight: 600;
     .w80vw();
-    cursor: pointer;
-    overflow: hidden;
+    .pointer();
+    .no_over();
     background-color: #00888866;
     outline: none;
 }
 ._tabby {
     .floatL();
-    background-color: #223333;
+    background-color: #223333ee;
     .w20vw();
     .h30vh();
 }
@@ -96,7 +95,7 @@ a {.blue();}
     .font();
     background-color: inherit;
     outline: none;
-    cursor: pointer;
+    .pointer();
     transition: 1s;
 }
 ._tabby_block {
