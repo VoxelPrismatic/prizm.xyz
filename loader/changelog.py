@@ -153,7 +153,7 @@ for key in content:
     lists.append(title)
     stuff = document.createElement("DIV")
     text = document.createTextNode('~loading~')
-    stuff.class_name = "tabby_sect content consect"
+    stuff.class_name = "tabby_sect"
     stuff.append(text)
     stuff.id = key+"-"
     for re in rep:
