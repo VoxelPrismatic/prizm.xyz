@@ -136,7 +136,7 @@ content = {"10-02-2019":"""\
 > Updated the help command so you can now do >!;]help {command name}!<
 > Added new interactive commands [cuddle, kiss, throw]
 > Added music capabilities"""}
-
+document.getElementById("labels").innerHTML = '|'.join(list(content))
 element = document.getElementById("changes")
 lists = document.getElementById("tabby")
 rep = {'\n':'<br>',
@@ -150,7 +150,6 @@ for key in content:
     title.class_name = "tabby_link"
     title.append(text)
     title.id = key
-    title.name = "findme"
     lists.append(title)
     stuff = document.createElement("DIV")
     text = document.createTextNode('~loading~')
@@ -162,4 +161,3 @@ for key in content:
         content[key] = content[key].replace(re,rep[re])
     stuff.innerHTML = content[key]
     element.append(stuff)
-document.getElementById("labels").innerHTML = '|'.join(list(content))
