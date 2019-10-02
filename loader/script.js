@@ -12,10 +12,12 @@ for (var i = 0; i < tap.length; i++) {
 var tab = document.getElementsByClassName("tabby_link");
 for (var i = 0; i < tab.length; i++) {
     tab[i].onclick = function() {changeLog(this);}
+    console.log(tab[i]);
 }
 var tab = document.getElementsByClassName("tabby_sect");
 for (var i = 0; i < tab.length; i++) {
-    tab[i].style.display="none"
+    tab[i].style.display="none";
+    console.log(tab[i]);
 }
 
 var parallax = document.body.style;
@@ -25,7 +27,7 @@ window.onscroll = function() {
 }
 function changeLog(itm) {
     nxt = itm.id+"-";
-    
+    console.log("Loading changes '"+next+"'");
     var sects = document.getElementsByClassName("tabby_sect content consect");
     for (var i = 0; i < sects.length; i++) {
         sects[i].style.display = "none";
@@ -36,4 +38,5 @@ function changeLog(itm) {
     }
     document.getElementById(nxt).style.display = "block";
     itm.className += " active";
+    console.log("done");
 }
