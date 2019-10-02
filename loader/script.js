@@ -15,11 +15,11 @@ window.onscroll = function() {
     parallax.backgroundPosition = 
         `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
 }
-var tab = document.getElementById("labels").split('|');
+var tab = document.getElementById("labels").innerHTML.split('|');
 console.log(tab)
 for (var i = 0; i < tab.length; i++) {
     document.getElementById(tab[i]).onclick = function() {
-        var tag = document.getElementsById("labels").split('|');
+        var tag = document.getElementsById("labels").innerHTML.split('|');
         for (var i = 0; i < tag.length; i++) {
             document.getElementById(tag[i]).className = document.getElementById(tag[i]).className.replace(" active", "");
         }
