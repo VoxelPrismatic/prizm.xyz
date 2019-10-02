@@ -15,7 +15,7 @@ window.onscroll = function() {
         `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
 }
 function changeLog(itm, date) {
-    var sects = document.getElementsByClassName("tabby_sect");
+    var sects = document.getElementsByClassName("tabby_sect content consect");
     for (var i = 0; i < tabcontent.length; i++) {
         sects[i].style.display = "none";
     }
@@ -29,7 +29,7 @@ function changeLog(itm, date) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-var tab = document.getElementsByClassName("tabby_link content consect");
+var tab = document.getElementsByClassName("tabby_link");
 for (var i = 0; i < tab.length; i++) {
     tab[i].onclick = function() {changeLog(this, tab[i].id+"-")}
 }
