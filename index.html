@@ -151,7 +151,7 @@
                 <div class="grid2 textC">
                     <div id="tabby" class="tabby" style="width:20vw;"></div>
                     <div class="_tabby_block" style="width: 55vw;" id="blocky">
-                        <-- Click on a date
+                        &gt;-- Click on a date
                     </div>
                 </div>
                 <!-- I will use scripts to load this section because it makes life easier -->
@@ -185,10 +185,23 @@
         </div>
         <div class="sep">---</div>
         <!-- OTHER SCRIPTS -->
-        <script type="text/python" src="loader/changelog.py"></script>
-        <script type="text/python" src="loader/faqs.py"></script>
-        <script type="text/python" src="loader/aboutme.py"></script>
-        <script type="text/javascript" src="loader/script.js"></script>
+        <script type="text/python" src="loader/changelog.py" async></script>
+        <script type="text/python" src="loader/faqs.py" async></script>
+        <script type="text/python" src="loader/aboutme.py" async></script>
     </body>
-    <script type="text/javascript" src="loader/tabs.js" defer></script>
+    <script type="text/javascript" src="loader/script.js" defer></script>
+    <script type="text/javascript" defer>
+        var tab = document.getElementsByClassName("tabby_link");
+        console.log(tab)
+        for (var i = 0; i < tab.length; i++) {
+            tab[i].onclick = function() {
+            var tag = document.getElementsByClassName("tabby_link");
+            for (var i = 0; i < tag.length; i++) {
+                tag[i].className = tag[i].className.replace(" active", "");
+            }
+            document.getElementById("blocky").innerHTML = document.getElementById(this.id+"-").innerHTML;
+            this.className += " active"
+        }
+    }
+    </script>
 </html>
