@@ -48,7 +48,7 @@ content = {"10-02-2019":"""\
 > Removed the guild listener because it was useless
 > Fixed several bugs
 """,
-           "09-12-2019 [BIG]":"""\
+           "09-12-2019":"""\
 > Added a public exec command
 > > Fixed a bug where newlines wouldn't actually go through
 > > I heard about some issues with encoding but I can't verify that rn
@@ -86,7 +86,7 @@ content = {"10-02-2019":"""\
 > > Support for xy functions [>!x^2+y^2=4!<] has not been added yet, I'm working on it tho
 """,
            
-           "08-22-2019 [MASSIVE]":"""\
+           "08-22-2019":"""\
 > Added an actually decent AI [>!;]text hello!<]
 > Fixed a bug where "no" would register as a bool and break it 
 > Fixed a bug where smart quotes [>!‘’“”!<] would register as a bool break it
@@ -136,6 +136,7 @@ content = {"10-02-2019":"""\
 > Updated the help command so you can now do >!;]help {command name}!<
 > Added new interactive commands [cuddle, kiss, throw]
 > Added music capabilities"""}
+
 document.getElementById("labels").innerHTML = '|'.join(list(content))
 element = document.getElementById("changes")
 lists = document.getElementById("tabby")
