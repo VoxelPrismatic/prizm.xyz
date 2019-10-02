@@ -5,7 +5,7 @@
 @import (reference) "_text_size";
 @import (reference) "_text_align";
 @import (reference) "_grid_cells";
-@import (reference) "colors";
+@import (reference) "_color";
 @import (reference) "_misc";
 /*# -=ELEMENTS=- #*/
 body {
@@ -50,10 +50,10 @@ a {.blue();}
     .textC();
     .bordBL();
     .bordBR();
-    height: 0;
     .v15();
-    width: 80vw;
-    overflow: hidden;
+    .v80vw();
+    height: 0;
+    .no_over();
     transition: height 1s ease;
     background-color: #00666644;
 }
@@ -71,7 +71,7 @@ a {.blue();}
     transition-duration: 1s;
     .v20();
     font-weight: 600;
-    width: 80vw;
+    .w80vw();
     cursor: pointer;
     overflow: hidden;
     background-color: #00888866;
@@ -80,8 +80,8 @@ a {.blue();}
 ._tabby {
     .floatL();
     background-color: #223333;
-    width: 20vw;
-    height: 30vh;
+    .w20vw();
+    .h30vh();
 }
 
 /* Style the buttons inside the tab */
@@ -108,8 +108,8 @@ a {.blue();}
     .bordR();
     .box();
     .hard();
-    width: 50vw;
-    height: 50vh;
+    .w50vw();
+    .h50vh();
 }
 ._tabby_buttonhover {
     .hover();
@@ -162,7 +162,7 @@ a {.blue();}
 }
 .btn_after {
     background-color: #88ffffff;
-    display: block;
+    .block();
     position: absolute;
     padding-top: 300%;
     padding-left: 350%;
