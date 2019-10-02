@@ -15,13 +15,13 @@ window.onscroll = function() {
     parallax.backgroundPosition = 
         `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
 }
-var tab = document.getElementsByName("findme");
+var tab = document.getElementById("labels").split('|');
 console.log(tab)
 for (var i = 0; i < tab.length; i++) {
-    tab[i].onclick = function() {
-        var tag = document.getElementsByName("findme");
+    document.getElementById(tab[i]).onclick = function() {
+        var tag = document.getElementsById("labels").split('|');
         for (var i = 0; i < tag.length; i++) {
-            tag[i].className = tag[i].className.replace(" active", "");
+            document.getElementById(tag[i]).className = document.getElementById(tag[i]).className.replace(" active", "");
         }
         document.getElementById("blocky").innerHTML = document.getElementById(this.id+"-").innerHTML;
         this.className += " active"
