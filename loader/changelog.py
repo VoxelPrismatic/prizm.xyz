@@ -162,4 +162,4 @@ for key in content:
         content[key] = content[key].replace(re,rep[re])
     stuff.innerHTML = content[key]
     element.append(stuff)
-doc.getElementById("labels").innerHTML = '|'.join(list(content))
+document.getElementById("labels").innerHTML = '|'.join(list(content))
