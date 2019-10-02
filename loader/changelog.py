@@ -14,12 +14,15 @@ content = {"10-02-2019":"""\
 > > Adding >!--max!< to the end of the equation should give you the maximum coordinates shown
 > > Adding >!--min!< to the end of the equation should give you the minimum coordinates shown
 > > Adding >!--zero!< should give you the coordinates for when >!y = 0!<
+
 > The >!;]sym!< command has been updated
 > > Doing something like >!;]sym 2x^2!< shouldn't break it
+
 > Added the >!;]sub!< command
 > > Syntax ] >!;]sub {num} {eq}!<
 > > Allows you to substitute {num} in for X in {eq}
 > > Example ] >!;]sub 206 x^2+34!<
+
 > The >!;]calc!< command now actually loads on startup
 """,
            "09-23-2019":"""\
@@ -32,7 +35,9 @@ content = {"10-02-2019":"""\
 """,
            "09-22-2019":"""\
 > Logging now actually works
+
 > You can now create, edit, delete, and view tags with no issues
+
 > All >!;]mng!< features now work
 """,
            "09-16-2019":"""\
@@ -42,18 +47,26 @@ content = {"10-02-2019":"""\
 """,
            "09-15-2019":"""\
 > Switched the database from >!JSON!< to >!SQLITE3!<
+
 > > This is a pretty big change, please submit any and all bugs via the >!;]bug!< command or via DMs
+
 > The >!;]audit!< command has been refreshed
+
 > All commands have been updated to use the new database
+
 > Removed the guild listener because it was useless
+
 > Fixed several bugs
 """,
            "09-12-2019":"""\
 > Added a public exec command
 > > Fixed a bug where newlines wouldn't actually go through
 > > I heard about some issues with encoding but I can't verify that rn
+
 > Fixed the aliases of the help command [again]
+
 > Fixed very minor bugs with the simplify command
+
 > Updated the graph command
 > > The graph command now supports both-axis graphing [>!x^2+y^2=4!<]
 > > It should now actually graph faster when using more equations
@@ -68,12 +81,15 @@ content = {"10-02-2019":"""\
            
            "09-09-2019":"""\
 > Added the simplify command
+
 > Added more features to that command
+
 > Fixed bugs with the help command
-> > All aliases after the first one would have a '.' in front
+> > All aliases after the first one would have a >!.!< in front
+
 > Added the calc command
 > > Added more functions
-> ] Why did it take so long? I was trying to prevent injection, and I'm fairly certain I succeeded
+> > Why did it take so long? I was trying to prevent injection, and I'm fairly certain I succeeded
 """,
            
            "08-26-2019":"""\
