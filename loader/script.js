@@ -29,4 +29,4 @@ function chng() {
     }
 }
 console.log("Wait");
-window.setTimeout(chng, 500);
+window.setTimeout(chng, 5000);
