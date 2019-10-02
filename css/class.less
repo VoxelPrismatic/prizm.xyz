@@ -8,106 +8,66 @@
 @import (reference) "base/color";
 /*# -=ELEMENTS=- #*/
 body {
-    .hard();
-    .font();
-    .v40();
+    .hard(); .font(); .v40();
 }
 a {.blue();}
 /*# -=DYNAMIC CLASSES=- #*/
 
 ._code {
-    .hard();
-    .round();
-    .mono();
-    .v20();
-    .w90vw();
+    .hard(); .round(); .mono();
+    .v20();  .w90vw();
     background-color: #303136dd;
     padding: 5px;
     border: 3px solid #292a2eee;
 }
 ._header {
-    .white();
-    .pad();
-    .textL();
-    .font();
-    .v20();
+    .white(); .pad(); .textL();
+    .font();  .v20();
     weight: 600;
 }
 ._content {
-    .pad();
-    .hard();
-    .textL();
-    .white();
-    .font();
-    .v10();
+    .pad();   .hard(); .textL();
+    .white(); .font(); .v10();
 }
 ._sect {
-    .horz();
-    .pad();
-    .hard();
-    .white();
-    .textC();
-    .bordBL();
-    .bordBR();
-    .v15();
-    .w80vw();
-    height: 0;
+    .horz();   .pad();  .hard();
+    .white();  .textC(); .bordBL();
+    .bordBR(); .v15();  .w80vw();
     .no_over();
+    height: 0;
     transition: height 1s ease;
     background-color: #00666644;
 }
 ._clicky {
-    .horz(); 
-    //.hard(); 
-    .white();
-    .pad();
-    .textC();
-    .font();
-    .bordT();
-    .nohover();
+    .horz();    .white(); .pad();
+    .textC();   .font();  .bordT();
+    .nohover(); .v20();   .w80vw();
+    .point();   .no_over();
     position: relative;
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
-    .v20();
     font-weight: 600;
-    .w80vw();
-    .point();
-    .no_over();
     background-color: #00888866;
     outline: none;
 }
 ._tabby {
-    .floatL();
+    .floatL(); .w20vw(); .h30vh();
     background-color: #223333ee;
-    .w20vw();
-    .h30vh();
 }
 
 /* Style the buttons inside the tab */
 ._tabby_button {
-    .hard();
-    .bordL();
-    .white();
-    .pad();
-    .fullW();
-    .textR();
-    .v20();
-    .font();
+    .hard(); .bordL(); .white();
+    .pad();  .fullW(); .textR();
+    .v20(); .font();   .point();
     background-color: inherit;
     outline: none;
-    .point();
     transition: 1s;
 }
 ._tabby_block {
-    .pad();
-    .hover();
-    .font();
-    .floatR(); 
-    .textL();
-    .bordR();
-    .box();
-    .hard();
-    .w50vw();
+    .pad();    .hover(); .font();
+    .floatR(); .textL(); .bordR();
+    .box();    .hard();  .w50vw();
     .h50vh();
 }
 ._tabby_buttonhover {
@@ -119,44 +79,27 @@ a {.blue();}
 
 /* Style the tab content */
 ._tabby_content {
-    .floatL();
-    .pad();
-    .hover();
-    .bordR();
+    .floatL(); .pad(); .hover();
+    .bordR();  .v20();
     width: 70%;
     height: 300px;
-    .v20();
 }
 ._linky {
-    ._clicky();
-    .round();
-    .fullW();
+    ._clicky(); .round(); .fullW();
 }
 ._title {
-    .white();
-    .hard();
-    .textC();
+    .white(); .hard(); .textC();
     font-size: 13vw;
 }
 ._foot {
-    .white();
-    .hard();
-    .pad();
-    .textC();
-    .font();
-    .v10();
+    .white(); .hard(); .pad();
+    .textC(); .font(); .v10();
 }
 ._consect {width: 78vw;}
 ._warn {
-    .horz();
-    .white();
-    .pad();
-    .hard();
-    .textL();
-    .font();
-    .round();
-    .v20();
-    .w90vw();
+    .horz(); .white(); .pad(); 
+    .hard(); .textL(); .v20();
+    .font(); .round(); .w90vw();
     background-color: #ff000088;
 }
 .btn_after {
@@ -178,6 +121,5 @@ a {.blue();}
 }
 .btn_active {
     background-color: #008888aa;
-    .bordT();
-    .select();
+    .bordT(); .select();
 }
