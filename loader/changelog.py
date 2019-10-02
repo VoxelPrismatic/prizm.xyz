@@ -150,6 +150,7 @@ for key in content:
     title.class_name = "tabby_link"
     title.append(text)
     title.id = key
+    title.name = "findme"
     lists.append(title)
     stuff = document.createElement("DIV")
     text = document.createTextNode('~loading~')
