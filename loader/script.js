@@ -7,10 +7,9 @@ for (var i = 0; i < tap.length; i++) {
             this.nextElementSibling.style.height = `${this.nextElementSibling.scrollHeight + 5}px`
         } else {
             this.nextElementSibling.style.height = "0px";
-        }
+        } 
     }
 }
-console.log(tab);
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
