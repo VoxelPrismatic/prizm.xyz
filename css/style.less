@@ -1,68 +1,8 @@
 @import "colors";
-/*# -=TEXT ALIGNS=- #*/
-.textL {
-    text-align: left;
-}
-.textR {
-    text-align: right;
-}
-.textC {
-    text-align: center;
-}
-.textT {
-    vertical-align: text-top;
-}
-.textB {
-    vertical-align: text-bottom;
-}
-.textM {
-    vertical-align: middle;
-}
-.floatL {
-    float: left;
-}
-.floatR {
-    float: right;
-}
-.floatC {
-    float: center;
-}
-/*# -=BOARDER SIZES=- #*/
-.pad {
-    padding: 5px 10px 5px 10px;
-}
-.round {
-    border-radius: 5px;
-}
-.bordTR {
-    border-top-right-radius: 5px;
-}
-.bordTL {
-    border-top-left-radius: 5px;
-}
-.bordBR {
-    border-bottom-right-radius: 5px;
-}
-.bordBL {
-    border-bottom-left-radius: 5px;
-}
-.bordB {
-    .bordBL(); 
-    .bordBR();
-}
-.bordT {
-    .bordTL(); 
-    .bordTR();
-}
-.bordR {
-    .bordBR(); 
-    .bordTR();
-}
-.bordL {
-    .bordBL(); 
-    .bordTL();
-}
-/*# -=FONTS=- #*/
+@import "_text_align";
+@import "_font_size";
+@import "_elem_size";
+@import "_boarders";
 .font {
     font-family: 'Ubuntu';
 }
@@ -87,34 +27,3 @@
     background-color: #11222288; 
     padding: 1px 3px 1px 3px;
 }
-/*# -=FONT SIZES=- #*/
-.f90 {font-size: 90%;}
-.f75 {font-size: 75%;}
-.f60 {font-size: 60%;}
-.f50 {font-size: 50%;}
-.f45 {font-size: 45%;}
-.f30 {font-size: 30%;}
-.f25 {font-size: 25%;}
-.f15 {font-size: 15%;}
-.v05 {font-size: 0.5vw;}
-.v10 {font-size: 1.0vw;}
-.v15 {font-size: 1.5vw;}
-.v20 {font-size: 2.0vw;}
-.v25 {font-size: 2.5vw;}
-.v30 {font-size: 3.0vw;}
-.v35 {font-size: 3.5vw;}
-.v40 {font-size: 4.0vw;}
-.v45 {font-size: 4.5vw;}
-.v50 {font-size: 5.0vw;}
-.v55 {font-size: 5.5vw;}
-.v60 {font-size: 6.0vw;}
-.v65 {font-size: 6.5vw;}
-.v70 {font-size: 7.0vw;}
-.v75 {font-size: 7.5vw;}
-.v80 {font-size: 8.0vw;}
-.v85 {font-size: 8.5vw;}
-.v90 {font-size: 9.0vw;}
-.v95 {font-size: 9.5vw;}
-/*# -=OTHERS=- #*/
-.w90vw {width: 90vw;}
-.w80vw {width: 80vw;}
