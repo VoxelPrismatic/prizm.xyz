@@ -4,8 +4,8 @@ for (var i = 0; i < tap.length; i++) {
         var tap = document.getElementsByClassName("clicky");
         for (var i = 0; i < tap.length; i++) {
             if (tap[i].id != this.id) {
-                tap[i].classList.replace(" select", "");
-                tap[i].classList.replace(" active", "");
+                tap[i].classList = tap[i].classList.replace(" select", "");
+                tap[i].classList = tap[i].classList.replace(" active", "");
             }
         }
         this.classList.toggle("select");
