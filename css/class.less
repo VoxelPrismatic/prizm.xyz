@@ -85,7 +85,7 @@ a {.blue();}
     .white();
     .pad();
     .fullW();
-    .textC();
+    .textR();
     .v20();
     .font();
     background-color: inherit;
@@ -93,12 +93,21 @@ a {.blue();}
     cursor: pointer;
     transition: 1s;
 }
-/* Change background color of buttons on hover */
+._tabby_block {
+    .pad();
+    .hover();
+    .font();
+    .floatR(); 
+    .textL();
+    .bordR();
+    .box();
+    .hard();
+    width: 50vw;
+    height: 50vw%;
+}
 ._tabby_buttonhover {
     .hover();
 }
-
-/* Create an active/current "tab button" class */
 ._tab_buttonactive {
     .select();
 }
