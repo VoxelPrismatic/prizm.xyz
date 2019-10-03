@@ -24,10 +24,12 @@
     .tabby_sect {._tabby_content(); ._content(); .v30();}
     .tabby button {._tabby_button(); .v40();}
     .tabby {
-        width: 15vw; .font(); .h50vh(); .scroller();
+        width: 15vw; .font(); .fullH(); .scroller();
         .pad(); .hover(); .bordL(); .textR(); 
         .header(); .v40(); ._tabby(); 
     }
+    .tabby_block {._tabby_block(); .fullH(); .w50vw();
+                  .content(); scroller(); }
 }
 
 @media only screen and (max-width: 640px) and (min-width: 361px) {
@@ -46,10 +48,12 @@
     .tabby_sect {._tabby_content(); ._content(); .v30();}
     .tabby button {._tabby_button(); .v40();}
     .tabby {
-        width: 15vw; .font(); .h50vh(); .scroller();
+        width: 15vw; .font(); .fullH(); .scroller();
         .pad(); .hover(); .bordL(); .textR(); 
         .header(); .v40(); ._tabby(); 
     }
+    .tabby_block {._tabby_block(); .fullH(); .w50vw();
+                  .content(); scroller(); }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 641px) {
@@ -69,10 +73,12 @@
     .tabby button {._tabby_button(); .v15();}
     .tabby_sect {._content(); font-size: 1.3vw;}
     .tabby {
-        width: 15vw; .font(); .h50vh(); .scroller();
+        .w10vw(); .font(); .scroller(); .fullH();
         .pad(); .hover(); .bordL(); .textR(); 
-        .header(); font-size: 1.3vw; ._tabby(); 
+        .header(); font-size: 1.3vw; ._tabby();
     }
+    .tabby_block {._tabby_block(); .fullH(); .w50vw();
+                  .content(); scroller(); }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -91,8 +97,10 @@
     .tabby_sect {._tabby_content(); ._content(); font-size: 1.3vw;}
     .tabby button {._tabby_button(); .v15();}
     .tabby {
-        width: 10vw; .font(); .h50vh(); .scroller();
+        .w10vw(); .font(); .fullH(); .scroller();
         .pad(); .hover(); .bordL(); .textR(); 
         .header(); font-size: 1.3vw; ._tabby();
     }
+    .tabby_block {._tabby_block(); .fullH(); .w50vw();
+                  .content(); scroller(); }
 }
