@@ -6,6 +6,7 @@
 @import "base/text_align";
 @import "base/grid_cells";
 @import "base/color";
+@import "base/listen.less";
 @import "class";
 @media only screen and (max-width: 360px) {
     /* SMOL */
@@ -77,40 +78,4 @@
     .tabby_sect {._tabby_content(); font-size: 1.3vw;}
     .tabby button {._tabby_button(); .v15();}
     .tabby_sect {._content(); font-size: 1.3vw;}
-}
-
-/*# -=LISTENERS=- #*/
-.clicky:after {
-    .btn_after(); 
-    .bordT();
-}
-.clicky.active:after {
-    .btn_activeafter();
-    .bordT();
-}
-.clicky.active {
-    .select();
-}
-.clicky:hover {
-    .hover();
-}
-.linky:hover {
-    .hover();
-}
-.linky:after {
-    .btn_after(); 
-    .round();
-}
-.linky.active:after {
-    .btn_activeafter(); 
-    .round();
-}
-.tabby button {
-    .nohover();
-}
-.tabby button:hover {
-    .hover();
-}
-.tabby button.active {
-    .select();
 }
