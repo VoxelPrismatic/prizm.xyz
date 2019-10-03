@@ -1,0 +1,43 @@
+@import (reference) "basics";
+@import (reference) "boarders";
+@import (reference) "elem_size";
+@import (reference) "elem_align";
+@import (reference) "font_size";
+@import (reference) "text_align";
+@import (reference) "grid_cells";
+@import (reference) "color";
+@import (reference) "../class";
+.clicky:after {
+    .btn_after(); 
+    .bordT();
+}
+.clicky.active:after {
+    .btn_activeafter();
+    .bordT();
+}
+.clicky.active {
+    .select();
+}
+.clicky:hover {
+    .hover();
+}
+.linky:hover {
+    .hover();
+}
+.linky:after {
+    .btn_after(); 
+    .round();
+}
+.linky.active:after {
+    .btn_activeafter(); 
+    .round();
+}
+.tabby button {
+    .nohover();
+}
+.tabby button:hover {
+    .hover();
+}
+.tabby button.active {
+    .select();
+}
