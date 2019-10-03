@@ -30,6 +30,7 @@ a {.blue();}
     .white(); .font(); .v10();
 }
 ._sect {
+    border-size: 2px solid;
     .horz();   .pad();  .hard();
     .white();  .textC(); .bordBL();
     .bordBR(); .v15();  .w80vw();
@@ -59,7 +60,8 @@ a {.blue();}
 /* Style the buttons inside the tab */
 ._tabby_button {
     .hard(); .round(); .white();
-    .pad();  .fullW(); .textR();
+    .pad();  .w10vw(); .textR();
+    .fullH();
     .v20();  .font();  .point();
     background-color: inherit;
     outline: none;
@@ -69,9 +71,10 @@ a {.blue();}
     .pad();    .hover(); .font();
     .floatR(); .textL(); .bordR();
     .box();    .hard();  .w50vw();
-    .fullH();  .h50vh(); ._content();
-    .scroller();
+    .fullH();  .fullH(); ._content();
+    .scroller(); .floatL();
     background-color: #00000000;
+    transition: 1s;
 }
 ._tabby_buttonhover {
     .hover();
