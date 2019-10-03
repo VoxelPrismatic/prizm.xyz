@@ -59,7 +59,7 @@ a {.blue();}
 ._tabby_button {
     .hard(); .bordL(); .white();
     .pad();  .fullW(); .textR();
-    .v20(); .font();   .point();
+    .v20();  .font();  .point();
     background-color: inherit;
     outline: none;
     transition: 1s;
@@ -68,7 +68,8 @@ a {.blue();}
     .pad();    .hover(); .font();
     .floatR(); .textL(); .bordR();
     .box();    .hard();  .w50vw();
-    .h50vh();
+    .fullH();  .h50vh(); ._content();
+    .scroller();
 }
 ._tabby_buttonhover {
     .hover();
