@@ -21,9 +21,13 @@
     .headtitle {._title(); font-size: 20vw;}
     .full {width: 100vw; height: 50vh;}
     .full2 {width: 100vw; height: auto;}
-    .tabby_sect {._tabby_content(); .v30();}
+    .tabby_sect {._tabby_content(); ._content(); .v30();}
     .tabby button {._tabby_button(); .v40();}
-    .tabby_sect {._content(); .v30();}
+    .tabby {
+        width: 15vw; .font(); .fullH(); .scroller();
+        .pad(); .hover(); .bordL(); .textR(); 
+        .header(); .v40(); ._tabby(); 
+    }
 }
 
 @media only screen and (max-width: 640px) and (min-width: 361px) {
@@ -39,9 +43,13 @@
     .headtitle {._title(); font-size: 20vw;}
     .full {width: 100vw; .h50vh();}
     .full2 {width: 100vw; height: auto;}
-    .tabby_sect {._tabby_content(); .v30();}
+    .tabby_sect {._tabby_content(); ._content(); .v30();}
     .tabby button {._tabby_button(); .v40();}
-    .tabby_sect {._content(); .v30();}
+    .tabby {
+        width: 15vw; .font(); .fullH(); .scroller();
+        .pad(); .hover(); .bordL(); .textR(); 
+        .header(); .v40(); ._tabby(); 
+    }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 641px) {
@@ -57,9 +65,14 @@
     .headtitle {._title(); font-size: 20vw;}
     .full {width: 100vw; height: 100vh;}
     .full2 {width: 100vw; height: auto;}
-    .tabby_sect {._tabby_content(); font-size: 1.3vw;}
+    .tabby_sect {._tabby_content(); ._content(); font-size: 1.3vw;}
     .tabby button {._tabby_button(); .v15();}
     .tabby_sect {._content(); font-size: 1.3vw;}
+    .tabby {
+        width: 15vw; .font(); .fullH(); .scroller();
+        .pad(); .hover(); .bordL(); .textR(); 
+        .header(); font-size: 1.3vw; ._tabby(); 
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -75,7 +88,11 @@
     .headtitle {._title(); font-size: 20vw;}
     .full {width: 100vw; height: 100vh;}
     .full2 {width: 100vw; height: auto;}
-    .tabby_sect {._tabby_content(); font-size: 1.3vw;}
+    .tabby_sect {._tabby_content(); ._content(); font-size: 1.3vw;}
     .tabby button {._tabby_button(); .v15();}
-    .tabby_sect {._content(); font-size: 1.3vw;}
+    .tabby {
+        width: 15vw; .font(); .fullH(); .scroller();
+        .pad(); .hover(); .bordL(); .textR(); 
+        .header(); font-size: 1.3vw; ._tabby();
+    }
 }
