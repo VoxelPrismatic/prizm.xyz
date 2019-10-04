@@ -4,8 +4,16 @@ content = {"OwO WHAT IS THIS?": "This is an empty FAQ because nobody asked any q
 
 element = document.getElementById("faq")
 rep = {'\n':'<br>',
-       '<code>':'<span class="mono dark">',
-       '</code>':'</span>'}
+       '>!':'<span class="mono dark">',
+       '!<': '</span>',
+       '>#': '<b>',
+       '#<': '</b>',
+       '>*': '<i>',
+       '*<': '</i>',
+       '>_': '<u>',
+       '_<': '</u>',
+       '>`': '<div class="mono dark horz" style="width: 95%;">',
+       '`<': '</div>'}
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
