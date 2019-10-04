@@ -3,6 +3,9 @@ content = {"10-03-2019":"""\
 > The >!;]quad!< command should work now...
 > > Should load faster
 > > Shouls give the >*right*< answer...
+
+> Logging now >#should#< work
+> > Logging works on my own server, so...
 """,
            "10-02-2019":"""\
 > Just realized, the logging features are broken again
