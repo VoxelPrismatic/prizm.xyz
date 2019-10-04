@@ -26,12 +26,12 @@
     .grid5, .grid4, .grid3, .grid2 {.grid1();}
     .tabby {
         border: 2px solid @blue; ._tabby();
-        width: 15vw; .font(); .scroller();
-        .pad(); .bordL(); .textR(); 
-        .header(); .v40();
+        .fullW(); .font(); .scroller();
+        .pad(); .textR(); .bordT();
+        .header(); .v40(); .h20vh();
     }
-    .tabby_block {._tabby_block(); .w50vw();
-                  .content(); .scroller();}
+    .tabby_block {._tabby_block(); .fullW();
+                  .content(); .scroller(); .h50vh();}
 }
 
 @media only screen and (max-width: 640px) and (min-width: 361px) {
@@ -78,12 +78,12 @@
     .tabby_sect {._content(); font-size: 1.3vw;}
     .tabby {
         border: 2px solid @blue; ._tabby();
-        .fullW(); .font(); .scroller();
-        .pad(); .textR(); .bordT();
-        .header(); .v40(); .h20vh();
+        .w10vw(); .font(); .scroller();
+        .pad(); .bordL(); .textR(); .floatR();
+        .header(); font-size: 1.3vw;
     }
-    .tabby_block {._tabby_block(); .fullW();
-                  .content(); .scroller(); .h50vh();}
+    .tabby_block {._tabby_block(); width: 65vw;
+                  .content(); .scroller();}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -104,9 +104,9 @@
     .tabby {
         border: 2px solid @blue; ._tabby();
         .w10vw(); .font(); .scroller();
-        .pad(); .bordL(); .textR(); 
+        .pad(); .bordL(); .textR(); .floatR();
         .header(); font-size: 1.3vw;
     }
-    .tabby_block {._tabby_block(); .w60vw();
+    .tabby_block {._tabby_block(); width: 65vw;
                   .content(); .scroller();}
 }
