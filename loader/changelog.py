@@ -209,21 +209,28 @@ document.getElementById("labels").innerHTML = '|'.join(list(content))
 element = document.getElementById("changes")
 lists = document.getElementById("tabby")
 rep = {'\n':'<br>',
-       '>!':'<span class="mono dark">',
-       '!<': '</span>',
-       '>#': '<b>',
-       '#<': '</b>',
-       '>*': '<i>',
-       '*<': '</i>',
+       '>!':'<span class="mono dark">', '!<': '</span>', #Monospace
+       '>#': '<b>', 
+       '#<': '</b>', #Bold
+       '>*': '<i>', 
+       '*<': '</i>', #Italic
        '>_': '<u>',
-       '_<': '</u>',
-       '>`': '<div class="mono dark horz" style="width: 95%;">',
-       '`<': '</div>',
-       '>$': '<a href="',
-       '$$': '">',
-       '$<': '</a>',
-       '>~': '<s>',
-       '~<': '</s>'}
+       '_<': '</u>', #Underline
+       '>^': '<sup>',
+       '^<': '</sup>' #Superscript
+       '>v': '<sub>',
+       'v<': '</sub>', #Subscript
+       '>@': '<span class="mono dark" style="color: ',
+       '@@': ';">',
+       '@<': '</span>' #Highlighter
+       '>`': '<div class="mono dark horz" style="width: 95%;">', 
+       '`<': '</div>', #Code block
+       '>$': '<a href="', 
+       '$$': '">', 
+       '$<': '</a>', #Link
+       '>~': '<s>', 
+       '~<': '</s>' #Strikethrough
+      }
 for key in content:
     title = document.createElement("BUTTON")
     text = document.createTextNode(key)
