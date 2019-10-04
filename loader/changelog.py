@@ -222,7 +222,7 @@ rep = {'\n':'<br>',
        'v<': '</sub>', #Subscript
        '>@': '<span class="mono dark" style="color: ',
        '@@': ';">',
-       '@<': '</span>' #Highlighter
+       '@<': '</span>', #Highlighter
        '>`': '<div class="mono dark horz" style="width: 95%;">', 
        '`<': '</div>', #Code block
        '>$': '<a href="', 
