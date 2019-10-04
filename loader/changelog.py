@@ -1,5 +1,10 @@
 from browser import document
-content = {"10-02-2019":"""\
+content = {"10-03-2019":"""\
+> The >!;]quad!< command should work now...
+> > Should load faster
+> > Shouls give the >*right*< answer...
+""",
+           "10-02-2019":"""\
 > Just realized, the logging features are broken again
 > > All >!;]mng!< features should still be funtional though
 """,
@@ -201,10 +206,14 @@ document.getElementById("labels").innerHTML = '|'.join(list(content))
 element = document.getElementById("changes")
 lists = document.getElementById("tabby")
 rep = {'\n':'<br>',
-       '<code>':'<span class="mono dark">',
-       '</code>':'</span>',
        '>!':'<span class="mono dark">',
-       '!<': '</span>'}
+       '!<': '</span>',
+       '>#': '<b>',
+       '#<': '</b>',
+       '>*': '<i>',
+       '*<': '</i>',
+       '>_': '<u>',
+       '_<': '</u>'}
 for key in content:
     title = document.createElement("BUTTON")
     text = document.createTextNode(key)
