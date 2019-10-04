@@ -13,7 +13,12 @@ rep = {'\n':'<br>',
        '>_': '<u>',
        '_<': '</u>',
        '>`': '<div class="mono dark horz" style="width: 95%;">',
-       '`<': '</div>'}
+       '`<': '</div>',
+       '>$': '<a href="',
+       '$$': '">',
+       '$<': '</a>',
+       '>~': '<s>',
+       '~<': '</s>'}
 for key in content:
     title = document.createElement("DIV")
     text = document.createTextNode(key)
