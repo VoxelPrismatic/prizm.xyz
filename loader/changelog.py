@@ -213,7 +213,9 @@ rep = {'\n':'<br>',
        '>*': '<i>',
        '*<': '</i>',
        '>_': '<u>',
-       '_<': '</u>'}
+       '_<': '</u>',
+       '>`': '<div class="mono dark">',
+       '`<': '</div>'}
 for key in content:
     title = document.createElement("BUTTON")
     text = document.createTextNode(key)
