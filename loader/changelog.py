@@ -214,7 +214,7 @@ rep = {'\n':'<br>',
        '*<': '</i>',
        '>_': '<u>',
        '_<': '</u>',
-       '>`': '<div class="mono dark">',
+       '>`': '<div class="mono dark horz" style="width: 95%;">',
        '`<': '</div>'}
 for key in content:
     title = document.createElement("BUTTON")
