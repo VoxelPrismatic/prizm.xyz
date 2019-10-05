@@ -217,7 +217,7 @@ rep = {'\n':'<br>',
        '>_': '<u>',
        '_<': '</u>', #Underline
        '>^': '<sup>',
-       '^<': '</sup>' #Superscript
+       '^<': '</sup>', #Superscript
        '>v': '<sub>',
        'v<': '</sub>', #Subscript
        '>@': '<span class="mono dark" style="color: ',
