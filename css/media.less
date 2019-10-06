@@ -8,7 +8,37 @@
 @import "base/color";
 @import "base/listen.less";
 @import "class";
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 240px) {
+    /* SMOL */
+    .code {._code(); font-size: 3.2vw;}
+    .header {._header(); .v40();}
+    .content {._content(); font-size: 3.5vw;}
+    .warn {._warn(); .v30();}
+    .foot {._foot(); .v25();}
+    .sect {._sect(); .v25();}
+    .clicky {._clicky(); .v35();}
+    .linky {._linky(); .v35();}
+    .headtitle {._title(); font-size: 20vw;}
+    .full {width: 100vw; height: 50vh;}
+    .full2 {width: 100vw; height: auto;}
+    .tabby_sect {._tabby_content(); ._content(); .v30();}
+    .tabby button {._tabby_button(); .v40();}
+    .grid5, .grid4, .grid3, .grid2 {.grid1();}
+    .tabby {
+        border: 2px solid @blue; ._tabby();
+        .font(); .scroller();
+        .pad(); .textR(); .bordT();
+        .header(); .v40(); .h20vh();
+        width: auto;
+    }
+    .tabby_block {
+        ._tabby_block(); .fullW();
+        .content(); .scroller(); .h50vh();
+        .nordR(); .bordB(); font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width: 360px) and (min-width: 241px) {
     /* SMOL */
     .code {._code(); font-size: 3.1vw;}
     .header {._header(); .v40();}
