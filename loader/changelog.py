@@ -1,5 +1,5 @@
 from browser import document as doc, html
-from loader.priz_md import mark
+from loader import priz_md
 content = {"10-03-2019":"""\
 > The >!;]quad!< command should work now...
 > > Should load faster
@@ -211,6 +211,6 @@ element = doc["changes"]
 lists = doc["tabby"]
 
 for key in content:
-    content[key] = mark(content[key])
+    content[key] = priz_md.mark(content[key])
     lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
     element <= html.DIV(content[key]+"<br>", Class = "tabby_sect", Id = key+"-", style={"display": "none"})
