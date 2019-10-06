@@ -1,4 +1,4 @@
-from browser import document
+from browser import document as doc, html
 content = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
           "UPTIME": """\
 Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. \
@@ -29,7 +29,7 @@ Please keep in mind that I have no idea what I'm actually doing, so bugs will oc
 Actually, it's because I don't know how to web design. I just asked for opinions, and you can always submit \
 your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$this link$< ;]"""}
 
-element = document.getElementById("about")
+element = doc["about"]
 rep = {'\n':'<br>',
        '>!':'<span class="mono dark">',
        '!<': '</span>',
@@ -47,16 +47,7 @@ rep = {'\n':'<br>',
        '>~': '<s>',
        '~<': '</s>'}
 for key in content:
-    title = document.createElement("DIV")
-    text = document.createTextNode(key)
-    title.class_name = "header"
-    title.append(text)
-    element.append(title)
-    stuff = document.createElement("DIV")
-    text = document.createTextNode('~loading~')
-    stuff.class_name = "content consect"
-    stuff.append(text)
     for re in rep:
         content[key] = content[key].replace(re,rep[re])
-    stuff.innerHTML = content[key]
-    element.append(stuff)
+    element <= html.DIV(key, Class="header")
+    element <= html.DIV(content[key], Class="content consect")
