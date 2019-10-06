@@ -29,7 +29,7 @@ Please keep in mind that I have no idea what I'm actually doing, so bugs will oc
           "WHY IS THIS SITE LAGGY?":"""\
 Actually, it's because I don't know how to web design. I just asked for opinions, and you can always submit \
 your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$this link$< ;]""",
-          "WHEN ARE YOU WORKING ON IT":"""\
+          "WHEN ARE YOU WORKING ON IT?":"""\
 Alsmost always... I love working on it. Many changes and bug fixes are made every day"""}
 
 element = doc["about"]
