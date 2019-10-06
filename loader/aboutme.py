@@ -33,6 +33,5 @@ your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$
 element = doc["about"]
 
 for key in content:
-    content[key] = mark(content[key])
     element <= html.DIV(key, Class="header")
-    element <= html.DIV(content[key], Class="content consect")
+    element <= html.DIV(mark(content[key]), Class="content consect")
