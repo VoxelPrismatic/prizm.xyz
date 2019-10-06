@@ -1,5 +1,5 @@
 from browser import document as doc, html
-from priz_md import mark
+from loader.priz_md import mark
 content = {"10-03-2019":"""\
 > The >!;]quad!< command should work now...
 > > Should load faster
