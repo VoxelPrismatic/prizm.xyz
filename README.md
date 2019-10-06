@@ -1,5 +1,5 @@
 # PRIZM.xyz
-The web page for the Discord bot, [PRIZM ;]](https://voxelprismatic.github.io/prizm.xyz)
+The web page for the Discord bot, [PRIZM ;\]](https://voxelprismatic.github.io/prizm.xyz)
 
 Why not use the [main repo](https://github.com/voxelprismatic/prizm)?
 
