@@ -10,7 +10,7 @@ for (var i = 0; i < tap.length; i++) {
             } else {
                 this.classList.toggle("select");
                 if (this.classList.toggle("active"))
-                    this.nextElementSibling.style.height = `${this.nextElementSibling.scrollHeight + 5}px`
+                    this.nextElementSibling.style.height = `${this.nextElementSibling.scrollHeight + 10}px`
                 else
                     this.nextElementSibling.style.height = "0px";
             }
