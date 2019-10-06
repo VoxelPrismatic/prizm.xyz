@@ -1,5 +1,5 @@
 from browser import document as doc, html
-from loader.priz_md import mark
+from loader import priz_md
 content = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
           "UPTIME": """\
 Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. \
@@ -33,6 +33,6 @@ your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$
 element = doc["about"]
 
 for key in content:
-    content[key] = mark(content[key])
+    content[key] = priz_md.mark(content[key])
     element <= html.DIV(key, Class="header")
     element <= html.DIV(content[key], Class="content consect")
