@@ -9,12 +9,12 @@ and I am not there to turn it back on UwU""",
           "WHAT IT RUNS ON": """\
 This bot runs on a laptop about 5 years old, an HP ProBook. \
 I love it greatly, and it sacrificed its OS and time just to run this bot. \
-It actually runs pretty well for 8GB of RAM, 2GB of SWAP [Virtual Ram], and a 2.5GHz processor \
-[it's stable at 2.9GHz which is very surprising for a laptop of any sort]""",
+It actually runs pretty well for 8GB of RAM, 2GB of SWAP [Virtual Ram], a 2.5GHz processor, and no dedicated GPU\
+[it's stable at 2.9GHz which is very surprising for a 5 year old laptop in general]""",
           "ASCIIMOJI AND CUSTOM EMOJI": """\
 I made all of these by myself, fyi 
-Too find many cool faces that the bot uses, please visit this <a href="https://discord.gg/NHqbnyc">link</a> ;]
-If you have Discord Nitro and want to use the sick emoji this bot comes with, please visit the \
+Too find many cool faces that the bot uses, please visit this >$https://discord.gg/NHqbnyc$$link$< ;]
+If you have Discord Nitro and want to use the sick ASCIImoji this bot comes with, please visit the \
 >$https://discord.gg/eYMyfcd$$emoji server ;]$<""",
           "WTF IS THAT LOGO?":"""\
 That logo is something that I made quite a while ago, except that version was much worse. \
@@ -28,7 +28,9 @@ I'm confused and don't know what to do, but this seems cool, so I'll continue do
 Please keep in mind that I have no idea what I'm actually doing, so bugs will occur.""",
           "WHY IS THIS SITE LAGGY?":"""\
 Actually, it's because I don't know how to web design. I just asked for opinions, and you can always submit \
-your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$this link$< ;]"""}
+your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$this link$< ;]""",
+          "WHEN ARE YOU WORKING ON IT":"""\
+Alsmost always... I love working on it. Many changes and bug fixes are made every day"""}
 
 element = doc["about"]
 
