@@ -1,4 +1,5 @@
 from browser import document as doc, html
+from priz_md import mark
 content = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
           "UPTIME": """\
 Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. \
@@ -30,24 +31,8 @@ Actually, it's because I don't know how to web design. I just asked for opinions
 your feedback over at >$https://github.com/VoxelPrismatic/prizm.xyz/issues/new$$this link$< ;]"""}
 
 element = doc["about"]
-rep = {'\n':'<br>',
-       '>!':'<span class="mono dark">',
-       '!<': '</span>',
-       '>#': '<b>',
-       '#<': '</b>',
-       '>*': '<i>',
-       '*<': '</i>',
-       '>_': '<u>',
-       '_<': '</u>',
-       '>`': '<div class="mono dark horz" style="width: 95%;">',
-       '`<': '</div>',
-       '>$': '<a href="',
-       '$$': '">',
-       '$<': '</a>',
-       '>~': '<s>',
-       '~<': '</s>'}
+
 for key in content:
-    for re in rep:
-        content[key] = content[key].replace(re,rep[re])
+    content[key] = mark(content[key])
     element <= html.DIV(key, Class="header")
     element <= html.DIV(content[key], Class="content consect")
