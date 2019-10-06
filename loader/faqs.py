@@ -1,8 +1,8 @@
-from browser import document
+from browser import document as doc, html
 
 content = {"OwO WHAT IS THIS?": "This is an empty FAQ because nobody asked any questions yet UwU"}
 
-element = document.getElementById("faq")
+element = doc["faq"]
 rep = {'\n':'<br>',
        '>!':'<span class="mono dark">',
        '!<': '</span>',
@@ -20,16 +20,7 @@ rep = {'\n':'<br>',
        '>~': '<s>',
        '~<': '</s>'}
 for key in content:
-    title = document.createElement("DIV")
-    text = document.createTextNode(key)
-    title.class_name = "header"
-    title.append(text)
-    element.append(title)
-    stuff = document.createElement("DIV")
-    text = document.createTextNode('~loading~')
-    stuff.class_name = "content consect"
-    stuff.append(text)
     for re in rep:
         content[key] = content[key].replace(re,rep[re])
-    stuff.innerHTML = content[key]
-    element.append(stuff)
+    element <= html.DIV(key, Class="header")
+    element <= html.DIV(content[key], Class="content consect")
