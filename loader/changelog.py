@@ -235,4 +235,4 @@ for key in content:
     for re in rep:
         content[key] = content[key].replace(re,rep[re])
     lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
-    element <= html.DIV(content[key]+"<br><br>", Class = "tabby_sect", Id = key+"-", style={"display": "none"})
+    element <= html.DIV(content[key]+"<br>", Class = "tabby_sect", Id = key+"-", style={"display": "none"})
