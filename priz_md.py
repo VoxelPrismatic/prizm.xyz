@@ -1,5 +1,10 @@
 from browser import document as doc
-md = {'>~': '<s>',
+md = {'\n': '<br>',
+      '\t': '    ',
+      ' ': ' \u200b',
+      # ^Extras
+      
+      '>~': '<s>',
       '~<': '</s>',
       # ^Strike through
       
@@ -65,11 +70,6 @@ md = {'>~': '<s>',
       '??': '">',
       '?<': '</div>',
       # ^Header
-      
-      '\n': '<br>',
-      '\t': '    ',
-      ' ': ' \u200b',
-      # ^Extras
 }
 
 def mark(st: str):
