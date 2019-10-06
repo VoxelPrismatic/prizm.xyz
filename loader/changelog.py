@@ -1,4 +1,5 @@
 from browser import document as doc, html
+from priz_md import mark
 content = {"10-03-2019":"""\
 > The >!;]quad!< command should work now...
 > > Should load faster
@@ -208,31 +209,8 @@ content = {"10-03-2019":"""\
 doc["labels"].innerHTML = '|'.join(list(content))
 element = doc["changes"]
 lists = doc["tabby"]
-rep = {'\n':'<br>',
-       '>!':'<span class="mono dark">', '!<': '</span>', #Monospace
-       '>#': '<b>', 
-       '#<': '</b>', #Bold
-       '>*': '<i>', 
-       '*<': '</i>', #Italic
-       '>_': '<u>',
-       '_<': '</u>', #Underline
-       '>^': '<sup>',
-       '^<': '</sup>', #Superscript
-       '>v': '<sub>',
-       'v<': '</sub>', #Subscript
-       '>@': '<span class="mono dark" style="color: ',
-       '@@': ';">',
-       '@<': '</span>', #Highlighter
-       '>`': '<div class="mono dark horz" style="width: 95%;">', 
-       '`<': '</div>', #Code block
-       '>$': '<a href="', 
-       '$$': '">', 
-       '$<': '</a>', #Link
-       '>~': '<s>', 
-       '~<': '</s>' #Strikethrough
-      }
+
 for key in content:
-    for re in rep:
-        content[key] = content[key].replace(re,rep[re])
+    content[key] = mark(content[key])
     lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
     element <= html.DIV(content[key]+"<br>", Class = "tabby_sect", Id = key+"-", style={"display": "none"})
