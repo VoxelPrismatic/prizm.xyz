@@ -58,7 +58,7 @@ md = {'>~': '<s>',
       '`<': '</div>',
       # ^Code block
       
-      '>/<': '<div class="mdline">---</div>",
+      '>/<': '<div class="mdline">---</div>',
       # ^Seperator line
       
       '>?': '<div class="head',
