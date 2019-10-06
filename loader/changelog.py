@@ -1,4 +1,4 @@
-from browser import document
+from browser import document as doc, html
 content = {"10-03-2019":"""\
 > The >!;]quad!< command should work now...
 > > Should load faster
@@ -205,9 +205,9 @@ content = {"10-03-2019":"""\
 > Added a paginator
 """}
 
-document.getElementById("labels").innerHTML = '|'.join(list(content))
-element = document.getElementById("changes")
-lists = document.getElementById("tabby")
+doc["labels"].innerHTML = '|'.join(list(content))
+element = doc["changes"]
+lists = doc["tabby"]
 rep = {'\n':'<br>',
        '>!':'<span class="mono dark">', '!<': '</span>', #Monospace
        '>#': '<b>', 
@@ -232,19 +232,7 @@ rep = {'\n':'<br>',
        '~<': '</s>' #Strikethrough
       }
 for key in content:
-    title = document.createElement("BUTTON")
-    text = document.createTextNode(key)
-    title.class_name = "tabby_link"
-    title.append(text)
-    title.id = key
-    lists.append(title)
-    stuff = document.createElement("DIV")
-    text = document.createTextNode('~loading~')
-    stuff.class_name = "tabby_sect"
-    stuff.style.display = "none"
-    stuff.append(text)
-    stuff.id = key+"-"
     for re in rep:
         content[key] = content[key].replace(re,rep[re])
-    stuff.innerHTML = content[key]
-    element.append(stuff)
+    lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
+    element <= html.DIV(content[key], Class = "tabby_sect", Id = key+"-", style={"display": "none"})
