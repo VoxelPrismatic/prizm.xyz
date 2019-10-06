@@ -6,10 +6,13 @@
 @import "base/text_align";
 @import "base/grid_cells";
 @import "base/color";
-@import "base/listen.less";
+@import "base/listen";
 @import "class";
+@import "md/mdtext";
+@import "md/mdelem";
+@import "md/mdcolor";
 @media only screen and (max-width: 240px) {
-    /* SMOL */
+    /* SPH-M580 */
     .code {._code(); font-size: 3.2vw;}
     .header {._header(); .v40();}
     .content {._content(); font-size: 3.5vw;}
@@ -125,7 +128,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    /* DESKTOP */
+    /* PC */
     .code {._code(); .v15();}
     .header {._header(); .v15();}
     .content {._content(); font-size: 1.3vw;}
