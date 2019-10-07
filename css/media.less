@@ -127,15 +127,15 @@
                   .content(); .scroller();}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
     /* PC */
-    .code {._code(); .v15();}
+    .code {._code(); .v15(); .w60vw();}
     .header {._header(); .v15();}
     .content {._content(); font-size: 1.3vw;}
     .warn {._warn(); .v15();}
     .foot {._foot(); .v10();}
-    .sect {._sect(); .v15();}
-    .clicky {._clicky(); .v20();}
+    .sect {._sect(); .v15(); .w60vw();}
+    .clicky {._clicky(); .v20(); .w60vw();}
     .linky {._linky(); .v20();}
     .headtitle {._title(); font-size: 20vw;}
     .full {width: 100vw; height: 100vh;}
@@ -148,6 +148,30 @@
         .pad(); .bordL(); .textR(); .floatR();
         .header(); font-size: 1.3vw;
     }
-    .tabby_block {._tabby_block(); width: 65vw;
+    .tabby_block {._tabby_block(); width: 45vw;
+                  .content(); .scroller();}
+}
+@media only screen and (min-width: 1281px) {
+    /* PC */
+    .code {._code(); .v15(); .w50vw();}
+    .header {._header(); .v15();}
+    .content {._content(); font-size: 1.3vw;}
+    .warn {._warn(); .v15();}
+    .foot {._foot(); .v10();}
+    .sect {._sect(); .v15(); .w50vw();}
+    .clicky {._clicky(); .v20(); .w50vw();}
+    .linky {._linky(); .v20();}
+    .headtitle {._title(); font-size: 20vw;}
+    .full {width: 100vw; height: 100vh;}
+    .full2 {width: 100vw; height: auto;}
+    .tabby_sect {._tabby_content(); ._content(); font-size: 1.3vw;}
+    .tabby button {._tabby_button(); .v15();}
+    .tabby {
+        border: 2px solid @blue; ._tabby();
+        .font(); .scroller();
+        .pad(); .bordL(); .textR(); .floatR();
+        .header(); font-size: 1.3vw;
+    }
+    .tabby_block {._tabby_block(); width: 35vw;
                   .content(); .scroller();}
 }
