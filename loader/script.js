@@ -4,17 +4,16 @@ for (var i = 0; i < tap.length; i++) {
         var taq = document.getElementsByClassName("clicky");
         for (var i = 0; i < taq.length; i++) {
             if (taq[i].id != this.id) {
-                taq[i].classList = taq[i].className.replace(" select", "");
-                taq[i].classList = taq[i].className.replace(" active", "");
+                taq[i].classList = taq[i].className.replace(/ (active|select)/, "");
                 taq[i].nextElementSibling.style.height = "0px";
-            } else {
-                this.classList.toggle("select");
-                if (this.classList.toggle("active"))
-                    this.nextElementSibling.style.height = `${this.nextElementSibling.scrollHeight + 10}px`
-                else
-                    this.nextElementSibling.style.height = "0px";
             }
         }
+        var nxt = this.nextElementSibling;
+        this.classList.toggle("select");
+        if (this.classList.toggle("active"))
+            nxt.style.height = `${nxt.scrollHeight + 10}px`
+        else
+            nxt.style.height = "0px";
     }
 }
 var parallax = document.body.style;
