@@ -1,6 +1,7 @@
 var tap = document.getElementsByClassName("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].onclick = function() {
+        console.log("Window size [at time of log] ] "+window.innerWidth+"x"+window.innerHeight);
         var taq = document.getElementsByClassName("clicky");
         for (var i = 0; i < taq.length; i++) {
             if (taq[i].id != this.id) {
@@ -36,5 +37,4 @@ function chng() {
         }
     }
 }
-console.log("Window size [at time of log] ] "+window.innerWidth+"x"+window.innerHeight);
 window.setTimeout(chng, 2000);
