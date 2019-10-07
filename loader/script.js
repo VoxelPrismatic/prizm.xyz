@@ -4,7 +4,7 @@ for (var i = 0; i < tap.length; i++) {
         var taq = document.getElementsByClassName("clicky");
         for (var i = 0; i < taq.length; i++) {
             if (taq[i].id != this.id) {
-                taq[i].classList = taq[i].className.replace(/ (active|select)/, "");
+                taq[i].classList = taq[i].className.replace(/ (active|select)/g, "");
                 taq[i].nextElementSibling.style.height = "0px";
             }
         }
