@@ -36,4 +36,5 @@ function chng() {
         }
     }
 }
+console.log("Window size [at time of log] ] "+window.innerWidth+"x"+window.innerHeight);
 window.setTimeout(chng, 2000);
