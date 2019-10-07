@@ -23,7 +23,7 @@ a {.blue();}
 ._header {
     .white(); .pad(); .textL();
     .font();  .v20();
-    weight: 600;
+    font-weight: bold;
 }
 ._content {
     .pad();   .hard(); .textL();
@@ -36,7 +36,7 @@ a {.blue();}
     .v15();  .w80vw();
     .no_over();
     height: 0;
-    transition: height 1s ease;
+    transition: all .5s ease;
     background-color: #00666644;
 }
 ._clicky {
@@ -45,16 +45,16 @@ a {.blue();}
     .nohover(); .v20();   .w80vw();
     .point();   .no_over();
     position: relative;
-    -webkit-transition-duration: 1s; /* Safari */
-    transition-duration: 1s;
-    font-weight: 600;
+    -webkit-transition: all .5s ease; /* Safari */
+    transition: all .5s ease;
+    font-weight: bold;
     background-color: #00888866;
     outline: none;
 }
 ._tabby {
     .floatL(); .pad();
     background-color: #223333ee;
-    transition: 1s;
+    transition: .5s;
     width: auto;
 }
 
@@ -65,7 +65,7 @@ a {.blue();}
     .v20();  .font();  .point();
     background-color: #33444488;
     .round();
-    transition: 1s;
+    transition: .5s ease;
 }
 ._tabby_block {
     .pad();    .hover(); .font();
@@ -74,7 +74,7 @@ a {.blue();}
     ._content();
     .scroller(); .floatL();
     background-color: #00ffff44;
-    transition: 1s;
+    transition: all .5s ease;
 }
 ._tabby_buttonhover {
     .hover();
@@ -85,6 +85,7 @@ a {.blue();}
 .tabby_link {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 ._tabby_content {
     .floatL(); .pad(); .hover();
@@ -94,10 +95,12 @@ a {.blue();}
 }
 ._linky {
     ._clicky(); .round(); .fullW();
+    font-weight: bold;
 }
 ._title {
     .white(); .hard(); .textC();
     font-size: 13vw;
+    font-weight: bold;
 }
 ._foot {
     .white(); .hard(); .pad();
@@ -119,7 +122,7 @@ a {.blue();}
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 1s;
+    transition: all .5s ease;
 }
 .btn_activeafter {
     padding: 0;
