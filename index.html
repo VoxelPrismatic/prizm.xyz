@@ -32,6 +32,13 @@
             }
         </style>
         <link rel="stylesheet/less" type="text/css" href="css/media.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/md/mdall.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/base/elem_size.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/base/font_size.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/base/basics.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/base/text_align.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/base/color.less"/>
+        <link rel="stylesheet/less" type="text/css" href="css/base/grid_cells.less"/>
         <!-- SCRIPTS -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.3/brython.min.js"></script>
@@ -39,9 +46,11 @@
         <title>PRIZM ;]</title>
     </head>
     <body class="parallax" onload="brython()">
-        <!------------------>
+        <!-- DATA -->
+        <script type="text/python" src="loader/changelog.py" async></script>
+        <script type="text/python" src="loader/faqs.py" async></script>
+        <script type="text/python" src="loader/aboutme.py" async></script>
         <!-- COVER SCREEN -->
-        <!------------------>
         <div class="headtitle vert full textC">
             PRIZM ;]
             <div class="f25">
@@ -189,9 +198,6 @@
         <div class="sep">---</div>
         <div id="labels" style="display: none"></div>
         <!-- OTHER SCRIPTS -->
-        <script type="text/python" src="loader/changelog.py" async></script>
-        <script type="text/python" src="loader/faqs.py" async></script>
-        <script type="text/python" src="loader/aboutme.py" async></script>
         <script type="text/javascript" src="loader/script.js" defer></script>
     </body>
 </html>
