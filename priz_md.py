@@ -70,6 +70,10 @@ md = {'\n': '<br>',
       '??': '">',
       '?<': '</div>',
       # ^Header
+      
+      '>=': '<span class="spoil">',
+      '=<': '</span>',
+      # ^Spoiler
 }
 
 def mark(st: str):
