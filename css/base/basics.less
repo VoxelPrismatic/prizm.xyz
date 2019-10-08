@@ -32,10 +32,14 @@
 .no_over {overflow: hidden;}
 .point {cursor: pointer;}
 .blur {
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);  
+    -webkit-backdrop-filter: blur(2px); // Old Safari
+    -o-backdrop-filter: blur(2px);      // Old Opera
+    -moz-backdrop-filter: blur(2px);    // Old Firefox
+    backdrop-filter: blur(2px);         // Modern Browsers
 }
 .trn {
-    -webkit-transition: all .5s ease; /* Safari */
-    transition: all .5s ease;
+    -webkit-transition: all .5s ease; // Old Safari
+    -o-transition: all .5s ease;      // Old Opera
+    -moz-transition: all .5 ease;     // Old Firefox
+    transition: all .5s ease;         // Modern Browsers
 }
