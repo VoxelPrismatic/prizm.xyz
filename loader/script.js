@@ -19,7 +19,7 @@ for (var i = 0; i < tap.length; i++) {
 var parallax = document.body.style;
 window.onscroll = function() {
     parallax.backgroundPosition = 
-        `center ${(window.pageYOffset || document.body.scrollTop)/2.5}px`;
+        `center ${window.pageYOffset/4.0}px`;
 }
 function chng() {
     var tab = document.getElementById("labels").innerHTML.split('|');
