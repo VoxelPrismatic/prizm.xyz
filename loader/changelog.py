@@ -4,8 +4,8 @@ content = {"10/08/2019":"""\
 > The >!;]graph!< command has new features
 > > Adding >!--zero!< to the end of the equation now shows the true zeros
 > > Adding >!--yint!< to the end will show the y-intercept
-> > >!--max!<, >!--min!<, >!--zero!<, >!--yint!< will be shown next to the equation
-- - in the legend, and everything else should work as normal...
+> > >!--max!<, >!--min!<, >!--zero!<, >!--yint!< will be shown next to the equation in the legend, \
+and everything else should work as normal...
 >#Please use the >!;]bug!< command if you experience any issues#<
 """,
            "10/03/2019":"""\
