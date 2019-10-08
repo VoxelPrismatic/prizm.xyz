@@ -33,9 +33,8 @@ a {.blue();}
     .horz();   .pad();  .hard();
     .white();  .textC(); .bordB();
     .v15();  .w80vw(); .blur();
-    .no_over();
+    .no_over(); .trn();
     height: 0;
-    transition: all .5s ease;
     background-color: #00666644;
     outline: none;
 }
@@ -44,17 +43,15 @@ a {.blue();}
     .textC();   .font();  .bordT();
     .nohover(); .v20();   .w80vw();
     .point();   .no_over(); .blur();
-    -webkit-transition: all .5s ease; /* Safari */
-    transition: all .5s ease;
+    .trn();
+    position: relative;
     font-weight: bold;
     background-color: #00888866;
     outline: none;
 }
 ._tabby {
-    .floatL(); .pad();
+    .floatL(); .pad(); .trn(); .wAUTO();
     background-color: #223333ee;
-    transition: .5s;
-    width: auto;
 }
 
 /* Style the buttons inside the tab */
@@ -62,19 +59,16 @@ a {.blue();}
     .hard(); .round(); .white();
     .pad();  .fullW(); .textC();
     .v20();  .font();  .point();
-    .blur();
+    .blur(); .trn(); .round();
     background-color: #33444488;
-    .round();
-    transition: .5s ease;
 }
 ._tabby_block {
     .pad();    .hover(); .font();
     .floatR(); .textL(); .bordR();
     .box();    .hard();  .w60vw();
-    ._content(); .blur();
+    ._content(); .blur(); .trn();
     .scroller(); .floatL();
     background-color: #00ffff44;
-    transition: all .5s ease;
 }
 ._tabby_buttonhover {
     .hover();
@@ -115,14 +109,13 @@ a {.blue();}
 }
 .btn_after {
     background-color: #88ffffff;
-    .block();
+    .block(); .trn();
     position: absolute;
     padding-top: 300%;
     padding-left: 350%;
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all .5s ease;
 }
 .btn_activeafter {
     padding: 0;
