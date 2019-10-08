@@ -1,6 +1,6 @@
 from browser import document as doc, html
 from priz_md import mark
-content = {"10/08/2019":"""\
+content = {"10x08_2019":"""\
 > The >!;]graph!< command has new features
 > > Adding >!--zero!< to the end of the equation now shows the true zeros
 > > Adding >!--yint!< to the end will show the y-intercept
@@ -8,7 +8,7 @@ content = {"10/08/2019":"""\
 and everything else should work as normal...
 >#Please use the >!;]bug!< command if you experience any issues#<
 """,
-           "10/03/2019":"""\
+           "10x03_2019":"""\
 > The >!;]quad!< command should work now...
 > > Should load faster
 > > Shouls give the >*right*< answer...
@@ -16,16 +16,16 @@ and everything else should work as normal...
 > Logging now >#should#< work
 > > Logging works on my own server, so...
 """,
-           "10/02/2019":"""\
+           "10x02_2019":"""\
 > Just realized, the logging features are broken again
 > > All >!;]mng!< features should still be funtional though
 """,
-           "10/01/2019":"""\
+           "10x01_2019":"""\
 > The >!;]graph!< command now actually works [mostly]
 > > Fixed >!--max!< and >!--min!< to not show up with >![nan, nan]!<
 > > Fixed >!--zero!< to actually show some zeros, except not the correct ones...
 """,
-           "09/29/2019":"""\
+           "09x29_2019":"""\
 > The >!;]graph!< command now has been refreshed
 > > The new syntax ] >!;]graph {?window} {eq1} | {eq2} | {eq3} | {eqX}!<
 > > Adding >!--max!< to the end of the equation should give you the maximum coordinates shown
@@ -42,7 +42,7 @@ and everything else should work as normal...
 
 > The >!;]calc!< command now actually loads on startup
 """,
-           "09/23/2019":"""\
+           "09x23_2019":"""\
 > The >!;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
 > > >!;]graph x!< - ymin, ymax, xmin, xmax = -10, 10, -10, 10
 > > >!;]graph -3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 10
@@ -50,19 +50,19 @@ and everything else should work as normal...
 > > >!;]graph -3 3 -5 x!< - ymin, ymax, xmin, xmax = -5, 10, -3, 3
 > > >!;]graph -3 3 -5 5 x!< - ymin, ymax, xmin, xmax = -5, 5, -3, 3
 """,
-           "09/22/2019":"""\
+           "09x22_2019":"""\
 > Logging now actually works
 
 > You can now create, edit, delete, and view tags with no issues
 
 > All >!;]mng!< features now work
 """,
-           "09/16/2019":"""\
+           "09x16_2019":"""\
 > Fixed the >!;]mng!< command
 > > The logging section now actually loads
 > > The moderator section now doesn't throw an error
 """,
-           "09/15/2019":"""\
+           "09x15_2019":"""\
 > Switched the database from >!JSON!< to >!SQLITE3!<
 
 > > This is a pretty big change, please submit any and all bugs via the >!;]bug!< command or via DMs
@@ -75,7 +75,7 @@ and everything else should work as normal...
 
 > Fixed several bugs
 """,
-           "09/12/2019":"""\
+           "09x12_2019":"""\
 > Added a public exec command
 > > Fixed a bug where newlines wouldn't actually go through
 > > I heard about some issues with encoding but I can't verify that rn
@@ -96,7 +96,7 @@ and everything else should work as normal...
 > > Shouldn't break with >!x=...!< or >!y=...!<
 """,
            
-           "09/09/2019":"""\
+           "09x09_2019":"""\
 > Added the simplify command
 
 > Added more features to that command
@@ -109,7 +109,7 @@ and everything else should work as normal...
 > > Why did it take so long? I was trying to prevent injection, and I'm fairly certain I succeeded
 """,
            
-           "08/26/2019":"""\
+           "08x26_2019":"""\
 > Cleaned up files and code to make it more readable
 
 > Added help text for the clrin command
@@ -122,7 +122,7 @@ and everything else should work as normal...
 > > Support for xy functions [>!x^2+y^2=4!<] has not been added yet, I'm working on it tho
 """,
            
-           "08/22/2019":"""\
+           "08x22_2019":"""\
 > Added an actually decent AI [>!;]text hello!<]
 
 > Fixed a bug where "no" would register as a bool and break it 
@@ -158,7 +158,7 @@ and everything else should work as normal...
 > Fixed bugs and things
 """,
            
-           "08/20/2019":"""\
+           "08x20_2019":"""\
 > Added the >!;]reddit!< command
 > > Fixed some bugs with that
 
@@ -167,7 +167,7 @@ and everything else should work as normal...
 > Added the >!;]8ball!< command
 """,
            
-           "08/19/2019":"""\
+           "08x19_2019":"""\
 > Fixed the >!;]2048!< command
 > > Now groups properly when not moving right
 > > Now doesn't break when there are multiple instances
@@ -175,7 +175,7 @@ and everything else should work as normal...
 > > Now ends the game properly, whereas before it would end if it couldn't add any new tiles
 """,
            
-           "08/18/2019":"""\
+           "08x18_2019":"""\
 > Added 2048
 > > Fixed some bugs
 > > Added to the help command
@@ -187,7 +187,7 @@ and everything else should work as normal...
 > Added this site link to the inv command
 """,
            
-           "08/13/2019":"""\
+           "08x13_2019":"""\
 > Updated the help command to be automatic documentation
 
 > Updated the help command so you can now do >!;]help {command name}!<
@@ -195,11 +195,11 @@ and everything else should work as normal...
 > Added new interactive commands [cuddle, kiss, throw]
 
 > Added music capabilities""",
-           "0x0000":"""\
+           "00x00_0000":"""\
 > This bit here was lost in time...
 > > Rest assured, the bot was being developed :D
 """,
-           "06/26/2019":"""\
+           "06x26_2019":"""\
 > Added the >!embedify!< utility
 
 > Moved module loading to a seperate file
