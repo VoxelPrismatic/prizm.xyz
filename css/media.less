@@ -22,321 +22,245 @@ a {
 .tabby_sect {
     visibility: hidden;
 }
-
-@media only screen and (max-width: 240px) {
-    /* SPH-M580 */
-    .WIDTH {.w90vw();}
-    .code {
-        ._code(); font-size: 3.2vw; .WIDTH();
-    }
-    .header {
-        ._header(); .v40();
-    }
-    .content {
-        ._content(); font-size: 3.5vw;
-    }
-    .warn {
-        ._warn(); .v30();
-    }
-    .foot {
-        ._foot(); .v25();
-    }
-    .sect {
-        ._sect(); .v25();
-    }
-    .clicky {
-        ._clicky(); .v35();
-    }
-    .linky {
-        ._linky(); .v35();
-    }
-    .headtitle {
-        ._title(); .v20();
-    }
-    .full {
-        width: 100vw; height: 50vh;
-    }
-    .full2 {
-        width: 100vw; height: auto;
-    }
-    .tabby button {
-        ._tabby_button(); .v40();
-    }
-    .grid5, .grid4, .grid3, .grid2 {
-        .grid1();
-    }
-    .tabby {
-        border: 2px solid @blue; ._tabby();
-        .font(); .scroller();
-        .pad(); .textR(); .bordT();
-        .header(); .v40(); .h20vh();
-        width: auto;
-    }
-    .tabby_block {
-        ._tabby_block(); .fullW();
-        .content(); .scroller(); .h50vh();
-        .nordR(); .bordB(); font-size: 3.5vw;
-    }
-    .contact {.WIDTH();}
+/* SPH-M580 */
+.WIDTH {
+    .w90vw();
+} .code {
+    ._code(); font-size: 3.2vw; .WIDTH();
+} .header {
+    ._header(); .v40();
+} .content {
+    ._content(); font-size: 3.5vw;
+} .warn {
+    ._warn(); .v30();
+} .foot {
+    ._foot(); .v25();
+} .sect {
+    ._sect(); .v25();
+} .clicky {
+    ._clicky(); .v35();
+} .linky {
+    ._linky(); .v35();
+} .headtitle {
+    ._title(); .v20();
+} .full {
+    width: 100vw; height: 50vh;
+} .full2 {
+    width: 100vw; height: auto;
+} .tabby button {
+    ._tabby_button(); .v40();
+} .grid5, .grid4, .grid3, .grid2 {
+    .grid1();
+} .tabby {
+    border: 2px solid @blue; ._tabby();
+    .font(); .scroller(); .wAUTO();
+    .pad(); .textR(); .bordT();
+    .header(); .v40(); .h20vh()
+} .tabby_block {
+    ._tabby_block(); .fullW();
+    .content(); .scroller(); .h50vh();
+    .nordR(); .bordB(); font-size: 3.5vw;
+} .contact {
+    .WIDTH();
 }
 
 @media only screen and (max-width: 360px) and (min-width: 241px) {
     /* SMOL */
-    .WIDTH {.w90vw();}
-    .code {
+    .WIDTH {
+        .w90vw();
+    } .code {
         ._code(); font-size: 3.2vw; .WIDTH();
-    }
-    .header {
+    } .header {
         ._header(); .v40();
-    }
-    .content {
+    } .content {
         ._content(); font-size: 3.5vw;
-    }
-    .warn {
+    } .warn {
         ._warn(); .v30();
-    }
-    .foot {
+    } .foot {
         ._foot(); .v25();
-    }
-    .sect {
+    } .sect {
         ._sect(); .v25();
-    }
-    .clicky {
+    } .clicky {
         ._clicky(); .v35();
-    }
-    .linky {
+    } .linky {
         ._linky(); .v35();
-    }
-    .headtitle {
+    } .headtitle {
         ._title(); .v20();
-    }
-    .full {
+    } .full {
         width: 100vw; height: 50vh;
-    }
-    .full2 {
+    } .full2 {
         width: 100vw; height: auto;
-    }
-    .tabby button {
+    } .tabby button {
         ._tabby_button(); .v40();
-    }
-    .grid5, .grid4, .grid3, .grid2 {
+    } .grid5, .grid4, .grid3, .grid2 {
         .grid1();
-    }
-    .tabby {
+    } .tabby {
         border: 2px solid @blue; ._tabby();
         .font(); .scroller();
         .pad(); .textR(); .bordT();
         .header(); .v40(); .h20vh();
         width: auto;
-    }
-    .tabby_block {
+    } .tabby_block {
         ._tabby_block(); .fullW();
         .content(); .scroller(); .h50vh();
         .nordR(); .bordB(); font-size: 3.5vw;
+    } .contact {
+        .WIDTH();
     }
-    .contact {.WIDTH();}
 }
 
 @media only screen and (max-width: 640px) and (min-width: 361px) {
     /* PHONE */
-    .WIDTH {.w90vw();}
-    .code {
+    .WIDTH {
+        .w90vw();
+    } .code {
         ._code(); font-size: 3.2vw; .WIDTH();
-    }
-    .header {
+    } .header {
         ._header(); .v30();
-    }
-    .content {
+    } .content {
         ._content(); font-size: 2.5vw;
-    }
-    .warn {
+    } .warn {
         ._warn(); .v20();
-    }
-    .foot {
+    } .foot {
         ._foot(); .v15();
-    }
-    .sect {
+    } .sect {
         ._sect(); .v15();
-    }
-    .clicky {
+    } .clicky {
         ._clicky(); .v25();
-    }
-    .linky {
+    } .linky {
         ._linky(); .v25();
-    }
-    .headtitle {
+    } .headtitle {
         ._title(); .v10();
-    }
-    .full {
+    } .full {
         width: 100vw; height: 50vh;
-    }
-    .full2 {
+    } .full2 {
         width: 100vw; height: auto;
-    }
-    .tabby button {
+    } .tabby button {
         ._tabby_button(); .v30();
-    }
-    .grid5, .grid4, .grid3, .grid2 {
+    } .grid5, .grid4, .grid3, .grid2 {
         .grid1();
-    }
-    .tabby {
+    } .tabby {
         border: 2px solid @blue; ._tabby();
-        .font(); .scroller();
+        .font(); .scroller(); .wAUTO();
         .pad(); .textR(); .bordT();
         .header(); .v30(); .h20vh();
-        width: auto;
-    }
-    .tabby_block {
+    } .tabby_block {
         ._tabby_block(); .fullW();
         .content(); .scroller(); .h50vh();
         .nordR(); .bordB(); font-size: 2.5vw;
-    }
-    .contact {.WIDTH();}
+    } .contact {.WIDTH();}
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 641px) {
     /* TABLET */
-    .WIDTH {.w80vw();}
-    .code {
+    .WIDTH {
+        .w80vw();
+    } .code {
         ._code(); .v15(); .WIDTH();
-    }
-    .header {
+    } .header {
         ._header(); .v15();
-    }
-    .content {
+    } .content {
         ._content(); font-size: 1.3vw;
-    }
-    .warn {
+    } .warn {
         ._warn(); .v15(); .WIDTH();
-    }
-    .foot {
+    } .foot {
         ._foot(); .v10();
-    }
-    .sect {
+    } .sect {
         ._sect(); .v15(); .WIDTH();
-    }
-    .clicky {
+    } .clicky {
         ._clicky(); .v20(); .WIDTH();
-    }
-    .linky {
+    } .linky {
         ._linky(); .v20();
-    }
-    .headtitle {
+    } .headtitle {
         ._title(); font-size: 20vw;
-    }
-    .full {
+    } .full {
         width: 100vw; height: 100vh;
-    }
-    .full2 {
+    } .full2 {
         width: 100vw; height: 100vh;
-    }
-    .tabby button {
+    } .tabby button {
         ._tabby_button(); .v15();
-    }
-    .tabby {
+    } .tabby {
         border: 2px solid @blue; ._tabby();
         .font(); .scroller(); .wAUTO();
         .pad(); .bordL(); .textR(); .floatR();
         .header(); font-size: 1.3vw;
-    }
-    .tabby_block {
+    } .tabby_block {
         ._tabby_block(); width: 60vw;
         .content(); .scroller();
+    } .contact {
+        .WIDTH();
     }
-    .contact {.WIDTH();}
 }
 
 @media only screen and (max-width: 1280px) and (min-width: 1025px) {
     /* PC */
-    .WIDTH {.w60vw();}
-    .code {
+    .WIDTH {
+        .w60vw();
+    } .code {
         ._code(); .v15(); .WIDTH();
-    }
-    .header {
+    } .header {
         ._header(); .v15();
-    }
-    .content {
+    } .content {
         ._content(); font-size: 1.3vw;
-    }
-    .warn {
+    } .warn {
         ._warn(); .v15(); .WIDTH();
-    }
-    .foot {
+    } .foot {
         ._foot(); .v10();
-    }
-    .sect {
+    } .sect {
         ._sect(); .v15(); .WIDTH();
-    }
-    .clicky {
+    } .clicky {
         ._clicky(); .v20(); .WIDTH();
-    }
-    .linky {
+    } .linky {
         ._linky(); .v20();
-    }
-    .headtitle {
+    } .headtitle {
         ._title(); font-size: 20vw;
-    }
-    .full {
+    } .full {
         width: 100vw; height: 100vh;
-    }
-    .full2 {
+    } .full2 {
         width: 100vw; height: 100vh;
-    }
-    .tabby button {
+    } .tabby button {
         ._tabby_button(); .v15();
-    }
-    .tabby {
+    } .tabby {
         border: 2px solid @blue; ._tabby();
         .font(); .scroller(); .wAUTO();
         .pad(); .bordL(); .textR(); .floatR();
         .header(); font-size: 1.3vw;
-    }
-    .tabby_block {
+    } .tabby_block {
         ._tabby_block(); width: 45vw;
         .content(); .scroller();
+    } .contact {
+        .WIDTH();
     }
-    .contact {.WIDTH();}
 }
 @media only screen and (max-width: 1368px) and (min-width: 1281px) {
     /* PC */
-    .WIDTH {.w50vw();}
-    .code {
+    .WIDTH {
+        .w50vw();
+    } .code {
         ._code(); .v15(); .WIDTH();
-    }
-    .header {
+    } .header {
         ._header(); .v15();
-    }
-    .content {
+    } .content {
         ._content(); font-size: 1.3vw;
-    }
-    .warn {
+    } .warn {
         ._warn(); .v15(); .WIDTH();
-    }
-    .foot {
+    } .foot {
         ._foot(); .v10();
-    }
-    .sect {
+    } .sect {
         ._sect(); .v15(); .WIDTH();
-    }
-    .clicky {
+    } .clicky {
         ._clicky(); .v20(); .WIDTH();
-    }
-    .linky {
+    } .linky {
         ._linky(); .v20();
-    }
-    .headtitle {
+    } .headtitle {
         ._title(); font-size: 20vw;
-    }
-    .full {
+    } .full {
         width: 100vw; height: 100vh;
-    }
-    .full2 {
+    } .full2 {
         width: 100vw; height: 100vh;
-    }
-    .tabby button {
+    } .tabby button {
         ._tabby_button(); .v15();
-    }
-    .tabby {
+    } .tabby {
         border: 2px solid @blue; ._tabby();
         .font(); .scroller(); .wAUTO();
         .pad(); .bordL(); .textR(); .floatR();
@@ -345,58 +269,48 @@ a {
     .tabby_block {
         ._tabby_block(); width: 37vw;
         .content(); .scroller();
-    }
-    .contact {.WIDTH();} 
+    } .contact {
+        .WIDTH();
+    } 
 }
 @media only screen and (min-width: 1369px) {
     /* PC */
-    .WIDTH {.w40vw();}
-    .code {
+    .WIDTH {
+        .w40vw();
+    } .code {
         ._code(); .v10(); .WIDTH();
-    }
-    .header {
+    } .header {
         ._header(); .v10();
-    }
-    .content {
+    } .content {
         ._content(); font-size: 0.6vw;
-    }
-    .warn {
+    } .warn {
         ._warn(); .v10(); .WIDTH();
-    }
-    .foot {
+    } .foot {
         ._foot(); .v10();
-    }
-    .sect {
+    } .sect {
         ._sect(); .v10(); .WIDTH();
-    }
-    .clicky {
+    } .clicky {
         ._clicky(); .v15(); .WIDTH();
-    }
-    .linky {
+    } .linky {
         ._linky(); .v15();
-    }
-    .headtitle {
+    } .headtitle {
         ._title(); .v15();
-    }
-    .full {
+    } .full {
         width: 100vw; height: 100vh;
-    }
-    .full2 {
+    } .full2 {
         width: 100vw; height: 100vh;
-    }
-    .tabby button {
+    } .tabby button {
         ._tabby_button(); .v15();
-    }
-    .tabby {
+    } .tabby {
         border: 2px solid @blue; ._tabby();
         .font(); .scroller(); .wAUTO();
         .pad(); .bordL(); .textR(); .floatR();
         .header(); font-size: 0.7vw;
-    }
-    .tabby_block {
+    } .tabby_block {
         ._tabby_block(); width: 30vw;
         .content(); .scroller();
-    }
-    .contact {.WIDTH();} 
+    } .contact {
+        .WIDTH();
+    } 
 }
 
