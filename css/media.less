@@ -22,46 +22,48 @@ a {
 .tabby_sect {
     visibility: hidden;
 }
-/* SPH-M580 */
-.WIDTH {
-    .w90vw();
-} .code {
-    ._code(); font-size: 3.2vw; .WIDTH();
-} .header {
-    ._header(); .v40();
-} .content {
-    ._content(); font-size: 3.5vw;
-} .warn {
-    ._warn(); .v30();
-} .foot {
-    ._foot(); .v25();
-} .sect {
-    ._sect(); .v25();
-} .clicky {
-    ._clicky(); .v35();
-} .linky {
-    ._linky(); .v35();
-} .headtitle {
-    ._title(); .v20();
-} .full {
-    width: 100vw; height: 50vh;
-} .full2 {
-    width: 100vw; height: auto;
-} .tabby button {
-    ._tabby_button(); .v40();
-} .grid5, .grid4, .grid3, .grid2 {
-    .grid1();
-} .tabby {
-    border: 2px solid @blue; ._tabby();
-    .font(); .scroller(); .wAUTO();
-    .pad(); .textR(); .bordT();
-    .header(); .v40(); .h20vh()
-} .tabby_block {
-    ._tabby_block(); .fullW();
-    .content(); .scroller(); .h50vh();
-    .nordR(); .bordB(); font-size: 3.5vw;
-} .contact {
-    .WIDTH();
+@media only screen and (max-width: 240px) {
+    /* SPH-M580 */
+    .WIDTH {
+        .w90vw();
+    } .code {
+        ._code(); font-size: 3.2vw; .WIDTH();
+    } .header {
+        ._header(); .v40();
+    } .content {
+        ._content(); font-size: 3.5vw;
+    } .warn {
+        ._warn(); .v30();
+    } .foot {
+        ._foot(); .v25();
+    } .sect {
+        ._sect(); .v25();
+    } .clicky {
+        ._clicky(); .v35();
+    } .linky {
+        ._linky(); .v35();
+    } .headtitle {
+        ._title(); .v20();
+    } .full {
+        width: 100vw; height: 50vh;
+    } .full2 {
+        width: 100vw; height: auto;
+    } .tabby button {
+        ._tabby_button(); .v40();
+    } .grid5, .grid4, .grid3, .grid2 {
+        .grid1();
+    } .tabby {
+        border: 2px solid @blue; ._tabby();
+        .font(); .scroller(); .wAUTO();
+        .pad(); .textR(); .bordT();
+        .header(); .v40(); .h20vh()
+    } .tabby_block {
+        ._tabby_block(); .fullW();
+        .content(); .scroller(); .h50vh();
+        .nordR(); .bordB(); font-size: 3.5vw;
+    } .contact {
+        .WIDTH();
+    }
 }
 
 @media only screen and (max-width: 360px) and (min-width: 241px) {
