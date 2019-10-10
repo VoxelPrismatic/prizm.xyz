@@ -45,7 +45,7 @@
     outline: none;
 }
 ._tabby {
-    .floatL(); .pad(); .trn(); .wAUTO();
+    .floatL(); .pad(); .trn(); .wMIN();
     background-color: #223333ee;
 }
 
@@ -53,16 +53,18 @@
 ._tabby_button {
     .hard(); .round(); .white();
     .pad();  .fullW(); .textC();
-    .v20();  .font();  .point();
-    .trn(); .round();
+    .font();  .point(); .trn(); 
+    .round();
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
     background-color: #33444444;
 }
 ._tabby_block {
     .pad();    .hover(); .font();
     .floatR(); .textL(); .bordR();
-    .box();    .hard();  .w60vw();
-    ._content(); .trn(); .floatL();
-    .scroller();
+    .box(); .hard();
+    ._content(); .trn();
     background-color: #00ffff44;
 }
 ._tabby_buttonhover {
@@ -97,8 +99,7 @@
 ._warn {
     .horz(); .white(); .pad(); 
     .hard(); .textL(); .v20();
-    .font(); .round(); .w90vw();
-    .blur();
+    .font(); .round(); .blur();
     background-color: #ff000088;
 }
 .btn_after {
