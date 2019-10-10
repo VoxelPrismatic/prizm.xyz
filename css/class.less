@@ -37,7 +37,7 @@
 ._clicky {
     .horz();    .white(); .pad();
     .textC();   .font();  .bordT();
-    .nohover(); .v20();   .w80vw();
+    .nohover(); .v20(); .blur();
     .point();   .no_over(); .trn();
     position: relative;
     font-weight: bold;
@@ -45,7 +45,8 @@
     outline: none;
 }
 ._tabby {
-    .floatL(); .pad(); .trn(); .wMIN();
+    .pad(); .trn(); .wMIN(); .scroller();
+    .floatL();
     background-color: #223333ee;
 }
 
@@ -53,18 +54,18 @@
 ._tabby_button {
     .hard(); .round(); .white();
     .pad();  .fullW(); .textC();
-    .font();  .point(); .trn(); 
-    .round();
+    .font(); .point(); .trn(); 
+    .round(); 
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: bold;
     background-color: #33444444;
 }
 ._tabby_block {
-    .pad();    .hover(); .font();
+    .pad(); .hover(); .font();
     .floatR(); .textL(); .bordR();
-    .box(); .hard();
-    ._content(); .trn();
+    .box(); .hard(); .trn();
+    ._content(); 
     background-color: #00ffff44;
 }
 ._tabby_buttonhover {
@@ -79,7 +80,7 @@
     font-weight: bold;
 }
 ._tabby_content {
-    .floatL(); .pad(); .hover();
+    .floatR(); .pad(); .hover();
     .bordR();  .v20();
     width: 70%;
     height: 300px;
