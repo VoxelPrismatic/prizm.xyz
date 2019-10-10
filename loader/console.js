@@ -22,3 +22,7 @@ function wTO(fn, inter) {
 function wSI(fn, inter) {
     return window.setInterval(fn, inter);
 }
+function out(vals) {
+    console.log(vals);
+}
+log("FUNCTIONS LOADED");
