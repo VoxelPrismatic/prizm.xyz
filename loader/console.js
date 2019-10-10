@@ -16,3 +16,9 @@ function gEDIT(elem, val) {
 function gST_EDIT(elem, name, val) {
     gID(elem).style.setProperty(name, val.split(' ')[0], val.split(' ')[1]);
 }
+function wTO(fn, inter) {
+    return window.setTimeout(fn, inter);
+}
+function wSI(fn, inter) {
+    return window.setInterval(fn, inter);
+}
