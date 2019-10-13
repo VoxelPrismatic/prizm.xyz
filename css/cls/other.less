@@ -1,0 +1,34 @@
+@import (reference) "base/basics";
+@import (reference) "base/boarders";
+@import (reference) "base/elem_size";
+@import (reference) "base/elem_align";
+@import (reference) "base/font_size";
+@import (reference) "base/text_align";
+@import (reference) "base/grid_cells";
+@import (reference) "base/color";
+@import (reference) "base/fx";
+._sect {
+    .horz();   .pad();  .hard();
+    .white();  .textC(); .bordB();
+    .v15(); .blur(); .no_over(); 
+    .trn();
+    height: 0;
+    width: 100%;
+    background-color: #00666644;
+    outline: none;
+}
+._clicky {
+    .horz();    .white(); .pad();
+    .textC();   .font();  .bordT();
+    .nohover(); .v20(); .blur();
+    .point();   .no_over(); .trn();
+    position: relative;
+    font-weight: bold;
+    background-color: #00888866;
+    outline: none;
+    width: 100%;
+}
+
+._linky {
+    ._clicky(); .round(); .fullW();
+}
