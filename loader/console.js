@@ -32,9 +32,7 @@ function wSI(fn, inter) {
     return window.setInterval(fn, inter);
 }
 // OTHER
-function out(...vals) {
-    console.log(vals);
-}
+out = console.log
 function help() {
     out(  "AVAILABLE THINGS ]\n"
         + "gID(id: str) --------------------------- Get an element\n"
@@ -49,18 +47,18 @@ function help() {
         + "wSI(fn: function, inter: int) ---------- Set the window interval\n";
         + "out(vals: any) ------------------------- Shorter version of console.log()\n"
     );
-out(  "EXAMPLES OF THINGS\n"
-    + 'gID("elem_id")\n'
-    + 'gHTML("elem_id")\n'
-    + 'gPARAM("elem_id")\n'
-    + 'gSTYLE("elem_id", "style_name")\n'
-    + 'ePARAM("elem_id", "style=\'width: auto\'")\n'
-    + 'eCLASS("elem_id", "class_name")\n'
-    + 'eHTML("elem_id", "content")\n'
-    + 'eSTYLE("elem_id", "style_name", "value")\n'
-    + 'wTO(function(){out("hi");}, 1200)\n'
-    + 'wSI(function(){out("hi");}, 1200)\n'
-    + 'out("2", 1, true)\n'
+    out(  "EXAMPLES OF THINGS\n"
+        + 'gID("elem_id")\n'
+        + 'gHTML("elem_id")\n'
+        + 'gPARAM("elem_id")\n'
+        + 'gSTYLE("elem_id", "style_name")\n'
+        + 'ePARAM("elem_id", "style=\'width: auto\'")\n'
+        + 'eCLASS("elem_id", "class_name")\n'
+        + 'eHTML("elem_id", "content")\n'
+        + 'eSTYLE("elem_id", "style_name", "value")\n'
+        + 'wTO(function(){out("hi");}, 1200)\n'
+        + 'wSI(function(){out("hi");}, 1200)\n'
+        + 'out("2", 1, true)\n'
     );
 }
 out("DEBUG FUNCTIONS LOADED\nTYPE 'help();' TO SEE NEW FUNCTIONS");
