@@ -1,6 +1,25 @@
 from browser import document as doc, html
 from priz_md import mark
-content = {"10x08_2019":"""\
+content = {"10x13_2019":"""\
+> The >!;]reddit!< command has been updated
+> > Now properly states whether or not the post is archived
+> > Now states whether or not the `[IMAGE]` button should be pressed
+""",
+           "10x11_2019":"""\
+> The >!;]reddit!< command has been updated
+> > Now looks much cleaner
+> > Attributes---
+> > > >![-] !< - Archived
+> > > >!O-O !< - Link submission
+> > > >!TXT !< - Text submission
+> > > >! => !< - Edited
+> > > >![>- !< - Pinned
+> > > >![||]!< - Spoiled
+> > Now supports multireddits
+> > Now loads so much faster
+> > Direct links now work
+""",
+           "10x08_2019":"""\
 > The >!;]graph!< command has new features
 > > Adding >!--zero!< to the end of the equation now shows the true zeros
 > > Adding >!--yint!< to the end will show the y-intercept
