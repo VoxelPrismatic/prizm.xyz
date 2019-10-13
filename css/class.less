@@ -28,9 +28,10 @@
 ._sect {
     .horz();   .pad();  .hard();
     .white();  .textC(); .bordB();
-    .v15(); .blur();
-    .no_over(); .trn();
+    .v15(); .blur(); .no_over(); 
+    .trn();
     height: 0;
+    width: 100%;
     background-color: #00666644;
     outline: none;
 }
@@ -56,8 +57,7 @@
     .pad();  .fullW(); .textC();
     .font(); .point(); .trn(); 
     .round(); 
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0px;
     font-weight: bold;
     background-color: #33444444;
 }
@@ -75,8 +75,7 @@
     .select();
 }
 .tabby_link {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin 5px 0px;
     font-weight: bold;
 }
 ._tabby_content {
@@ -107,8 +106,7 @@
     background-color: #88ffffff;
     .block(); .trn();
     position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
+    padding: 300% 0 0 350%;
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
