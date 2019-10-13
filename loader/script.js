@@ -35,4 +35,4 @@ function chng() {
         }
     }
 }
-window.setTimeout(chng, 2000);
+window.setTimeout(chng, 2500);
