@@ -43,8 +43,8 @@ function fns() {
         + "eHTML(id: str, content: str) ----------- Edit the inner html of an element\n"
         + "ePARAM(id: str, content: str) ---------- Edit the outer html of an element\n"
         + "eSTYLE(id: str, style: str, val: str) -- Set the style of an element to val\n"
-        + "wTO(fn: function, inter: int) ---------- Set the window timeout\n";
-        + "wSI(fn: function, inter: int) ---------- Set the window interval\n";
+        + "wTO(fn: function, inter: int) ---------- Set the window timeout\n"
+        + "wSI(fn: function, inter: int) ---------- Set the window interval\n"
         + "out(vals: any) ------------------------- Shorter version of console.log()\n"
     );
     out(  "EXAMPLES OF THINGS\n"
