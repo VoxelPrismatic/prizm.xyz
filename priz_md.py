@@ -1,5 +1,5 @@
 from browser import document as doc
-md = {'\n': '<br>',
+md = {'\n': ' <br>',
       '\t': '    ',
       ' ': ' \u200b',
       # ^Extras
@@ -74,6 +74,10 @@ md = {'\n': '<br>',
       '>=': '<span class="spoil">',
       '=<': '</span>',
       # ^Spoiler
+      
+      '\>': '>',
+      '\<': '<',
+      # ^Escaped
 }
 
 def mark(st: str):
