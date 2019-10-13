@@ -33,7 +33,7 @@ function wSI(fn, inter) {
 }
 // OTHER
 out = console.log
-function help() {
+function fns() {
     out(  "AVAILABLE THINGS ]\n"
         + "gID(id: str) --------------------------- Get an element\n"
         + "gHTML(id: str) ------------------------- Get the inner html of an element\n"
@@ -61,4 +61,4 @@ function help() {
         + 'out("2", 1, true)\n'
     );
 }
-out("DEBUG FUNCTIONS LOADED\nTYPE 'help();' TO SEE NEW FUNCTIONS");
+out("DEBUG FUNCTIONS LOADED\nTYPE 'fns();' TO SEE NEW FUNCTIONS");
