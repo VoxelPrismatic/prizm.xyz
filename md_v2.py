@@ -66,6 +66,7 @@ def mark(st):
         st = st.replace(key, others[key])
     
     ##/// FINISH
+    st = st.replace(">/<", "<div class='mdline'>---</div>")
     st = st.replace("\>", "&gt;")
     st = st.replace("\<", "&lt;")
     return st
