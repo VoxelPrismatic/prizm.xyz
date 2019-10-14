@@ -1,15 +1,45 @@
 import javascript as js
-def Str(st):
-    return js.String.new(st)
-def Re(st):
-    return js.RegExp.new(st)
+from javascript import String as Str, RegExp as RegEx
+
+others = {">|", "<table>",
+          "|#", "<th><td>",
+          "-|", "</td><td>",
+          "#|", "</td></th>",
+          "+|", "</td></tr><tr><td>",
+          "|+", "</td></tr>",
+          "|<", "</table>",
+          # ^Table
+          
+          ">&": "<ul><li>",
+          "&&": "</li><li>",
+          "&<": "</li></ul>",
+          # ^Unordered list
+          
+          ">^": "<ol><li>",
+          "^^": "</li><li>",
+          "^<": "</li></ol>",
+          # ^Ordered list
+         }
+
+def replaces(st, *arg):
+    for ex, to in arg:
+        st = st.replace(ex, to)
+    return st
+
+def pyStr(st):
+    return ''.join(st[int(x)] for x in dir(st))
+
 def sub(re, to, st):
-    to = to.replace("\1","$1").replace("\2","$2")
+    to = Str(to)
+    tmp = RegEx("\\(\d+)")
+    while to.search(tmp) != -1:
+        to = to.replace(tmp, "$$$1")
+    to = pyStr(to)
     st = Str(st)
-    re = Re(re)
+    re = RegEx(re)
     while st.search(re) != -1:
         st = st.replace(re, to)
-    return st
+    return pyStr(st)
 def mark(st):
     ##/// INIT
     st.replace(" ", "\u200b")
@@ -22,13 +52,20 @@ def mark(st):
     st = sub(r"\>\+(.*)\+\<", r"<sup>\1</sup>", st) #Superscript
     st = sub(r"\>\-(.*)\-\<", r"<sub>\1</sub>", st) #Subscript
     st = sub(r"\>\:(.*)\:\<", r"<span class='oL'>\1</span>", st) #Overline
+    st = sub(r"\>\=(.*)\=\<", r"<span class='spoil'>\1</span>", st) #Spoiler
+    st = sub(r"\>\!(.*)\!\<", r"<span class='mono dark'>\1</span>", st) #Inline code
+    st = sub(r"\>\`(.*)\`\<", r"<div class='mono dark' style='width: 90%'>\1</div>", st) #Code block
     
     ##/// DOUBLE PARAM
     st = sub(r"\>\$(.*)\$\$(.*)\$\<", r"<a href='\1'>\2</a>", st) #Link
-    st = sub(r"\>\$(.*)\$\$(.*)\$\<", r"<a href='\1'>\2</a>", st) #Link
+    st = sub(r"\>\@(.*)\@\@(.*)\@\<", r"<span class='note_\1'>\2</span>", st) #Highlight
+    st = sub(r"\>\?(.*)\?\?(.*)\?\<", r"<span class='head\1'>\2</span>", st) #Header
     
     ##/// MULTI PARAM
-    
+    for key in others:
+        st = st.replace(key, others[key])
     
     ##/// FINISH
-    st
+    st = st.replace("\>", "&gt;")
+    st = st.replace("\<", "&lt;")
+    return st
