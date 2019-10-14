@@ -1,5 +1,5 @@
 from browser import document as doc, html
-from priz_md import mark
+from md_v2 import mark
 content = {"DEVS ;]": "PRIZ ;]#9244 - Literally does everything with the bot",
           "UPTIME": """\
 Hopefully 24hrs with minor downtime. There may be moments of downtime of up to 1 second. \
