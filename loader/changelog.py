@@ -1,6 +1,13 @@
 from browser import document as doc, html
 from priz_md import mark
-content = {"10x13_2019":"""\
+content = {"10x14_2019":"""\
+> The char command now gives more info
+> > When requesting one character, it tells you how to write it in many languages
+> > > Includes PY, JS, URI/URL, JAVA, C#, C++, C, HTML, RUBY, and SWIFT
+> > > If you want other languages, please visit the >$https://discordapp.com/channels/533290351184707584/535507316775059516/\
+$$#prizm_suggest$< channel
+""",
+           "10x13_2019":"""\
 > The >!;]reddit!< command has been updated
 > > Now properly states whether or not the post is archived
 > > Now states whether or not the >![IMAGE]!< button should be pressed
