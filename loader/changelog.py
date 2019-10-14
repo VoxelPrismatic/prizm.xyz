@@ -3,7 +3,7 @@ from priz_md import mark
 content = {"10x13_2019":"""\
 > The >!;]reddit!< command has been updated
 > > Now properly states whether or not the post is archived
-> > Now states whether or not the `[IMAGE]` button should be pressed
+> > Now states whether or not the >![IMAGE]!< button should be pressed
 """,
            "10x11_2019":"""\
 > The >!;]reddit!< command has been updated
@@ -13,8 +13,8 @@ content = {"10x13_2019":"""\
 > > > >!O-O !< - Link submission
 > > > >!TXT !< - Text submission
 > > > >! => !< - Edited
-> > > >![\>- !< - Pinned
-> > > >![&#x7c;&#7c;]!< - Spoiled
+> > > >![&#x3e;- !< - Pinned
+> > > >![&#x7c;&#x7c;]!< - Spoiled
 > > Now supports multireddits
 > > Now loads so much faster
 > > Direct links now work
