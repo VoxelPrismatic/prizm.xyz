@@ -1,7 +1,10 @@
 import javascript as js
+def Str(st):
+    return js.string(st)
+def Re(st):
+    return js.RegExp(st)
 def sub(re, to, st):
-    
-    return
+    return Str(st).replace(Re(re), to)
 def mark(st):
     st = sub(r"\>\*(.*)\*\<", r"<i>\1</i>", st) #Italic
     st = sub(r"\>\#(.*)\#\<", r"<b>\1</b>", st) #Bold
