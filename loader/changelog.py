@@ -13,8 +13,8 @@ content = {"10x13_2019":"""\
 > > > >!O-O !< - Link submission
 > > > >!TXT !< - Text submission
 > > > >! => !< - Edited
-> > > >![&#x3e;- !< - Pinned
-> > > >![&#x7c;&#x7c;]!< - Spoiled
+> > > >![\>- !< - Pinned
+> > > >![\|\|]!< - Spoiled
 > > Now supports multireddits
 > > Now loads so much faster
 > > Direct links now work
