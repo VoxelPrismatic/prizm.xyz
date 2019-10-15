@@ -32,13 +32,13 @@ def sub(re, to, st):
     to = jsStr(to)
     tmp = RegEx("\\\\(\\d+)")
     while to.search(tmp) != -1:
-        to = to.replace(tmp, "$$$1")
+        to = jsStr(to).replace(tmp, "$$$1")
     print('CONVERT')
     to = pyStr(to)
     st = jsStr(st)
     re = RegEx(re)
     while st.search(re) != -1:
-        st = st.replace(re, to)
+        st = jsStr(st).replace(re, to)
     return pyStr(st)
 
 def mark(st):
