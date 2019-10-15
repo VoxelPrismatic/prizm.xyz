@@ -19,9 +19,9 @@ $$#prizm_suggest$< channel
 > > > >![-] !< - Archived
 > > > >!O-O !< - Link submission
 > > > >!TXT !< - Text submission
-> > > >! => !< - Edited
-> > > >![&#x3e;- !< - Pinned
-> > > >![\|\|]!< - Spoiled
+> > > >!§ => !< - Edited
+> > > >![>§- !< - Pinned
+> > > >![|§|]!< - Spoiled
 > > Now supports multireddits
 > > Now loads so much faster
 > > Direct links now work
