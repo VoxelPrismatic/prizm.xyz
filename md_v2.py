@@ -1,7 +1,5 @@
-import javascript as js
-
-def Str(*args): return js.String(*args)
-def RegExp(*args): return js.RegExp(*args)
+#import javascript as js
+from javascript import String as Str, RegExp as RegEx
 
 others = {">|": "<table>",
           "|#": "<th><td>",
