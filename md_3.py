@@ -9,12 +9,12 @@ def pyStr(st):
 def sub(re, to, st):
     to = jsStr(to)
     tmp = RegEx("\\\\(\\d+)")
-    while String.new(to).search(tmp) != -1:
-        to = String.new(to).replace(tmp, "$$$1")
+    while to.search(tmp) != -1:
+        to = jsStr(to).replace(tmp, "$$$1")
     print('CONVERT')
     re = RegEx(re)
-    while String.new(st).search(re) != -1:
-        st = String.new(st).replace(re, to)
+    while st.search(re) != -1:
+        st = jsStr(st).replace(re, to)
     return pyStr(st)
 
 rep = {
