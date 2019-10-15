@@ -1,6 +1,6 @@
 import javascript as js
 def jsStr(st): return js.String.new(st)
-def RegEx(st): return js.RegExp.new(st, "U")
+def RegEx(st): return js.RegExp.new(st)
 def pyStr(st):
     if type(st) == js.JSObject:
         return ''.join(st[int(x)] for x in dir(st))
