@@ -30,10 +30,10 @@ def pyStr(st):
 
 def sub(re, to, st):
     to = jsStr(to)
-    print(type(to))
     tmp = RegEx("\\\\(\\d+)")
     while to.search(tmp) != -1:
         to = to.replace(tmp, "$$$1")
+    print('CONVERT')
     to = pyStr(to)
     st = jsStr(st)
     re = RegEx(re)
