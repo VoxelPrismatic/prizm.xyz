@@ -1,6 +1,6 @@
-import javascript as js
-Str = js.String
-RegEx = js.RegExp
+from javascript import *
+Str = String
+RegEx = RegExp
 
 others = {">|": "<table>",
           "|#": "<th><td>",
