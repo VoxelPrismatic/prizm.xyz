@@ -48,6 +48,7 @@ rep = {
     r"[^\\]( *)([-\]>}.~+=]) (.*)": r"\1> \2", #Unordered list
     
     r"[^\\]\[(.*)]\<(.*)\>": r"<a href='\2'>\1</a>", #Link
+    r"[^\\]\<(.*)\>": r"<a href='\1'>\1</a>", #Link
     r"[^\\]\[\#\[(.*)]\<(.*)\>": r"<embed href='\2' alt='\1'>", #Embed
     
     "\n---\n": "<div class='mdline'>---</div>", #Seperator
