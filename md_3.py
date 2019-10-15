@@ -41,7 +41,7 @@ rep = {
     
     r"[^\\]\"\"\"((.*|\n)?)\"\"\"": r"<span class='quoted'>\1</span>", #Quoted
     r"[^\\]\:\:\:[(\w+)\]((.|\n)*?)\:\:\:": r"<span class='note_\1'>\2</span>", #Highlight
-    r"[^\\]\;\;\;((.|\n)*)\;\;\;": r"<div class='mono dark' style='width: 90%;'>\1</div>" #Code block
+    r"[^\\]\;\;\;((.|\n)*)\;\;\;": r"<div class='mono dark' style='width: 90%;'>\1</div>", #Code block
     r"[^\\]\`(.*)\`": r"<span class='mono dark'>\1</span>", #Inline code block
     
     r"[^\\]( *)(\d+)([.)\]}-:;]) (.*)": r"\1\2] \3", #Ordered List
