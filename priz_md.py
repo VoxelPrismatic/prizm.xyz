@@ -2,7 +2,7 @@ from javascript import String, RegExp
 import javascript as js
 
 def jsStr(st): return String.new(st)
-def RegEx(st): return RegExp.new(st, "U")
+def RegEx(st): return RegExp.new(st)
 
 others = {">|": "<table>",
           "|#": "<th><td>",
