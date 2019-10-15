@@ -23,7 +23,6 @@ window.onscroll = function() {
 }
 function chng() {
     var tab = document.getElementById("labels").innerHTML.split('|');
-    console.log(tab)
     for (var i = 0; i < tab.length; i++) {
         document.getElementById(tab[i]).onclick = function() {
             var tag = document.getElementById("labels").innerHTML.split('|');
@@ -35,4 +34,3 @@ function chng() {
         }
     }
 }
-window.setTimeout(chng, 2500);
