@@ -1,13 +1,13 @@
 import javascript as js
 from javascript import String as Str, RegExp as RegEx
 
-others = {">|", "<table>",
-          "|#", "<th><td>",
-          "-|", "</td><td>",
-          "#|", "</td></th>",
-          "+|", "</td></tr><tr><td>",
-          "|+", "</td></tr>",
-          "|<", "</table>",
+others = {">|": "<table>",
+          "|#": "<th><td>",
+          "-|": "</td><td>",
+          "#|": "</td></th>",
+          "+|": "</td></tr><tr><td>",
+          "|+": "</td></tr>",
+          "|<": "</table>",
           # ^Table
           
           ">&": "<ul><li>",
