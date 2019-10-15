@@ -26,7 +26,9 @@ others = {">|": "<table>",
          }
 
 def pyStr(st):
-    return ''.join(st[int(x)] for x in dir(st))
+    if type(st) == js.JSObject:
+        return ''.join(st[int(x)] for x in dir(st))
+    return str(st)
 
 def sub(re, to, st):
     to = jsStr(to)
