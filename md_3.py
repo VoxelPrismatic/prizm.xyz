@@ -7,12 +7,10 @@ def pyStr(st):
     return str(st)
 
 def sub(re, to, st):
-    to = jsStr(to)
+    to, st, re = jsStr(to), jsStr(st), RegEx(re)
     tmp = RegEx("\\\\(\\d+)")
     while to.search(tmp) != -1:
         to = jsStr(to.replace(tmp, "$$$1"))
-    print('CONVERT')
-    re = RegEx(re)
     while st.search(re) != -1:
         st = jsStr(st.replace(re, to))
     return pyStr(st)
