@@ -1,5 +1,5 @@
 #import javascript as js
-from javascript import String as Str, RegExp as RegEx
+from javascript import *
 
 others = {">|": "<table>",
           "|#": "<th><td>",
@@ -21,22 +21,17 @@ others = {">|": "<table>",
           # ^Ordered list
          }
 
-def replaces(st, *arg):
-    for ex, to in arg:
-        st = st.replace(ex, to)
-    return st
-
 def pyStr(st):
     return ''.join(st[int(x)] for x in dir(st))
 
 def sub(re, to, st):
-    to = Str(to)
-    tmp = RegEx("\\(\d+)")
+    to = String(to)
+    tmp = RegExp("\\(\d+)")
     while to.search(tmp) != -1:
         to = to.replace(tmp, "$$$1")
     to = pyStr(to)
-    st = Str(st)
-    re = RegEx(re)
+    st = String(st)
+    re = RegExp(re)
     while st.search(re) != -1:
         st = st.replace(re, to)
     return pyStr(st)
