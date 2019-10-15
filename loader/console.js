@@ -62,3 +62,4 @@ function fns() {
     );
 }
 out("DEBUG FUNCTIONS LOADED\nTYPE 'fns();' TO SEE NEW FUNCTIONS");
+out("BRYTHON VERSION ] "+window.__BRYTHON__.__MAGIC__)
