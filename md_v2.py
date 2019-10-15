@@ -1,7 +1,10 @@
 #import javascript as js
-from javascript import String as jsStr, RegExp as RegEx
+from javascript import String, RegExp
 import javascript as js
-print(dir())
+
+def jsStr(st): return String.new(st)
+def RegEx(st): return RegExp.new(st)
+
 others = {">|": "<table>",
           "|#": "<th><td>",
           "-|": "</td><td>",
