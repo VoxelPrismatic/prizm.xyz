@@ -1,4 +1,4 @@
-from browser import document as doc, html
+from browser import document as doc, html, window as win
 from priz_md import mark
 content = {"10x14_2019":"""\
 > The char command now gives more info
@@ -247,3 +247,4 @@ lists = doc["tabby"]
 for key in content:
     lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
     element <= html.DIV(mark(content[key])+"<br>", Class = "tabby_sect", Id = key+"-", style={"display": "none"})
+win.chng()
