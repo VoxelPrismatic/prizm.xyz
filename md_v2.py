@@ -1,5 +1,5 @@
 #import javascript as js
-from javascript import *
+from javascript import String
 print(dir())
 others = {">|": "<table>",
           "|#": "<th><td>",
