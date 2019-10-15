@@ -41,8 +41,10 @@ def sub(re, to, st):
     while st.search(re) != -1:
         st = st.replace(re, to)
     return pyStr(st)
+
 def mark(st):
     ##/// INIT
+    st = st.replace("\t", "    ")
     st.replace(" ", "\u200b")
     
     ##/// SINGLE PARAM
@@ -68,6 +70,7 @@ def mark(st):
     
     ##/// FINISH
     st = st.replace(">/<", "<div class='mdline'>---</div>")
+    st = st.replace("\n", "<br>")
     st = st.replace("\>", "&gt;")
     st = st.replace("\<", "&lt;")
     return st
