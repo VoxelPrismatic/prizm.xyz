@@ -63,3 +63,4 @@ def mark(st):
     for key, val in [(k, rep[k]) for k in list(rep)]:
         st = sub(key, val, st)
     return st
+print(mark("*hello m8*"))
