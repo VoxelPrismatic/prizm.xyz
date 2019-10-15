@@ -2,7 +2,7 @@ from javascript import String, RegExp
 import javascript as js
 
 def jsStr(st): return String.new(st)
-def RegEx(st): return RegExp.new(st)
+def RegEx(st): return RegExp.new(st, "U")
 
 others = {">|": "<table>",
           "|#": "<th><td>",
@@ -72,4 +72,5 @@ def mark(st):
     st = st.replace("\n", "<br>")
     st = st.replace("\>", "&gt;")
     st = st.replace("\<", "&lt;")
+    st = st.replace("§", "\u200b")
     return st
