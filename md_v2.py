@@ -1,5 +1,5 @@
 #import javascript as js
-from javascript import String as Str, RegExp as RegEx
+from javascript import String as jsStr, RegExp as RegEx
 import javascript as js
 print(dir())
 others = {">|": "<table>",
@@ -26,12 +26,12 @@ def pyStr(st):
     return ''.join(st[int(x)] for x in dir(st))
 
 def sub(re, to, st):
-    to = Str(to)
-    tmp = RegEx("\\(\d+)")
+    to = jsStr(to)
+    tmp = RegEx("\\\\(\\d+)")
     while to.search(tmp) != -1:
         to = to.replace(tmp, "$$$1")
     to = pyStr(to)
-    st = Str(st)
+    st = jsStr(st)
     re = RegEx(re)
     while st.search(re) != -1:
         st = st.replace(re, to)
