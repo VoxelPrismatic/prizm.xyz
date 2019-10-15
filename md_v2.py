@@ -1,6 +1,6 @@
 #import javascript as js
 from javascript import *
-
+print(dir())
 others = {">|": "<table>",
           "|#": "<th><td>",
           "-|": "</td><td>",
