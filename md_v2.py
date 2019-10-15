@@ -1,5 +1,6 @@
-print("2")
-from javascript import String as Str, RegExp as RegEx
+import javascript as js
+Str = js.String
+RegEx = js.RegExp
 
 others = {">|": "<table>",
           "|#": "<th><td>",
