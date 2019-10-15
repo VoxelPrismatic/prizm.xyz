@@ -43,7 +43,8 @@ def sub(re, to, st):
 def mark(st):
     ##/// INIT
     st = st.replace("\t", "    ")
-    st.replace(" ", "\u200b")
+    st.replace(" ", " \u200b")
+    st.replace("§", "\u200b")
     
     ##/// SINGLE PARAM
     st = sub(r"\>\*(.*)\*\<", r"<i>\1</i>", st) #Italic
