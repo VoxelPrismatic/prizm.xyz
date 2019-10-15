@@ -1,6 +1,4 @@
-from javascript import *
-Str = String
-RegEx = RegExp
+from javascript import String as Str, RegExp as RegEx
 
 others = {">|": "<table>",
           "|#": "<th><td>",
