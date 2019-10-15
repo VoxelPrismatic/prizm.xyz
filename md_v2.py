@@ -1,3 +1,4 @@
+print("2")
 from javascript import String as Str, RegExp as RegEx
 
 others = {">|": "<table>",
