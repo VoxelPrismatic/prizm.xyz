@@ -1,24 +1,64 @@
+import javascript as js
+def jsStr(st): return js.String.new(st)
+def RegEx(st): return js.RegExp.new(st, "U")
+def pyStr(st):
+    if type(st) == js.JSObject:
+        return ''.join(st[int(x)] for x in dir(st))
+    return str(st)
+
+def sub(re, to, st):
+    to = jsStr(to)
+    tmp = RegEx("\\\\(\\d+)")
+    while String.new(to).search(tmp) != -1:
+        to = String.new(to).replace(tmp, "$$$1")
+    print('CONVERT')
+    re = RegEx(re)
+    while String.new(st).search(re) != -1:
+        st = String.new(st).replace(re, to)
+    return pyStr(st)
+
 rep = {
-    r"(.*)\n(=*)": r"<h1>\1</h1>", #Header 1
-    r"(.*)\n(-*)": r"<h2>\1</h2>", #Header 2
-    r"\&(.*)": r"<h1>\1</h1>", #Header 1
-    r"\&\&(.*)": r"<h2>\1</h2>", #Header 2
-    r"\&\&\&(.*)": r"<h3>\1</h3>", #Header 3
-    r"\&\&\&\&(.*)": r"<h4>\1</h4>", #Header 4
-    r"\&\&\&\&\&(.*)": r"<h5>\1</h5>", #Header 5
-    r"\&\&\&\&\&\&(.*)": r"<h6>\1</h6>", #Header 6
+    " ": "\u200b ", #Infinite Spaces
+    "§": "\u200b",  #Short NBSP char
     
-    r"\#(.*?)\#": r"<b>\1</b>", #Bold
-    r"\*(.*?)\*": r"<i>\1</i>", #Ital
-    r"\~(.*?)\~": r"<s>\1</s>", #Strike
-    r"\_(.*?)\_": r"<u>\1</u>", #Under
-    r"\!(.*?)\!": r"<b><i>\1</i></b>", #BoldItal
-    r"\^\^(.*?)\^\^": r"<sup>\1</sup>", #Super
-    r"\v\^(.*?)\^\v": r"<sub>\1</sub>", #Sub
+    r"(.*)\n(=*)": r"<span class='head1'>\1</span>", #Header 1
+    r"(.*)\n(-*)": r"<span class='head2'>\1</span>", #Header 2
+    r"\&(.+)": r"<span class='head1'>\1</span>", #Header 1
+    r"\&\&(.+)": r"<span class='head2'>\1</span>", #Header 2
+    r"\&\&\&(.+)": r"<span class='head3'>\1</span>", #Header 3
+    r"\&\&\&\&(.+)": r"<span class='head4'>\1</span>", #Header 4
+    r"\&\&\&\&\&(.+)": r"<span class='head5'>\1</span>", #Header 5
+    r"\&\&\&\&\&\&(.+)": r"<span class='head6'>\1</span>", #Header 6
     
-    r"\"\"\"\[(\w+)\](.*?)\"\"\"": r"<span class='note_\1'>\2</span>", #Highlight
-    r"( *)(\d+)([.)\]}-:;]) (.*)": r"\1\2] \3", #Ordered List
-    r"( *)([-\]>}.~+=]) (.*)": r"\1> \2", #Unordered list
-    r"\;\;\;((.|\n)*)\;\;\;": r"<div class='mono dark' style='width: 90%;'>\1</div>" #Code block
-    r"\`(.*)\`": r"<span class='mono dark'>\1</span>",
+    r"[^\\]\#(.*?)\#": r"<b>\1</b>", #Bold
+    r"[^\\]\*(.*?)\*": r"<i>\1</i>", #Ital
+    r"[^\\]\~(.*?)\~": r"<s>\1</s>", #Strike
+    r"[^\\]\_(.*?)\_": r"<u>\1</u>", #Under
+    r"[^\\]\+\+(.*?)\+\+": r"<sup>\1</sup>", #Super
+    r"[^\\]\-\-(.*?)\-\-": r"<sub>\1</sub>", #Sub
+    r"[^\\]\:\:(.*?)\:\:": r"<span class='oL'>\1</sub>", #Overline
+    r"[^\\]\|(.*)\|": r"<span class='spoil'>\1</span>", #Spoiler
+    
+    r"[^\\]\"\"\"((.*|\n)?)\"\"\"": r"<span class='quoted'>\1</span>", #Quoted
+    r"[^\\]\:\:\:[(\w+)\]((.|\n)*?)\:\:\:": r"<span class='note_\1'>\2</span>", #Highlight
+    r"[^\\]\;\;\;((.|\n)*)\;\;\;": r"<div class='mono dark' style='width: 90%;'>\1</div>" #Code block
+    r"[^\\]\`(.*)\`": r"<span class='mono dark'>\1</span>", #Inline code block
+    
+    r"[^\\]( *)(\d+)([.)\]}-:;]) (.*)": r"\1\2] \3", #Ordered List
+    r"[^\\]( *)([-\]>}.~+=]) (.*)": r"\1> \2", #Unordered list
+    
+    r"[^\\]\[(.*)]\<(.*)\>": r"<a href='\2'>\1</a>", #Link
+    r"[^\\]\[\#\[(.*)]\<(.*)\>": r"<embed href='\2' alt='\1'>", #Embed
+    
+    "\n---\n": "<div class='mdline'>---</div>", #Seperator
+    "\n": "<br>", #New Line
+    
+    
+    #[^\\] - Ignore backslashes
+    #(.*) -- Actual content
 }
+
+def mark(st):
+    for key, val in [(k, rep[k]) for k in list(rep)]:
+        st = sub(key, val, st)
+    return st
