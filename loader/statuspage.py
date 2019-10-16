@@ -5,4 +5,4 @@ history = {
 }
 for key in history:
     history[key] = mark(history[key])
-    doc["status"] <= html.DIV(key+" - "+history[key], Class="status_"+key)
+    doc["status"] <= html.DIV(key+" - "+history[key], Id="status_"+key, Class="content consect")
