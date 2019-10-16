@@ -246,5 +246,5 @@ lists = doc["tabby"]
 
 for key in content:
     lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
-    element <= html.DIV(mark(content[key])+"<br>", Class = "tabby_sect", Id = key+"-", style={"display": "none"})
+    element <= html.DIV(mark(content[key])+"<br>", Class = "tabby_sect", Id = "changes_"+key, style={"display": "none"})
 win.chng()
