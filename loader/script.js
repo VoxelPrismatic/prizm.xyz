@@ -29,7 +29,7 @@ function chng() {
             for (var i = 0; i < tag.length; i++) {
                 document.getElementById(tag[i]).className = document.getElementById(tag[i]).className.replace(" active", "");
             }
-            document.getElementById("blocky").innerHTML = document.getElementById(this.id+"-").innerHTML;
+            document.getElementById("blocky").innerHTML = document.getElementById("changes_"+this.id).innerHTML;
             this.className += " active"
         }
     }
