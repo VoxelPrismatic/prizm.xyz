@@ -16,7 +16,7 @@ def sub(re, to, st):
     return pyStr(st)
 
 rep = {
-    " ": "\u200b ", #Infinite Spaces
+    " ": "§ ", #Infinite Spaces
     "§": "\u200b",  #Short NBSP char
     
     r"(.+?)\n(=+?)": r"<span class='head1'>\1</span>", #Header 1
@@ -52,6 +52,7 @@ rep = {
     
     "\n---\n": "<div class='mdline'>---</div>", #Seperator
     "\n": "<br>", #New Line
+    "\u200b": "&nbsp;",
     
     #[^\\] - Ignore backslashes
     #(.*) -- Actual content
