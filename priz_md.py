@@ -56,7 +56,7 @@ def mark(st):
     st = sub(r"\>\:(.*?)\:\<", r"<span class='oL'>\1</span>", st) #Overline
     st = sub(r"\>\=(.*?)\=\<", r"<span class='spoil'>\1</span>", st) #Spoiler
     st = sub(r"\>\!(.*?)\!\<", r"<span class='mono dark'>\1</span>", st) #Inline code
-    st = sub(r"\>\`(.*?)\`\<", r"<div class='mono dark' style='width: 90%'>\1</div>", st) #Code block
+    st = sub(r"\>\`((.|\n)*?)\`\<", r"<div class='mono dark' style='width: 90%'>\1</div>", st) #Code block
     
     ##/// DOUBLE PARAM
     st = sub(r"\>\$(.*?)\$\$(.*?)\$\<", r"<a href='\1'>\2</a>", st) #Link
