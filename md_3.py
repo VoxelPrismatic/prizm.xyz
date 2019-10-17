@@ -1,19 +1,4 @@
-import javascript as js
-def jsStr(st): return js.String.new(st)
-def RegEx(st): return js.RegExp.new(st)
-def pyStr(st):
-    if type(st) == js.JSObject:
-        return ''.join(st[int(x)] for x in dir(st))
-    return str(st)
-
-def sub(re, to, st):
-    to, st, re = jsStr(to), jsStr(st), RegEx(re)
-    tmp = RegEx("\\\\(\\d+)")
-    while to.search(tmp) != -1:
-        to = jsStr(to.replace(tmp, "$$$1"))
-    while st.search(re) != -1:
-        st = jsStr(st.replace(re, to))
-    return pyStr(st)
+from re import sub
 
 rep = {
     " ": "§ ", #Infinite Spaces
@@ -52,7 +37,7 @@ rep = {
     
     "\n---\n": "<div class='mdline'>---</div>", #Seperator
     "\n": "<br>", #New Line
-    "\u200b": "&nbsp;",
+    "\u200b": "&nbsp;", #Catch for NBSP in string
     
     #[^\\] - Ignore backslashes
     #(.*) -- Actual content
@@ -60,6 +45,6 @@ rep = {
 
 def mark(st):
     for key, val in [(k, rep[k]) for k in list(rep)]:
-        st = sub(key, val, st)
+        st = sub(key, val, " "+st)[1:]
+        #The space is needed because of the backslash escape method in the RegEx
     return st
-print(mark("*hello m8*"))
