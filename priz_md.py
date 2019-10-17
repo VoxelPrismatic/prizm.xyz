@@ -43,7 +43,7 @@ def sub(re, to, st):
 def mark(st):
     ##/// INIT
     st = st.replace("\t", "    ")
-    st.replace(" ", " \u200b")
+    st.replace(" ", " §")
     st.replace("§", "\u200b")
     
     ##/// SINGLE PARAM
@@ -72,5 +72,5 @@ def mark(st):
     st = st.replace("\n", "<br>")
     st = st.replace("\>", "&gt;")
     st = st.replace("\<", "&lt;")
-    st = st.replace("§", "\u200b")
+    st = st.replace("\u200b", "&nbsp;")
     return st
