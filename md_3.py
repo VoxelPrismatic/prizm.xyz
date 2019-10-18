@@ -48,6 +48,5 @@ def mark(st):
     for key, val, ch in reg:
         if ch in st: #Faster loading
             st = sub(key, val, " "+st)[1:]
-            ps = False
             #The space is needed because of the backslash escape method in the RegEx
     return st
