@@ -1,7 +1,7 @@
 from priz_md import mark
 from browser import document as doc, window as win, html
 history = {
-    "10x17_2019": "Something is happening",
+    "10x17_2019": "PC was off [how?] - Resolved issue",
     "00x00_0000": "Thats the beginning of the history"
 }
 for key in history:
