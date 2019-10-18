@@ -25,7 +25,7 @@ others = {">|": "<table>",
          }
 
 def pyStr(st):
-    if type(st) == js.JSObject:
+    if type(st) == js.String:
         return ''.join(st[int(x)] for x in dir(st))
     return str(st)
 
@@ -34,7 +34,6 @@ def sub(re, to, st):
     tmp = RegEx("\\\\(\\d+)")
     while String.new(to).search(tmp) != -1:
         to = String.new(to).replace(tmp, "$$$1")
-    print('CONVERT')
     re = RegEx(re)
     while String.new(st).search(re) != -1:
         st = String.new(st).replace(re, to)
