@@ -1,6 +1,13 @@
 from browser import document as doc, html, window as win
 from priz_md import mark
-content = {"10x17_2019":"""\
+content = {"10x18_2019":"""\
+> Added many more faces like ;] and ;O
+
+> Added many more status texts
+
+> Updated the >!;]char!< command to have bytes for python
+""",
+           "10x17_2019":"""\
 > The >!;]draw!< command is now a thing!
 > > Draw whatever you want in a 128x128 grid!
 > > Will be upscaled to a 1024x1024 image when sending to prevent blurriness
@@ -10,12 +17,13 @@ content = {"10x17_2019":"""\
 >  ALIAS - "paint", "color", "canvas", "painting", "drawing", "coloring"
 COLOR  [STR] - The color you want to place, MUST BE HEX
 xN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]
-             - You can use ranges like 0-16
-             - You can be relative like ~1
-             - You can use relative ranges like ~9-26
+- - You can use ranges like 0-16
+- - You can be relative like ~1
+- - You can use relative ranges like ~9-26
 *If no params are passed, the image is sent
 *If only coordinates are passed, the color at that coordinate is sent along with the image
-*ALL relative points are relative to YOUR last point`<
+*ALL relative points are relative to the previously drawn point IN THE SAME MESSAGE
+*^ Any starting relative points will be relative to 0, 0`<
 """,
            "10x16_2019":"""\
 > Added the >!;]draw!< command
