@@ -34,7 +34,7 @@ def mark(st):
     
     st = sub(r"[^\\]\[(.*)]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
     st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
-    st = sub(r"[^\\]\#\[(.*)]\<(.*)\>", r"<embed href='\2' alt='\1'>", "#[", st) # #[alt text]<link>
+    st = sub(r"[^\\]\#\[(.*)]\<(.*)\>", r"<embed href='\2' alt='\1'>", st) # #[alt text]<link>
     
     st = st.replace("\n---\n", "<div class='mdline'>---</div>") # ↵---↵ sep
     st = st.replace("\n", "<br>") # newline
