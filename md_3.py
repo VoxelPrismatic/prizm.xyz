@@ -4,8 +4,8 @@ rep = {
     " ": ["§ ", " "], #Infinite Spaces
     "§": ["\u200b", "§"],  #Short NBSP char
    
-    r"(.+?)\n(=+?)": [r"<span class='head1'>\1</span>", "="],#Header 1
-    r"(.+?)\n(-+?)": [r"<span class='head2'>\1</span>", "-"] #Header 2
+    r"(.+?)\n(=+?)": [r"<span class='head1'>\1</span>", "="], #Header 1
+    r"(.+?)\n(-+?)": [r"<span class='head2'>\1</span>", "-"], #Header 2
     r"\&(.+)": [r"<span class='head1'>\1</span>", "&"], #Header 1
     r"\&\&(.+)": [r"<span class='head2'>\1</span>", "&"], #Header 2
     r"\&\&\&(.+)": [r"<span class='head3'>\1</span>", "&"], #Header 3
