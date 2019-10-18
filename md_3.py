@@ -23,7 +23,7 @@ rep = {
     r"[^\\]\:\:(.*?)\:\:": r"<span class='oL'>\1</sub>", #Overline
     r"[^\\]\|(.*)\|": r"<span class='spoil'>\1</span>", #Spoiler
     
-    r"[^\\]\"\"\"((.*|\n)?)\"\"\"": r"<span class='quoted'>\1</span>", #Quoted
+    r'[^\\]\"\"\"((.*|\n)?)\"\"\"': r"<span class='quoted'>\1</span>", #Quoted
     r"[^\\]\:\:\:[(\w+)]((.|\n)*?)\:\:\:": r"<span class='note_\1'>\2</span>", #Highlight
     
     r"[^\\]\;\;\;((.|\n)*)\;\;\;": r"<div class='mono dark' style='width: 90%;'>\1</div>", #Code block
