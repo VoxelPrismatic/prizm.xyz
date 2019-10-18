@@ -43,18 +43,18 @@
         <link rel="stylesheet/less" type="text/css" href="css/base/elem_align.less" id="elem_align"/>
         <link rel="stylesheet/less" type="text/css" href="css/base/listen.less" id="css_listen"/>
         <!-- SCRIPTS -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" async></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.5/brython.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.5/brython_stdlib.js"></script>
-        <script type="text/javascript" src="loader/console.js" async></script>
+        <script type="text/javascript" src="loader/console.js" id="fns_js" async></script>
         <title>PRIZM ;]</title>
     </head>
     <body class="parallax" onload="brython()">
         <!-- DATA -->
-        <script type="text/python" src="loader/changelog.py" async></script>
-        <script type="text/python" src="loader/faqs.py" async></script>
-        <script type="text/python" src="loader/aboutme.py" async></script>
-        <script type="text/python" src="loader/statuspage.py" async></script>
+        <script type="text/python" src="loader/changelog.py" id="changelog_py" async></script>
+        <script type="text/python" src="loader/faqs.py" id="faq_py" async></script>
+        <script type="text/python" src="loader/aboutme.py" id="about_py" async></script>
+        <script type="text/python" src="loader/statuspage.py" id="status_py" async></script>
         <!-- COVER SCREEN -->
         <div class="headtitle vert full textC">
             PRIZM ;]
@@ -144,6 +144,7 @@
         <div class="warn WIDTH">
             <b>!]</b> PRIZM is still under development... some bugs may occur<br>
             <b>!]</b> This site is a bit buggy at the moment...
+            <noscript><b>!]</b> Sorry lad, I used scripts after this point ;[</noscript>
         </div>
         <!-------------->
         <!-- COLLAPSE -->
@@ -154,7 +155,6 @@
             <button class="clicky floatC" id="btn_about">ABOUT PRIZM ;]</button>
             <div class="sect" id="about">
                 <!-- I will use scripts to load this section because it makes life easier -->
-                <noscript>Sorry lad, I used scripts here ;[</noscript>
             </div>
             <div class="sep">---</div>
             <button class="clicky floatC" id="btn_change">CHANGE LOG ;]</button>
@@ -172,13 +172,11 @@
                     </div>
                 </div>
                 <!-- I will use scripts to load this section because it makes life easier -->
-                <noscript>Sorry lad, I used scripts here ;[</noscript>
             </div>
             <div class="sep">---</div>
             <button class="clicky floatC" id="btn_faq">FAQ ;]</button>
             <div class="sect" id="faq">
                 <!-- I will use scripts to load this section because it makes life easier -->
-                <noscript>Sorry lad, I used scripts here ;[</noscript>
             </div>
             <div class="sep">---</div>
             <button class="clicky floatC" id="btn_status">STATUS ;]</button>
@@ -213,6 +211,6 @@
         <div class="sep">---</div>
         <div id="labels" style="display: none"></div>
         <!-- OTHER SCRIPTS -->
-        <script type="text/javascript" src="loader/script.js" defer></script>
+        <script type="text/javascript" src="loader/script.js" id="other_js" defer></script>
     </body>
 </html>
