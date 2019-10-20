@@ -40,14 +40,14 @@ def mark(st):
     st = sub(r"[^\\]\>\+{2}(.*?)\+{2}\<", r"<sup>\1</sup>", st) # >++superscript++<
     st = sub(r"[^\\]\>\-{2}(.*?)\-{2}\<", r"<sub>\1</sub>", st) # >--subscript--<
     st = sub(r"[^\\]\:{2}(.*?)\:{2}", r"<span class='oL'>\1</span>", st) # ::overline::
-    st = sub(r"[^\\]\%(.*)\%", r"<span class='spoil'>\1</span>", st) # %spoiler%
+    st = sub(r"[^\\]\%(.*?)\%", r"<span class='spoil'>\1</span>", st) # %spoiler%
     
     st = sub(r'[^\\]\"{3}((.*|\n)?)\"{3}', r"<span class='quoted'>\1</span>", st) # """↵quote block↵"""
     st = sub(r"[^\\]\!{3}\[(\w+)\] *((.|\n)*?)\!{3}", r"<span class='note_\1'>\2</span>", st) 
          # !!![color] notice me senpai!!!
     st = sub(r"[^\\]\;{3}((.|\n)*)\;{3}", r"<div class='mono dark' style='width: 90%;'>\1</div>", st)
          # ;;;code block;;;
-    st = sub(r"[^\\]\`(.*)\`", r"<span class='mono dark'>\1</span>", st) # `inline code`
+    st = sub(r"[^\\]\`(.*?)\`", r"<span class='mono dark'>\1</span>", st) # `inline code`
     
     st = sub(r"[^\\]( *)(\d+)([.\)\]\}\-:;]) (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"[^\\]( *)([-\]>}.~+=]) (.*)", r"\1> \2", st) # > Unordered list
@@ -58,9 +58,8 @@ def mark(st):
     
     st = st.replace("\n---\n", "<div class='mdline'>---</div>") # ↵---↵ sep
     st = st.replace("\n", "<br>") # newline
-    st = st.replace("\u200b", "&nbsp;") # Non Breaking Space
     
     #[^\\] - Ignore backslashes
     #(.*) -- Actual content
     
-    return st.strip()
+    return st.replace("  ", " ").strip()
