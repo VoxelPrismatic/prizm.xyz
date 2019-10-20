@@ -1,17 +1,18 @@
 from browser import document as doc, html, window as win
-from md_4 import mark
+from priz_md import mark
 content = {"10x18_2019":"""\
-> Added many more faces like ;] and ;O
+> Added many more faces like `;]` and `;O`
 
 > Added many more status texts
 
-> Updated the >!;]char!< command to have bytes for python
+> Updated the `;]char` command to have bytes for python
 """,
            "10x17_2019":"""\
-> The >!;]draw!< command is now a thing!
+> The `;]draw` command is now a thing!
 > > Draw whatever you want in a 128x128 grid!
 > > Will be upscaled to a 1024x1024 image when sending to prevent blurriness
->`#] HELP FOR DRAW [CATAGORY: fun]
+;;;
+#] HELP FOR DRAW [CATAGORY: fun]
 =] Have fun drawing with others!
 >  USAGE - ';]draw {?color} {?x1} {?y1} {?x2} {?y2} ... {?xN} {?yN}'
 >  ALIAS - "paint", "color", "canvas", "painting", "drawing", "coloring"
@@ -23,106 +24,107 @@ xN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]
 *If no params are passed, the image is sent
 *If only coordinates are passed, the color at that coordinate is sent along with the image
 *ALL relative points are relative to the previously drawn point IN THE SAME MESSAGE
-*^ Any starting relative points will be relative to 0, 0`<
+*^ Any starting relative points will be relative to 0, 0
+;;;
 """,
            "10x16_2019":"""\
-> Added the >!;]draw!< command
+> Added the `;]draw` command
 > > Still working on it, and will be greatly improved tomorrow
 """,
            "10x14_2019":"""\
 > The char command now gives more info
 > > When requesting one character, it tells you how to write it in many languages
 > > > Includes PY, JS, URI/URL, JAVA, C#, C++, C, HTML, RUBY, and SWIFT
-> > > If you want other languages, please visit the >$https://discordapp.com/channels/533290351184707584/535507316775059516/\
-$$#prizm_suggest$< channel
+> > > If you want other languages, please visit the [#prizm_suggest]\
+<https://discordapp.com/channels/533290351184707584/535507316775059516/> channel
 """,
            "10x13_2019":"""\
-> The >!;]reddit!< command has been updated
+> The `;]reddit` command has been updated
 > > Now properly states whether or not the post is archived
-> > Now states whether or not the >![IMAGE]!< button should be pressed
+> > Now states whether or not the `[IMAGE]` button should be pressed
 """,
            "10x11_2019":"""\
 > The >!;]reddit!< command has been updated
 > > Now looks much cleaner
 > > Attributes---
-> > > >![-] !< - Archived
-> > > >!O-O !< - Link submission
-> > > >!TXT !< - Text submission
-> > > >!§ => !< - Edited
-> > > >![>§- !< - Pinned
-> > > >![|§|]!< - Spoiled
+> > > `[-] ` - Archived
+> > > `O-O ` - Link submission
+> > > `TXT ` - Text submission
+> > > `§ => ` - Edited
+> > > `[>§- ` - Pinned
+> > > `[|§|]` - Spoiled
 > > Now supports multireddits
 > > Now loads so much faster
 > > Direct links now work
 """,
            "10x08_2019":"""\
-> The >!;]graph!< command has new features
-> > Adding >!--zero!< to the end of the equation now shows the true zeros
-> > Adding >!--yint!< to the end will show the y-intercept
-> > >!--max!<, >!--min!<, >!--zero!<, >!--yint!< will be shown next to the equation in the legend, \
+> The `;]graph` command has new features
+> > Adding `--zero` to the end of the equation now shows the true zeros
+> > Adding `--yint` to the end will show the y-intercept
+> > `--max`, `--min`, `--zero`, `--yint` will be shown next to the equation in the legend, \
 and everything else should work as normal...
->#Please use the >!;]bug!< command if you experience any issues#<
+#Please use the `;]bug` command if you experience any issues#
 """,
            "10x03_2019":"""\
-> The >!;]quad!< command should work now...
+> The `;]quad` command should work now...
 > > Should load faster
-> > Shouls give the >*right*< answer...
+> > Shouls give the *right* answer...
 
-> Logging now >#should#< work
+> Logging now #should# work
 > > Logging works on my own server, so...
 """,
            "10x02_2019":"""\
 > Just realized, the logging features are broken again
-> > All >!;]mng!< features should still be funtional though
+> > All `;]mng` features should still be funtional though
 """,
            "10x01_2019":"""\
-> The >!;]graph!< command now actually works [mostly]
-> > Fixed >!--max!< and >!--min!< to not show up with >![nan, nan]!<
-> > Fixed >!--zero!< to actually show some zeros, except not the correct ones...
+> The `;]graph` command now actually works [mostly]
+> > Fixed `--max` and `--min` to not show up with >![nan, nan]!<
+> > Fixed `--zero` to actually show some zeros, except not the correct ones...
 """,
            "09x29_2019":"""\
-> The >!;]graph!< command now has been refreshed
-> > The new syntax ] >!;]graph {?window} {eq1} | {eq2} | {eq3} | {eqX}!<
-> > Adding >!--max!< to the end of the equation should give you the maximum coordinates shown
-> > Adding >!--min!< to the end of the equation should give you the minimum coordinates shown
-> > Adding >!--zero!< should give you the coordinates for when >!y = 0!<
+> The `;]graph` command now has been refreshed
+> > The new syntax ] `;]graph {?window} {eq1} | {eq2} | {eq3} | {eqX}`
+> > Adding `--max` to the end of the equation should give you the maximum coordinates shown
+> > Adding `--min` to the end of the equation should give you the minimum coordinates shown
+> > Adding `--zero` should give you the coordinates for when `y = 0`
 
-> The >!;]sym!< command has been updated
-> > Doing something like >!;]sym 2x^2!< shouldn't break it
+> The `;]sym` command has been updated
+> > Doing something like `;]sym 2x^2` shouldn't break it
 
-> Added the >!;]sub!< command
-> > Syntax ] >!;]sub {num} {eq}!<
+> Added the `;]sub` command
+> > Syntax ] `;]sub {num} {eq}`
 > > Allows you to substitute {num} in for X in {eq}
-> > Example ] >!;]sub 206 x^2+34!<
+> > Example ] `;]sub 206 x^2+34`
 
 > The >!;]calc!< command now actually loads on startup
 """,
            "09x23_2019":"""\
-> The >!;]graph!< command now doesnt need xmin or xmax, but now also has options for ymin and ymax
-> > >!;]graph x!< - ymin, ymax, xmin, xmax = -10, 10, -10, 10
-> > >!;]graph -3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 10
-> > >!;]graph -3 3 x!< - ymin, ymax, xmin, xmax = -10, 10, -3, 3
-> > >!;]graph -3 3 -5 x!< - ymin, ymax, xmin, xmax = -5, 10, -3, 3
-> > >!;]graph -3 3 -5 5 x!< - ymin, ymax, xmin, xmax = -5, 5, -3, 3
+> The `;]graph` command now doesnt need xmin or xmax, but now also has options for ymin and ymax
+> > `;]graph x` - ymin, ymax, xmin, xmax = -10, 10, -10, 10
+> > `;]graph -3 x` - ymin, ymax, xmin, xmax = -10, 10, -3, 10
+> > `;]graph -3 3 x` - ymin, ymax, xmin, xmax = -10, 10, -3, 3
+> > `;]graph -3 3 -5 x` - ymin, ymax, xmin, xmax = -5, 10, -3, 3
+> > `;]graph -3 3 -5 5 x` - ymin, ymax, xmin, xmax = -5, 5, -3, 3
 """,
            "09x22_2019":"""\
 > Logging now actually works
 
 > You can now create, edit, delete, and view tags with no issues
 
-> All >!;]mng!< features now work
+> All `;]mng` features now work
 """,
            "09x16_2019":"""\
-> Fixed the >!;]mng!< command
+> Fixed the `;]mng` command
 > > The logging section now actually loads
 > > The moderator section now doesn't throw an error
 """,
            "09x15_2019":"""\
-> Switched the database from >!JSON!< to >!SQLITE3!<
+> Switched the database from `JSON` to `SQLITE3`
 
 > > This is a pretty big change, please submit any and all bugs via the >!;]bug!< command or via DMs
 
-> The >!;]audit!< command has been refreshed
+> The `;]audit` command has been refreshed
 
 > All commands have been updated to use the new database
 
@@ -140,7 +142,7 @@ and everything else should work as normal...
 > Fixed very minor bugs with the simplify command
 
 > Updated the graph command
-> > The graph command now supports both-axis graphing [>!x^2+y^2=4!<]
+> > The graph command now supports both-axis graphing [`x^2+y^2=4`]
 > > It should now actually graph faster when using more equations
 > > Uses a new pallette that overall looks nicer
 > > Fixed a couple bugs
@@ -148,7 +150,7 @@ and everything else should work as normal...
 > > Now has X and Y axes clearly marked
 > > Now won't break when the vars are uppercase
 > > Should actually parse faster and break less when doing so
-> > Shouldn't break with >!x=...!< or >!y=...!<
+> > Shouldn't break with `x=...` or `y=...`
 """,
            
            "09x09_2019":"""\
@@ -157,7 +159,7 @@ and everything else should work as normal...
 > Added more features to that command
 
 > Fixed bugs with the help command
-> > All aliases after the first one would have a >!.!< in front
+> > All aliases after the first one would have a `.` in front
 
 > Added the calc command
 > > Added more functions
@@ -167,22 +169,22 @@ and everything else should work as normal...
            "08x26_2019":"""\
 > Cleaned up files and code to make it more readable
 
-> Added help text for the clrin command
+> Added help text for the `;]clrin` command
 
-> Added the clrto command, it clears all messages to a given message ID
+> Added the `;]clrto` command, it clears all messages to a given message ID
 > > Useful if you don't know the exact amount of kessages to clear
 
 > Updated the graph command so you can now graph on the y axis too 
-> > [>!x=y^2!< and >!y=x^2!< are supported]
-> > Support for xy functions [>!x^2+y^2=4!<] has not been added yet, I'm working on it tho
+> > [`x=y^2` and `y=x^2` are supported]
+> > Support for xy functions [`x^2+y^2`] has not been added yet, I'm working on it tho
 """,
            
            "08x22_2019":"""\
-> Added an actually decent AI [>!;]text hello!<]
+> Added an actually decent AI [`;]text hello`]
 
 > Fixed a bug where "no" would register as a bool and break it 
 
-> Fixed a bug where smart quotes [>!‘’“”!<] would register as a bool break it
+> Fixed a bug where smart quotes [`‘’“”`] would register as a bool break it
 
 > Fixed a bug where any colons would register as a dict and break it
 
@@ -214,16 +216,16 @@ and everything else should work as normal...
 """,
            
            "08x20_2019":"""\
-> Added the >!;]reddit!< command
+> Added the `;]reddit` command
 > > Fixed some bugs with that
 
-> Added the >!;]captcha!< command
+> Added the `;]captcha` command
 
-> Added the >!;]8ball!< command
+> Added the `;]8ball` command
 """,
            
            "08x19_2019":"""\
-> Fixed the >!;]2048!< command
+> Fixed the `;]2048` command
 > > Now groups properly when not moving right
 > > Now doesn't break when there are multiple instances
 > > Doesn't edit twice
@@ -238,14 +240,14 @@ and everything else should work as normal...
 > Updated the help command to change the prefix in the page
 > > Fixed bugs
 
-> Updated the >!;]inv!< command to comply with new permission requirements
+> Updated the `;]inv` command to comply with new permission requirements
 > Added this site link to the inv command
 """,
            
            "08x13_2019":"""\
 > Updated the help command to be automatic documentation
 
-> Updated the help command so you can now do >!;]help {command name}!<
+> Updated the help command so you can now do `;]help {command name}`
 
 > Added new interactive commands [cuddle, kiss, throw]
 
@@ -260,7 +262,7 @@ and everything else should work as normal...
 > Moved module loading to a seperate file
 
 > Removed some useless things
-> > Like >!bot.lock = False!< which I literally never used
+> > Like `bot.lock = False` which I literally never used
 
 > Moved custom faces and texts into a different file
 
