@@ -62,4 +62,4 @@ def mark(st):
     #[^\\] - Ignore backslashes
     #(.*) -- Actual content
     
-    return st.replace("  ", " ").strip()
+    return st.replace("  ", " ").strip('\u200b ')
