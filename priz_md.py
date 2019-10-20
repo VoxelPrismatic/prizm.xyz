@@ -23,6 +23,9 @@ def mark(st):
     st = " "+st
     st = st.replace(" ", "\u200b \u200b")
     st = st.replace("§", "\u200b")
+    
+    st = sub(r"\`\[(.*)\]\`", r"\`\u200b\[\1\]\u200b\`", st) #Fix for some code block issues
+    
     if "&" in st:
         st = sub(r"\&{1}(.+)", r"<span class='head1'>\1</span>", st) # &Header 1
         st = sub(r"\&{2}(.+)", r"<span class='head2'>\1</span>", st) # &&Header 2
@@ -51,10 +54,10 @@ def mark(st):
     
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
-    
-    st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
-    st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
-    st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
+    if "<" in st:
+        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
+        st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
+        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
     
     st = st.replace("\n---\n", "<div class='mdline'>---</div>") # ↵---↵ sep
     st = st.replace("\n", "<br>") # newline
