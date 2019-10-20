@@ -21,7 +21,7 @@ def sub(re, to, st):
 
 def mark(st):
     st = " "+st
-    st = st.replace(" ", "\u200b ")
+    st = st.replace(" ", "\u200b \u200b")
     st = st.replace("§", "\u200b")
     if "&" in st:
         st = sub(r"\&{1}(.+)", r"<span class='head1'>\1</span>", st) # &Header 1
