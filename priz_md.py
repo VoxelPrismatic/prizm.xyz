@@ -49,17 +49,20 @@ def mark(st):
          # ;;;code block;;;
     st = sub(r"[^\\]\`(.*?)\`", r"<span class='mono dark'>\1</span>", st) # `inline code`
     
-    st = sub(r"[^\\]( *)(\d+)([.\)\]\}\-:;]) (.*)", r"\1\2] \3", st) # 1] Ordered list
-    st = sub(r"[^\\]( *)([-\]>}.~+=]) (.*)", r"\1> \2", st) # > Unordered list
+    st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
+    st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
     
-    st = sub(r"[^\\]\[(.*)]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
+    st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
     st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
-    st = sub(r"[^\\]\#\[(.*)]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
+    st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
     
     st = st.replace("\n---\n", "<div class='mdline'>---</div>") # ↵---↵ sep
     st = st.replace("\n", "<br>") # newline
     
     #[^\\] - Ignore backslashes
+    #\n? --- Ignore newlines
+    #\X{n} - Atleast n characters of X
     #(.*) -- Actual content
-    
+    #(.*?) - Lazy actual content
+    #(.+?) - Lazy actual content
     return st.replace("  ", " ").strip('\u200b ')
