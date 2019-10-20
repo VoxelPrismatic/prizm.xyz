@@ -1,4 +1,24 @@
-from priz_md import sub
+from javascript import String, RegExp
+import javascript as js
+
+def jsStr(st): return String.new(st)
+def RegEx(st): return RegExp.new(st)
+
+def pyStr(st):
+    if type(st) == js.String:
+        return ''.join(st[int(x)] for x in dir(st))
+    return str(st)
+
+def sub(re, to, st):
+    to = jsStr(to)
+    tmp = RegEx("\\\\(\\d+)")
+    while String.new(to).search(tmp) != -1:
+        to = String.new(to).replace(tmp, "$$$1")
+    re = RegEx(re)
+    while String.new(st).search(re) != -1:
+        st = String.new(st).replace(re, to)
+    return pyStr(st)
+
 def mark(st):
     st = " "+st
     st = st.replace(" ", "\u200b ")
