@@ -13,19 +13,20 @@ def sub(re, to, st):
     to = jsStr(to)
     tmp = RegEx("\\\\(\\d+)")
     while String.new(to).search(tmp) != -1:
-        to = String.new(to).replace(tmp, "$$$1")
+        to = String.new(to).replace(tmp, "$$$1") #Convert from PY Regex to JS Regex
     re = RegEx(re)
     while String.new(st).search(re) != -1:
-        st = String.new(st).replace(re, to)
+        st = String.new(st).replace(re, to) #Doesn't stop until no matches are found
     return pyStr(st)
 
 def mark(st):
+    
+    ##/// INIT
     st = " "+st
     st = st.replace(" ", "\u200b \u200b")
     st = st.replace("§", "\u200b")
     
-    st = sub(r"\`\[(.*)\]\`", r"\`\u200b\[\1\]\u200b\`", st) #Fix for some code block issues
-    
+    ##/// HEADERS
     if "&" in st:
         st = sub(r"\&{1}(.+)", r"<span class='head1'>\1</span>", st) # &Header 1
         st = sub(r"\&{2}(.+)", r"<span class='head2'>\1</span>", st) # &&Header 2
@@ -36,6 +37,13 @@ def mark(st):
     st = sub(r"(.+?)\n={3,}", r"<span class='head1'>\1</span>", st) # header1 ↵ ===
     st = sub(r"(.+?)\n-{3,}", r"<span class='head2'>\1</span>", st) # header2 ↵ ---
     
+    ##/// LINKS
+    if "<" in st:
+        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
+        st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
+        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
+    
+    ##/// BASICS
     st = sub(r"[^\\]\#(.*?)\#", r"<b>\1</b>", st) # #bolded#
     st = sub(r"[^\\]\*(.*?)\*", r"<i>\1</i>", st) # *italics*
     st = sub(r"[^\\]\~(.*?)\~", r"<s>\1</s>", st) # ~strikethrough~
@@ -45,6 +53,7 @@ def mark(st):
     st = sub(r"[^\\]\:{2}(.*?)\:{2}", r"<span class='oL'>\1</span>", st) # ::overline::
     st = sub(r"[^\\]\%(.*?)\%", r"<span class='spoil'>\1</span>", st) # %spoiler%
     
+    ##/// ADVANCED
     st = sub(r'[^\\]\"{3}\n?((.*|\n)?)\n?\"{3}', r"<span class='quoted'>\1</span>", st) # """↵quote block↵"""
     st = sub(r"[^\\]\!{3}\n?\[(\w+)\] *((.|\n)*?)\n?\!{3}", r"<span class='note_\1'>\2</span>", st) 
          # !!![color] notice me senpai!!!
@@ -52,20 +61,20 @@ def mark(st):
          # ;;;code block;;;
     st = sub(r"[^\\]\`(.*?)\`", r"<span class='mono dark'>\1</span>", st) # `inline code`
     
+    ##/// ORGANIZE
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
-    if "<" in st:
-        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
-        st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
-        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
     
     st = st.replace("\n---\n", "<div class='mdline'>---</div>") # ↵---↵ sep
-    st = st.replace("\n", "<br>") # newline
     
+    ##/// OTHER
+    st = st.replace("\n", "<br>") # newline
+    return st.replace("  ", " ").strip('\u200b ')
+    
+    ##/// NOTES
     #[^\\] - Ignore backslashes
     #\n? --- Ignore newlines
     #\X{n} - Atleast n characters of X
     #(.*) -- Actual content
     #(.*?) - Lazy actual content
     #(.+?) - Lazy actual content
-    return st.replace("  ", " ").strip('\u200b ')
