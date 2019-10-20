@@ -42,10 +42,10 @@ def mark(st):
     st = sub(r"[^\\]\:{2}(.*?)\:{2}", r"<span class='oL'>\1</span>", st) # ::overline::
     st = sub(r"[^\\]\%(.*?)\%", r"<span class='spoil'>\1</span>", st) # %spoiler%
     
-    st = sub(r'[^\\]\"{3}((.*|\n)?)\"{3}', r"<span class='quoted'>\1</span>", st) # """↵quote block↵"""
-    st = sub(r"[^\\]\!{3}\[(\w+)\] *((.|\n)*?)\!{3}", r"<span class='note_\1'>\2</span>", st) 
+    st = sub(r'[^\\]\"{3}\n?((.*|\n)?)\n?\"{3}', r"<span class='quoted'>\1</span>", st) # """↵quote block↵"""
+    st = sub(r"[^\\]\!{3}\n?\[(\w+)\] *((.|\n)*?)\n?\!{3}", r"<span class='note_\1'>\2</span>", st) 
          # !!![color] notice me senpai!!!
-    st = sub(r"[^\\]\;{3}((.|\n)*)\;{3}", r"<div class='mono dark' style='width: 90%;'>\1</div>", st)
+    st = sub(r"[^\\]\;{3}\n?((.|\n)*)\n?\;{3}", r"<div class='mono dark' style='width: 90%;'>\1</div>", st)
          # ;;;code block;;;
     st = sub(r"[^\\]\`(.*?)\`", r"<span class='mono dark'>\1</span>", st) # `inline code`
     
@@ -54,7 +54,7 @@ def mark(st):
     
     st = sub(r"[^\\]\[(.*)]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
     st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
-    st = sub(r"[^\\]\#\[(.*)]\<(.*)\>", r"<embed href='\2' alt='\1'>", st) # #[alt text]<link>
+    st = sub(r"[^\\]\#\[(.*)]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
     
     st = st.replace("\n---\n", "<div class='mdline'>---</div>") # ↵---↵ sep
     st = st.replace("\n", "<br>") # newline
