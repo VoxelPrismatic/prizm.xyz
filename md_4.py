@@ -1,4 +1,4 @@
-from re import sub
+from priz_md import sub
 def mark(st):
     st = " "+st
     st = st.replace(" ", "\u200b ")
