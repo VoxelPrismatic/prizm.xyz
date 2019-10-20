@@ -1,5 +1,5 @@
 from browser import document as doc, html, window as win
-from priz_md import mark
+from md_4 import mark
 content = {"10x18_2019":"""\
 > Added many more faces like ;] and ;O
 
