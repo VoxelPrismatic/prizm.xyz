@@ -13,5 +13,5 @@ for key in history:
     history[key] = mark(history[key])
     doc["status"] <= html.DIV(key+" - "+history[key], Id="status_"+key, Class="content consect")
 
-doc["current_status"] = "PRIZM IS " + ("ONLINE ;]" if online else "OFFLINE ;[")
-doc["issue"] = "No issues here" if online else current+"\nWill be fixed at "+when
+doc["current_status"].innerHTML = "PRIZM IS " + ("ONLINE ;]" if online else "OFFLINE ;[")
+doc["issue"].innerHTML = "No issues here" if online else current+"\nWill be fixed at "+when
