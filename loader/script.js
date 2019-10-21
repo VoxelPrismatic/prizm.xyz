@@ -1,7 +1,7 @@
-var tap = document.getElementsByClassName("clicky");
+var tap = gCLASS("clicky");
 for (var i = 0; i < tap.length; i++) {
     tap[i].onclick = function() {
-        var taq = document.getElementsByClassName("clicky");
+        var taq = gCLASS("clicky");
         for (var i = 0; i < taq.length; i++) {
             if (taq[i].id != this.id) {
                 taq[i].classList = taq[i].className.replace(/ (active|select)/g, "");
@@ -9,7 +9,7 @@ for (var i = 0; i < tap.length; i++) {
             }
         }
         var nxt = this.nextElementSibling;
-        this.classList.toggle("select");
+        eCLASS(this.id, "select");
         if (this.classList.toggle("active"))
             nxt.style.height = `${nxt.scrollHeight + 10}px`
         else
@@ -24,12 +24,26 @@ window.onscroll = function() {
 function chng() {
     var tab = document.getElementById("labels").innerHTML.split('|');
     for (var i = 0; i < tab.length; i++) {
-        document.getElementById(tab[i]).onclick = function() {
-            var tag = document.getElementById("labels").innerHTML.split('|');
+        gID(tab[i]).onclick = function() {
+            var tag = gHTML("labels").innerHTML.split('|');
             for (var i = 0; i < tag.length; i++) {
-                document.getElementById(tag[i]).className = document.getElementById(tag[i]).className.replace(" active", "");
+                gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
             }
-            document.getElementById("blocky").innerHTML = document.getElementById("changes_"+this.id).innerHTML;
+            gHTML("blocky", gHTML("changes_"+this.id));
+            this.className += " active"
+        }
+    }
+}
+
+function comm() {
+    var tab = document.getElementById("labels").innerHTML.split('|');
+    for (var i = 0; i < tab.length; i++) {
+        gID(tab[i]).onclick = function() {
+            var tag = gHTML("labels").innerHTML.split('|');
+            for (var i = 0; i < tag.length; i++) {
+                gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
+            }
+            gHTML("blocky", gHTML("commands_"+this.id));
             this.className += " active"
         }
     }
