@@ -1,6 +1,17 @@
 from browser import document as doc, html, window as win
 from priz_md import mark
-content = {"10x18_2019":"""\
+content = {"10x21_2019":"""\
+> Added the `;]convert` command!
+> > You can now convert your 4mb files to any format you like!
+> > What it currently supports ---
+> > > Image ] `PNG`, `GIF`, `JPG`, and most other common image formats
+> > > Audio ] `MP3`, `M4A`, `WAV`, `AIFF` and all other `FFmpeg` formats
+> > > Video ] `MP4`, `OGV`, `M4V`, and all other `FFmpeg` formats
+> > Syntax ] `;]convert {output format} <attach a file to the message>`
+> Use the `;]bug` command to report any issues. 
+> One is known ] FFmpeg doesn't always work
+""",
+           "10x18_2019":"""\
 > Added many more faces like `;]` and `;O`
 
 > Added many more status texts
@@ -44,7 +55,7 @@ xN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]
 > > Now states whether or not the `[IMAGE]` button should be pressed
 """,
            "10x11_2019":"""\
-> The >!;]reddit!< command has been updated
+> The `;]reddit` command has been updated
 > > Now looks much cleaner
 > > Attributes---
 > > > `[-] ` - Archived
