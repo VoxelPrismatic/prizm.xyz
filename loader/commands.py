@@ -8,6 +8,12 @@ coms = {
         "dsc": "Help text"
     }
 }
+doc["labels"].innerHTML = '|'.join(list(content))
+element = doc["changes"]
+lists = doc["tabby"]
+
 commands = [(com, coms[com]["cat"], coms[com]["brf"], coms[com]["usg"], coms[com]["dsc"]) for com in coms]
 for com, cat, brf, usg, dsc in commands:
-    j
+    lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
+    element <= html.DIV(mark(content[key])+"<br>", Class = "tabby_sect", Id = "commands_"+key, style={"display": "none"})
+win.comm()
