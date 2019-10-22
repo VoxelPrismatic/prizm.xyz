@@ -17,7 +17,7 @@ commands = [(com, coms[com]["cat"],
              coms[com]["brf"], coms[com]["usg"], 
              coms[com]["dsc"], '", "'.join(coms[com]["als"])) for com in coms]
 for com, cat, brf, usg, dsc, als in commands:
-    lists <= html.BUTTON(key, Class = "tabby_link", Id = key)
+    lists <= html.BUTTON(com, Class = "tabby_link", Id = com)
     element <= html.DIV(
         mark(f"""\
 &&&THE {com} COMMAND
@@ -31,6 +31,6 @@ Usage Notes ---
 ;;;
 """)+"<br>", 
         Class = "tabby_sect", 
-        Id = "commands_"+key, 
+        Id = "commands_"+com, 
         style={"display": "none"})
 win.comm()
