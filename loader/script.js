@@ -1,3 +1,6 @@
+// VARS
+doc = document
+win = window
 // GET
 function gID(elem) { return doc.getElementById(elem); }
 function gHTML(elem) { return gID(elem).innerHTML; }
@@ -31,16 +34,16 @@ for (var i = 0; i < tap.length; i++) {
             nxt.style.height = "0px";
     }
 }
-var parallax = document.body.style;
-window.onscroll = function() {
+var parallax = doc.body.style;
+win.onscroll = function() {
     parallax.backgroundPosition = 
-        `center ${window.pageYOffset/4.0}px`;
+        `center ${win.pageYOffset/4.0}px`;
 }
 function chng() {
-    var tab = document.getElementById("labels").innerHTML.split('|');
+    var tab = gHTML("labels").split('|');
     for (var i = 0; i < tab.length; i++) {
         gID(tab[i]).onclick = function() {
-            var tag = gHTML("labels").innerHTML.split('|');
+            var tag = gHTML("labels").split('|');
             for (var i = 0; i < tag.length; i++) {
                 gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
             }
