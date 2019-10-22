@@ -5,7 +5,7 @@ coms = {
         "cat": "catagory",
         "brf": "description",
         "usg": ";] stuff",
-        "dsc": "Help text"
+        "dsc": "Help text",
         "als": [""]
     }
 }
