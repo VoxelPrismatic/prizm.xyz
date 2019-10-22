@@ -57,7 +57,7 @@ function comm() {
     var tab = document.getElementById("labels").innerHTML.split('|');
     for (var i = 0; i < tab.length; i++) {
         gID(tab[i]).onclick = function() {
-            var tag = gHTML("labels").innerHTML.split('|');
+            var tag = gHTML("labels").split('|');
             for (var i = 0; i < tag.length; i++) {
                 gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
             }
