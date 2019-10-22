@@ -9,7 +9,7 @@ coms = {
         "als": [""]
     }
 }
-doc["labels"].innerHTML = '|'.join(list(content))
+doc["labels"].innerHTML = '|'.join(list(coms))
 element = doc["changes"]
 lists = doc["tabby"]
 
