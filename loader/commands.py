@@ -1,4 +1,4 @@
-from browser import document as doc, html
+from browser import document as doc, html, window as win
 from priz_md import mark
 coms = {
     "command": {
