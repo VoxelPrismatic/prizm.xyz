@@ -47,7 +47,7 @@ function chng() {
             for (var i = 0; i < tag.length; i++) {
                 gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
             }
-            gHTML("blocky", gHTML("changes_"+this.id));
+            eHTML("blocky", gHTML("changes_"+this.id));
             this.className += " active"
         }
     }
@@ -61,7 +61,7 @@ function comm() {
             for (var i = 0; i < tag.length; i++) {
                 gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
             }
-            gHTML("blocky", gHTML("commands_"+this.id));
+            eHTML("blocky", gHTML("commands_"+this.id));
             this.className += " active"
         }
     }
