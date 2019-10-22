@@ -2,12 +2,12 @@
 doc = document;
 win = window;
 // GET
-function gID(elem) { return doc.getElementById(elem); }
+function gID(elem) { return document.getElementById(elem); }
 function gHTML(elem) { return gID(elem).innerHTML; }
 function gPARAM(elem) { return gID(elem).outerHTML; }
 function gSTYLE(elem, name) { return gID(elem).style.getPropertyValue(name); }
-function gCLASS(clss) { return doc.getElementsByClassName(clss); }
-function gTAG (tag) { return doc.getElementsByTagName(tag); }
+function gCLASS(clss) { return document.getElementsByClassName(clss); }
+function gTAG (tag) { return document.getElementsByTagName(tag); }
 
 // EDIT
 function eCLASS(elem, name) { gID(elem).classList.toggle(name); }
