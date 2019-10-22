@@ -39,22 +39,6 @@ a {
         width: 100vw; height: auto;
     } .tabby button {
         ._tabby_button();
-    } .grid5, .grid4, .grid3, .grid2 {
-        .grid1();
-    } .tabby {
-        border: 2px solid @blue; ._tabby();
-        .font(); .scroller(); .wAUTO();
-        .pad(); .textR(); .bordT();
-        .header(); .v40(); .h20vh()
-    } .tabby_block {
-        ._tabby_block(); .fullW();
-        .content(); .scroller(); .h50vh();
-        .nordR(); .bordB(); font-size: 3.5vw;
-    } .contact {
-        .WIDTH();
-    }
-    .changes_contain {
-        .grid2();
     }
 }
 
@@ -332,5 +316,21 @@ a {
         display: flex; 
         flex: 1;
     }
+}
+
+.grid5_smol, .grid4_smol, .grid3_smol, .grid2_smol {
+    .grid1();
+} .tabby_smol {
+    border: 2px solid @blue; ._tabby();
+    .font(); .scroller(); .wAUTO();
+    .pad(); .textR(); .bordT();
+    .header(); .h20vh()
+} .tabby_block_smol {
+    ._tabby_block(); .fullW();
+    .content(); .scroller(); .h50vh();
+    .nordR(); .bordB();
+}
+.changes_contain_smol {
+    .grid2();
 }
 
