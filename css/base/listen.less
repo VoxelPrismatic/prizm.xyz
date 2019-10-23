@@ -7,44 +7,35 @@
 @import (reference) "grid_cells";
 @import (reference) "color";
 @import (reference) "../cls/000";
-.clicky:after {
-    .btn_after(); 
-    .bordT();
-}
-.clicky.active:after {
-    .btn_activeafter();
-    .bordT();
-}
-.clicky.active {
-    .select();
-}
-.clicky:hover {
-    .hover();
-}
-.clicky.active:hover {
-    .closer();
-}
-.linky:hover {
-    .hover();
-}
-.linky:after {
-    .btn_after(); 
-    .round();
-}
-.linky.active:after {
-    .btn_activeafter(); 
-    .round();
-}
-.tabby button {
-    .nohover();
-}
-.tabby button:hover {
-    .hover();
-}
-.tabby button.active {
-    .select();
-}
-.tabby button.active:hover {
-    .closer();
+.clicky {
+    &:after {
+        .btn_after(); 
+        .bordT();
+    } &.active:after {
+        .btn_activeafter();
+        .bordT();
+    } &.active {
+        .select();
+    } &:hover {
+        .hover();
+    } &.active:hover {
+        .closer();
+} .linky {
+    &:hover {
+        .hover();
+    } &:after {
+        .btn_after(); 
+        .round();
+    } &.active:after {
+        .btn_activeafter(); 
+        .round();
+    } & button {
+        .nohover();
+    } & button:hover {
+        .hover();
+    } & button.active {
+        .select();
+    } & button.active:hover {
+        .closer();
 }
 
