@@ -22,7 +22,11 @@ coms = {
     }, "role": {
         "brf": "Adds or removes {role} from {user} for a {reason}",
         "usg": ";]role {mbr} {add/remove} {rol} {?rsn}",
-        "dsc": "MBR [MEMBER] - The target user, mention or name or ID\nROL [ROLE  ] - The target role, mention or name or ID\nRSN [STR   ] - The reason for the action DEFAULT: \"REQUESTED BY ] <name>\"",
+        "dsc": """\
+MBR [MEMBER] - The target user, mention or name or ID
+ROL [ROLE  ] - The target role, mention or name or ID
+RSN [STR   ] - The reason for the action DEFAULT: \"REQUESTED BY ] <name>\"
+""",
         "als": [],
         "cat": "mod"
     }, "text": {
@@ -40,7 +44,10 @@ coms = {
     }, "slap": {
         "brf": "Slaps a {member} for a {reason}!",
         "usg": ";]slap {mbr} {?reason}",
-        "dsc": "MBR    [INT or PING] - The member you want to slap\nREASON [STR        ] - The reason for the slap",
+        "dsc": """\
+MBR    [INT or PING] - The member you want to slap
+REASON [STR        ] - The reason for the slap
+""",
         "als": [],
         "cat": "int"
     }, "slots": {
@@ -88,7 +95,10 @@ coms = {
     }, "rad": {
         "brf": "Radical Reducers",
         "usg": ";]rad {D} {X}",
-        "dsc": "D [INT] - Discriminator, aka X\u221a>>D<<\nX [INT] - The radical, aka \"square root\" is 2 and \"cube root\" is 3",
+        "dsc": """\
+D [INT] - Discriminator, aka X\u221a>>D<<
+X [INT] - The radical, aka \"square root\" is 2 and \"cube root\" is 3
+""",
         "als": [ "reduce", "radical" ],
         "cat": "math"
     }, "react": {
@@ -100,7 +110,10 @@ coms = {
     }, "hug": {
         "brf": "Hugs a {member} for a {reason}!",
         "usg": ";]hug {mbr} {?reason}",
-        "dsc": "MBR    [INT or PING] - The Member you want to slap\nREASON [STR        ] - The reason for the hug",
+        "dsc": """\
+MBR    [INT or PING] - The Member you want to hug
+REASON [STR        ] - The reason for the hug
+""",
         "als": [],
         "cat": "int"
     }, "rpn": {
@@ -130,7 +143,10 @@ coms = {
     }, "cuddle": {
         "brf": "Cuddle with a {member} for a {reason}!",
         "usg": ";]cuddle {mbr} {?reason}",
-        "dsc": "MBR    [INT or PING] - The member you want to slap\nREASON [STR        ] - The reason for the slap",
+        "dsc": """\
+MBR    [INT or PING] - The member you want to cuddle
+REASON [STR        ] - The reason for the cuddle
+""",
         "als": [],
         "cat": "int"
     }, "char": {
@@ -160,7 +176,16 @@ coms = {
     }, "draw": {
         "brf": "Have fun drawing with others!",
         "usg": ";]draw {?color} {?x1} {?y1} {?x2} {?y2} ... {?xN} {?yN}",
-        "dsc": "COLOR  [STR] - The color you want to place, MUST BE HEX\nxN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]\n             - You can use ranges like 0-16\n             - You can be relative like ~1\n             - You can use relative ranges like ~9-26\n*If no params are passed, the image is sent\n*If only coordinates are passed, the color at that coordinate is sent along with the image\n*ALL relative points are relative to YOUR last point",
+        "dsc": """\
+COLOR  [STR] - The color you want to place, MUST BE HEX
+xN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]
+- - You can use ranges like 0-16
+- - You can be relative like ~1
+- - You can use relative ranges like ~9-26
+*If no params are passed, the image is sent
+*If only coordinates are passed, the color at that coordinate is sent along with the image
+*ALL relative points are relative to YOUR last point
+""",
         "als": [ "paint", "color", "canvas", "painting", "drawing", "coloring" ],
         "cat": "fun"
     }, "substitute": {
@@ -178,7 +203,10 @@ coms = {
     }, "throw": {
         "brf": "Throws a {member} for a {reason}!",
         "usg": ";]throw {mbr} {?reason}",
-        "dsc": "MBR    [INT or PING] - The member you want to slap\nREASON [STR        ] - The reason for the slap",
+        "dsc": """\
+MBR    [INT or PING] - The member you want to throw
+REASON [STR        ] - The reason for the throw
+""",
         "als": [],
         "cat": "int"
     }, "mng": {
@@ -196,7 +224,14 @@ coms = {
     }, "play": {
         "brf": "Plays Music",
         "usg": ";]play {vc} {link}",
-        "dsc": "LINK [STR] - Link to some file, youtube video, or is a youtube search\n           - YOUTUBE SEARCH\n             > SYNTAX: \";]play {vc} yt-{search}\"\n             > SEARCH RESULT: append \"-i={search result number}\"\n                              to get that result playing\nVC   [VC ] - The VC I should join",
+        "dsc": """
+LINK [STR] - Link to some file, youtube video, or is a youtube search
+- - YOUTUBE SEARCH---
+- - > SYNTAX: \";]play {vc} yt-{search}\"
+- - > SEARCH RESULT: append \"-i={search result number}\"
+- - § to get that result playing
+VC   [VC ] - The VC I should join
+""",
         "als": [],
         "cat": "music"
     }, "hlepmod": {
@@ -208,7 +243,13 @@ coms = {
     }, "code": {
         "brf": "A public exec command to test your code!",
         "usg": ";]code {lang} {code}",
-        "dsc": "LANG [STR] - The language to use, js or py\nCODE [STR] - The code to execute",
+        "dsc": """\
+LANG [STR] - The language to use
+- - 'js' for JavaScript
+- - 'py' for Python
+- - 'tr' for Boolean Logic
+CODE [STR] - The code to execute
+""",
         "als": [ "exec" ],
         "cat": "oth"
     }, "quad": {
@@ -220,7 +261,10 @@ coms = {
     }, "kiss": {
         "brf": "Kisses a {member} for a {reason}!",
         "usg": ";]slap {mbr} {?reason}",
-        "dsc": "MBR    [INT or PING] - The member you want to slap\nREASON [STR        ] - The reason for the slap",
+        "dsc": """\
+MBR    [INT or PING] - The member you want to slap
+REASON [STR        ] - The reason for the slap
+""",
         "als": [],
         "cat": "int"
     }, "rol": {
@@ -310,7 +354,11 @@ coms = {
     }, "ban": {
         "brf": "Bans {member} for {reason} and deletes their messages from the past {x} days",
         "usg": ";]ban {mbr1} {mbr2} {...} {?num} {?rsn}",
-        "dsc": "MBRx [MEMBER] - The target member, ID or ping or name\nNUM  [INT   ] - Delete messages from the past {x} days\nRSN  [STR   ] - The reason for the ban",
+        "dsc": """\
+MBRx [INT or PING] - The target member[s],
+NUM  [INT   ] - Delete messages from the past {x} days
+RSN  [STR   ] - The reason for the ban
+""",
         "als": [],
         "cat": "mod"
     }, "audit": {
@@ -346,7 +394,14 @@ coms = {
     }, "reddit": {
         "brf": "Gives you a random post from a given {subreddit}",
         "usg": ";]reddit {?subreddit} {?search}",
-        "dsc": "SUBREDDIT [STR] - The name of the subreddit, /r/ is optional\n                - /u/ is required to redditor feeds\n                - also can be a link to a submission\n                - /m/<multireddit>#<redditor> is needed for multireddits\n                  - eg /m/CoolMultireddit#Redditor1010\nSEARCH    [STR] - What to search for",
+        "dsc": """\
+SUBREDDIT [STR] - The name of the subredditm /r/ is optional
+- - /u/ is required to redditor feeds
+- - also can be a link to a submission
+- - /m/<multireddit>#<redditor> is needed for multireddits
+- - - eg /m/CoolMultireddit#Redditor1010
+SEARCH    [STR] - What to search for
+""",
         "als": [ "rd", "redd", "rdt", "red" ],
         "cat": "fun"
     }, "rng": {
@@ -388,7 +443,7 @@ coms = {
     }, "nick": {
         "brf": "Changes the nickname of a {member} to {this}",
         "usg": ";]nick {mbr} {this}",
-        "dsc": "MBR  [MEMBER] - The target member, ID or ping or name\nTHIS [STR   ] - The nickname",
+        "dsc": "MBR  [INT OR PING] - The target member\nTHIS [STR   ] - The nickname",
         "als": [],
         "cat": "mod"
     }, "_sysinfo": {
@@ -412,7 +467,18 @@ coms = {
     }, "mix": {
         "brf": "A noise generator with 2 inputs",
         "usg": ";]mix {action} {?args}",
-        "dsc": "ACTION [STR] - [slot1, slot2, imgs, view, slots, kill]\n                slot1 - Load an attached image into the \"image\" file\n                slot2 - Load an attached image into the \"pattern\" file\n                imgs  - View currently loaded images\n                view  - View the status of the current mix\n                slots - Start the mixing\n                kill  - Kills the current process if you started it\nARGS   [STR] - [-iter=,-np]\n                -iter= - Set the number of iterations [max 120, min 5]\n                -np    - Do not ping when finished",
+        "dsc": """\
+ACTION [STR] - [slot1, slot2, imgs, view, slots, kill]
+- > slot1 - Load an attached image into the \"image\" file
+- > slot2 - Load an attached image into the \"pattern\" file
+- > imgs  - View currently loaded images
+- > view  - View the status of the current mix
+- > slots - Start the mixing
+- > kill  - Kills the current process if you started it
+ARGS   [STR] - [-iter=,-np]
+- > -iter= - Set the number of iterations [max 120, min 5]
+- >    -np - Do not ping when finished
+""",
         "als": [],
         "cat": "ai"
     }, "leave": {
@@ -447,8 +513,17 @@ coms = {
         "cat": "mod"
     }, "graph": {
         "brf": "Your personal graphing calculator",
-        "usg": ";]graph {?window} {eq1} | {eq2} | {...}",
-        "dsc": "WINDOW [INT x 4] - Set XMIN, XMAX, YMIN, YMAX in that order\nEQx  [STR] - The equation in question",
+        "usg": ";]graph {?window} {eq1} {?ops} | {eq2} {?ops} | {...} {?ops}",
+        "dsc": """\
+WINDOW [INT x 4] - Set XMIN, XMAX, YMIN, YMAX in that order
+EQx    [STR    ] - The equation to graph
+OPS    [STR    ] - Other arguments
+- > `--max` for the maximum point shown in the graph
+- > `--min` for the minimum point shown in the graph
+- > `--zero` for the roots of the function
+- > `--yint` for the y intercept
+*Use '>=' and '<=' for 'at least' and 'at most' graphs [respectively]
+""",
         "als": [],
         "cat": "math"
     }, "clr": {
@@ -495,12 +570,20 @@ coms = {
         "cat": "dis"
     }, "tag": {
         "brf": "Custom commands, kinda",
-        "usg": ";]tag {action} {!name} {!data}",
-        "dsc": "ACTION [STR] - The action you want to take\n             > Use the tag name to view the tag\n             > Use 'edit {name} {content}' to edit your tag\n             > Use 'add {name} {content}' to create a tag\n             > Use 'delete {name}' to delete your tag\n!NAME  [STR] - Only used when adding or editing a tag\n!DATA  [STR] - The content when adding or editing a tag",
+        "usg": ";]tag {action} {?name} {?data}",
+        "dsc": """\
+ACTION [STR] - The action you want to take
+- > Use the tag name to view the tag
+- > Use 'edit {name} {content}' to edit your tag
+- > Use 'add {name} {content}' to create a tag
+- > Use 'delete {name}' to delete your tag
+NAME   [STR] - Only used when adding or editing a tag
+DATA   [STR] - The content when adding or editing a tag
+""",
         "als": [],
         "cat": "oth"
     }, "clrto": {
-        "brf": "Clears messages from {int1} to {int2} in chat",
+        "brf": "Clears messages from {int1} to {int2}  [non inclusive] in chat",
         "usg": ";]clrto {mID}",
         "dsc": "mID [INT] - The message ID to clear to",
         "als": [],
