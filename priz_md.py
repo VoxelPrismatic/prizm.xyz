@@ -28,14 +28,14 @@ def mark(st):
     
     ##/// HEADERS
     if "&" in st:
-        st = sub(r"\&{1}(.+)", r"<span class='head1'>\1</span>", st) # &Header 1
-        st = sub(r"\&{2}(.+)", r"<span class='head2'>\1</span>", st) # &&Header 2
-        st = sub(r"\&{3}(.+)", r"<span class='head3'>\1</span>", st) # &&&Header 3
-        st = sub(r"\&{4}(.+)", r"<span class='head4'>\1</span>", st) # &&&&Header 4
-        st = sub(r"\&{5}(.+)", r"<span class='head5'>\1</span>", st) # &&&&&Header 5
-        st = sub(r"\&{6}(.+)", r"<span class='head6'>\1</span>", st) # &&&&&&Header 6
-    st = sub(r"(.+?)\n={3,}", r"<span class='head1'>\1</span>", st) # header1 ↵ ===
-    st = sub(r"(.+?)\n-{3,}", r"<span class='head2'>\1</span>", st) # header2 ↵ ---
+        st = sub(r"\&{1}(.+)", r"<div class='head1'>\1</div>", st) # &Header 1
+        st = sub(r"\&{2}(.+)", r"<div class='head2'>\1</div>", st) # &&Header 2
+        st = sub(r"\&{3}(.+)", r"<div class='head3'>\1</div>", st) # &&&Header 3
+        st = sub(r"\&{4}(.+)", r"<div class='head4'>\1</div>", st) # &&&&Header 4
+        st = sub(r"\&{5}(.+)", r"<div class='head5'>\1</div>", st) # &&&&&Header 5
+        st = sub(r"\&{6}(.+)", r"<div class='head6'>\1</div>", st) # &&&&&&Header 6
+    st = sub(r"(.+?)\n={3,}", r"<div class='head1'>\1</div>", st) # header1 ↵ ===
+    st = sub(r"(.+?)\n-{3,}", r"<div class='head2'>\1</div>", st) # header2 ↵ ---
     
     ##/// LINKS
     if "<" in st:
