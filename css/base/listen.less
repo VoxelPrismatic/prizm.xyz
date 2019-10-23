@@ -30,7 +30,19 @@
     } &.active:after {
         .btn_activeafter(); 
         .round();
-    } & button {
+    }
+} .tabby {
+    & button {
+        .nohover();
+    } & button:hover {
+        .hover();
+    } & button.active {
+        .select();
+    } & button.active:hover {
+        .closer();
+    }
+} .tabby_smol {
+    & button {
         .nohover();
     } & button:hover {
         .hover();
@@ -40,4 +52,3 @@
         .closer();
     }
 }
-
