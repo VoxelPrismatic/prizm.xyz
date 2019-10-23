@@ -24,7 +24,9 @@ for com, cat, brf, usg, dsc, als in commands:
 &&&&{brf}
 &&&&&CATAGORY ] {cat}
 >++ALIASES ] "{als}"++<
+-~-
 `{usg}`
+-~-
 Usage Notes ---
 ;;;
 {dsc}
