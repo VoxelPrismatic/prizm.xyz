@@ -597,15 +597,15 @@ lists = doc["tabby"]
 
 commands = [(com, coms[com]["cat"], 
              coms[com]["brf"], coms[com]["usg"], 
-             coms[com]["dsc"], '", "'.join(coms[com]["als"])) for com in coms]
+             coms[com]["dsc"], '`'+'`, `'.join(coms[com]["als"])+'`') for com in coms]
 for com, cat, brf, usg, dsc, als in commands:
     lists <= html.BUTTON(com, Class = "tabby_link", Id = com)
     element <= html.DIV(
         mark(f"""\
 &&&THE {com} COMMAND
 &&&&{brf}
-&&&&&CATAGORY ] {cat}
->++ALIASES ] "{als}"++<
+&&&&CATAGORY ] {cat}
+&&&&&&ALIASES ] {als}
 -~-
 `{usg}`
 -~-
