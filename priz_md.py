@@ -26,6 +26,9 @@ def mark(st):
     st = st.replace(" ", "\u200b \u200b")
     st = st.replace("§", "\u200b")
     
+    ##/// ELEMENTS
+    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
+    
     ##/// LINKS
     if "<" in st:
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
