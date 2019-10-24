@@ -68,5 +68,5 @@ function comm() {
 }
 
 function markup(itm) {
-    eHTML(itm.id, window.mark(itm.innerHTML));
+    itm.innerHTML = window.mark(itm.innerHTML);
 }
