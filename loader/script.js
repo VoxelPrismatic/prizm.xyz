@@ -66,3 +66,7 @@ function comm() {
         }
     }
 }
+
+function markup(itm) {
+    eHTML(itm.id, window.mark(itm.innerHTML));
+}
