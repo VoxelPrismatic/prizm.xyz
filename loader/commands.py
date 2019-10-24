@@ -602,16 +602,16 @@ for com, cat, brf, usg, dsc, als in commands:
     lists <= html.BUTTON(com, Class = "tabby_link", Id = com)
     element <= html.DIV(
         mark(f"""\
-&&&THE {com} COMMAND
-&&&&{brf}
-&&&&CATAGORY ] {cat}
+&&&THE `;]{com.strip()}` COMMAND
+&&&&{brf.strip()}
+&&&&CATAGORY ] {cat.strip()}
 &&&&&&ALIASES ] {als}
--~-
-`{usg}`
--~-
+>-~-<
+`{usg.strip()}`
+>-~-<
 Usage Notes ---
 ;;;
-{dsc}
+{dsc.strip()}
 ;;;
 """)+"<br>", 
         Class = "tabby_sect", 
