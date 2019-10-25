@@ -632,3 +632,7 @@ Usage Notes ---
         Id = "commands_"+com, 
         style={"display": "none"})
 win.comm()
+if doc.URL.split("#")[-1] in coms:
+    page = doc.URL.split("#")[-1]
+    doc["blocky"].innerHTML = ["commands_"+page].innerHTML
+    doc[page].classList += " active"
