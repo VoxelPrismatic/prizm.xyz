@@ -62,7 +62,8 @@ function comm() {
                 gID(tag[i]).className = gID(tag[i]).className.replace(" active", "");
             }
             eHTML("blocky", gHTML("commands_"+this.id));
-            this.className += " active"
+            this.className += " active";
+            document.URL = document.URL.split("#")[0]+"#"+this.id;
         }
     }
 }
