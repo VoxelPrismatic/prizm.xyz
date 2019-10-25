@@ -1,11 +1,12 @@
 @import (reference) "../base/text_align";
 .mdline {
+    .horz();
     height: 4px;
     width: 90%;
     color: #00000000;
-    background-color: #11222288;
+    background-color: #11222244;
 } .quoted {
-    background-color: #11222288;
+    background-color: #11222244;
     border-left: 2px solid #00ffff88;
 } embed {
     max-width: 90%;
@@ -13,7 +14,8 @@
     height: auto;
     width: auto;
 } table {
-    width:90%;
+    .horz();
+    width: 90%;
 } tr {
     &:nth-child(even) {
         background-color: #11222244;
