@@ -51,7 +51,7 @@ def mark(st):
          # !!![color] notice me senpai!!!
     st = sub(r"[^\\]\;{3}\n?((.|\n)+)\n?\;{3}", r"<div class='mono dark' style='width: 90%;'>\1</div>", st)
          # ;;;code block;;;
-    st = sub(r"[^\\]\`(.+?)\`", r"<span class='mono dark'>\1</span>", st) # `inline code`
+    st = sub(r"[^\\]\`(.+?)\`", r"<span class='mono dark horz'>\1</span>", st) # `inline code`
     
     ##/// ORGANIZE
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
