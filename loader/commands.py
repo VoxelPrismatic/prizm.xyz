@@ -21,11 +21,11 @@ coms = {
         "cat": "inf"
     }, "role": {
         "brf": "Adds or removes {role} from {user} for a {reason}",
-        "usg": ";]role {mbr} {add/remove} {rol} {?rsn}",
+        "usg": ";]role {member} {add/remove} {role} {?reason}",
         "dsc": """\
-MBR [MEMBER] - The target user, mention or name or ID
-ROL [ROLE  ] - The target role, mention or name or ID
-RSN [STR   ] - The reason for the action DEFAULT: \"REQUESTED BY ] <name>\"
+MEMBER [MEMBER] - The target user, mention or name or ID
+ROLE   [ROLE  ] - The target role, mention or name or ID
+REASON [STR   ] - The reason for the action DEFAULT: \"REQUESTED BY ] <name>\"
 """,
         "als": [],
         "cat": "mod"
@@ -43,10 +43,10 @@ RSN [STR   ] - The reason for the action DEFAULT: \"REQUESTED BY ] <name>\"
         "cat": "fun"
     }, "slap": {
         "brf": "Slaps a {member} for a {reason}!",
-        "usg": ";]slap {mbr} {?reason}",
+        "usg": ";]slap {member} {?reason}",
         "dsc": """\
-MBR    [INT or PING] - The member you want to slap
-REASON [STR        ] - The reason for the slap
+MEMBER [MEMBER] - The member you want to slap, name or ping or ID
+REASON [STR   ] - The reason for the slap
 """,
         "als": [],
         "cat": "int"
@@ -104,15 +104,15 @@ X [INT] - The radical, aka \"square root\" is 2 and \"cube root\" is 3
     }, "react": {
         "brf": "Adds reactions quickly and easily",
         "usg": ";]react {mID} {rct1} {rct2} {...}",
-        "dsc": "mID  [INT] - The message\nRCTx [ANY] - The reaction[s]",
+        "dsc": "mID  [MESSAGE] - The message, URL or ID\nRCTx [ANY] - The reaction[s]",
         "als": [],
         "cat": "fun"
     }, "hug": {
         "brf": "Hugs a {member} for a {reason}!",
-        "usg": ";]hug {mbr} {?reason}",
+        "usg": ";]hug {member} {?reason}",
         "dsc": """\
-MBR    [INT or PING] - The Member you want to hug
-REASON [STR        ] - The reason for the hug
+MEMBER [MEMBER] - The Member you want to hug, name or ping or ID
+REASON [STR   ] - The reason for the hug
 """,
         "als": [],
         "cat": "int"
@@ -137,22 +137,26 @@ REASON [STR        ] - The reason for the hug
     }, "hlep": {
         "brf": "Brings up this message",
         "usg": ";]help {?com}",
-        "dsc": "COM [command] - OPTIONAL: Brings up a help message for that specific command",
+        "dsc": "COM [COMMAND NAME] - OPTIONAL: Brings up a help message for that specific command",
         "als": [ "help" ],
         "cat": "inf"
     }, "cuddle": {
         "brf": "Cuddle with a {member} for a {reason}!",
-        "usg": ";]cuddle {mbr} {?reason}",
+        "usg": ";]cuddle {member} {?reason}",
         "dsc": """\
-MBR    [INT or PING] - The member you want to cuddle
-REASON [STR        ] - The reason for the cuddle
+MEMBER [MEMBER] - The member you want to cuddle, name or ping or ID
+REASON [STR   ] - The reason for the cuddle
 """,
         "als": [],
         "cat": "int"
     }, "char": {
         "brf": "Shows unicode info on {char}",
         "usg": ";]char {chars}",
-        "dsc": "CHARS [STR] - The characters you want data on",
+        "dsc": """\
+CHARS [STR] - The characters you want data on
+- > If you want info on one chatacter, you can see how to write it\
+in various programming languages
+""",
         "als": [],
         "cat": "oth"
     }, "asci": {
@@ -175,13 +179,13 @@ REASON [STR        ] - The reason for the cuddle
         "cat": "inf"
     }, "draw": {
         "brf": "Have fun drawing with others!",
-        "usg": ";]draw {?color} {?x1} {?y1} {?x2} {?y2} ... {?xN} {?yN}",
+        "usg": ";]draw {?color} {?x1} {?y1} {?x2} {?y2} {...} {?xN} {?yN}",
         "dsc": """\
 COLOR  [STR] - The color you want to place, MUST BE HEX
 xN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]
-- - You can use ranges like 0-16
-- - You can be relative like ~1
-- - You can use relative ranges like ~9-26
+- > You can use ranges like 0-16
+- > You can be relative like ~1
+- > You can use relative ranges like ~9-26
 *If no params are passed, the image is sent
 *If only coordinates are passed, the color at that coordinate is sent along with the image
 *ALL relative points are relative to YOUR last point
@@ -202,10 +206,10 @@ xN, yN [ANY] - The XY coordinates [MAX - 127, MIN - 0]
         "cat": "fun"
     }, "throw": {
         "brf": "Throws a {member} for a {reason}!",
-        "usg": ";]throw {mbr} {?reason}",
+        "usg": ";]throw {member} {?reason}",
         "dsc": """\
-MBR    [INT or PING] - The member you want to throw
-REASON [STR        ] - The reason for the throw
+MEMBER [MEMBER] - The member you want to throw, name or ping or ID
+REASON [STR   ] - The reason for the throw
 """,
         "als": [],
         "cat": "int"
@@ -226,11 +230,11 @@ REASON [STR        ] - The reason for the throw
         "usg": ";]play {vc} {link}",
         "dsc": """
 LINK [STR] - Link to some file, youtube video, or is a youtube search
-- - YOUTUBE SEARCH---
+- > YOUTUBE SEARCH---
 - - > SYNTAX: \";]play {vc} yt-{search}\"
 - - > SEARCH RESULT: append \"-i={search result number}\"
 - - § to get that result playing
-VC   [VC ] - The VC I should join
+VC   [VC ] - The VC I should join, name or ID
 """,
         "als": [],
         "cat": "music"
@@ -245,9 +249,9 @@ VC   [VC ] - The VC I should join
         "usg": ";]code {lang} {code}",
         "dsc": """\
 LANG [STR] - The language to use
-- - 'js' for JavaScript
-- - 'py' for Python
-- - 'tr' for Boolean Logic
+- > 'js' for JavaScript
+- > 'py' for Python
+- > 'tr' for Boolean Logic
 CODE [STR] - The code to execute
 """,
         "als": [ "exec" ],
@@ -255,15 +259,15 @@ CODE [STR] - The code to execute
     }, "quad": {
         "brf": "Solves the quadratic formula",
         "usg": ";]quad {A} {B} {C}",
-        "dsc": "A, B, C [FLOATS] - Corrosponds to \"Ax^2 + Bx + C\"",
+        "dsc": "A, B, C [FLOAT] - Corrosponds to \"Ax^2 + Bx + C\"",
         "als": [],
         "cat": "math"
     }, "kiss": {
         "brf": "Kisses a {member} for a {reason}!",
-        "usg": ";]slap {mbr} {?reason}",
+        "usg": ";]slap {member} {?reason}",
         "dsc": """\
-MBR    [INT or PING] - The member you want to slap
-REASON [STR        ] - The reason for the slap
+MEMBER [MEMBER] - The member you want to slap, name or ping or ID
+REASON [STR   ] - The reason for the slap
 """,
         "als": [],
         "cat": "int"
@@ -282,13 +286,13 @@ REASON [STR        ] - The reason for the slap
     }, "pin": {
         "brf": "Pins a message for you, useful on mobile",
         "usg": ";]pin {mID}",
-        "dsc": "mID [INT] - The ID of the message you wish to pin",
+        "dsc": "mID [MESSAGE] - The message you wish to pin, ID or URL",
         "als": [],
         "cat": "mod"
     }, "unpin": {
         "brf": "Unpins a message for you, useful on mobile",
         "usg": ";]unpin {mID}",
-        "dsc": "mID [INT] - The ID of the message you wish to unpin",
+        "dsc": "mID [MESSAGE] - The ID of the message you wish to unpin, ID or URL",
         "als": [],
         "cat": "mod"
     }, "spam": {
@@ -306,7 +310,7 @@ REASON [STR        ] - The reason for the slap
     }, "chnl": {
         "brf": "Shows info about a given {text_channel}",
         "usg": ";]chnl {txt_chnl}",
-        "dsc": "TXT CHNL [TEXT CHANNEL] - The target channel",
+        "dsc": "TXT CHNL [CHANNEL] - The target channel, name or ping or ID",
         "als": [],
         "cat": "dis"
     }, "hangman": {
@@ -318,19 +322,25 @@ REASON [STR        ] - The reason for the slap
     }, "snd": {
         "brf": "I send {text} to a given {channel}",
         "usg": ";]snd {cID} {mCTX}",
-        "dsc": "cID  [INT] - The Channel ID\nmCTX [STR] - The text to send",
+        "dsc": """\
+cID  [CHANNEL] - The channel you want the message in, name or ping or ID
+mCTX [STR] - The text to send
+""",
         "als": [ "send" ],
         "cat": "fun"
     }, "usr": {
         "brf": "Shows info for a given {user}",
         "usg": ";]usr {usr}",
-        "dsc": "USR [MEMBER] - The member you want info on",
+        "dsc": "USR [MEMBER] - The member you want info on, name or ping or ID",
         "als": [],
         "cat": "dis"
     }, "mock": {
         "brf": "iM nOt MoCkInG yOu",
-        "usg": ";]mock {msg}",
-        "dsc": "MSG [INT] - The ID of the message you want me to mock",
+        "usg": ";]mock {?msg}",
+        "dsc": """\
+MSG [MESSAGE] - The message you want me to mock, ID or URL
+- > Will use the latest message in chat if not specified
+""",
         "als": [],
         "cat": "fun"
     }, "calc": {
@@ -342,7 +352,7 @@ REASON [STR        ] - The reason for the slap
     }, "cool": {
         "brf": "Gives someone a sneaky surprise",
         "usg": ";]cool {uID}",
-        "dsc": "uID [INT] - The ID of the user you are willing to surprise",
+        "dsc": "uID [INT] - The ID of the user you are willing to surprise, must be the user ID",
         "als": [],
         "cat": "fun"
     }, "pause": {
@@ -353,11 +363,11 @@ REASON [STR        ] - The reason for the slap
         "cat": "music"
     }, "ban": {
         "brf": "Bans {member} for {reason} and deletes their messages from the past {x} days",
-        "usg": ";]ban {mbr1} {mbr2} {...} {?num} {?rsn}",
+        "usg": ";]ban {member1} {member2} {...} {memberX} {?num} {?rsn}",
         "dsc": """\
-MBRx [INT or PING] - The target member[s],
-NUM  [INT   ] - Delete messages from the past {x} days
-RSN  [STR   ] - The reason for the ban
+MEMBERx [MEMBER] - The target member[s], name or ping or ID
+NUM     [INT   ] - Delete messages from the past {x} days
+REASON  [STR   ] - The reason for the ban
 """,
         "als": [],
         "cat": "mod"
@@ -396,10 +406,10 @@ RSN  [STR   ] - The reason for the ban
         "usg": ";]reddit {?subreddit} {?search}",
         "dsc": """\
 SUBREDDIT [STR] - The name of the subredditm /r/ is optional
-- - /u/ is required to redditor feeds
-- - also can be a link to a submission
-- - /m/<multireddit>#<redditor> is needed for multireddits
-- - - eg /m/CoolMultireddit#Redditor1010
+- > /u/ is required to redditor feeds
+- > also can be a link to a submission
+- > /m/<multireddit>#<redditor> is needed for multireddits
+- - > eg /m/CoolMultireddit#Redditor1010
 SEARCH    [STR] - What to search for
 """,
         "als": [ "rd", "redd", "rdt", "red" ],
@@ -431,7 +441,7 @@ SEARCH    [STR] - What to search for
     }, "msg": {
         "brf": "Displays info on a given {message}",
         "usg": ";]msg {msg}",
-        "dsc": "MSG [INT] - The ID of the target message",
+        "dsc": "MSG [MESSAGE] - The target message, ID or URL",
         "als": [],
         "cat": "dis"
     }, "gld": {
@@ -442,8 +452,11 @@ SEARCH    [STR] - What to search for
         "cat": "dis"
     }, "nick": {
         "brf": "Changes the nickname of a {member} to {this}",
-        "usg": ";]nick {mbr} {this}",
-        "dsc": "MBR  [INT OR PING] - The target member\nTHIS [STR   ] - The nickname",
+        "usg": ";]nick {mbr} {nickname}",
+        "dsc": """\
+MEMBER   [MEMBER] - The target member, name or ping or ID
+NICKNAME [STR   ] - The nickname
+""",
         "als": [],
         "cat": "mod"
     }, "_sysinfo": {
@@ -523,6 +536,7 @@ OPS    [STR    ] - Other arguments
 - > `--zero` for the roots of the function
 - > `--yint` for the y intercept
 *Use '>=' and '<=' for 'at least' and 'at most' graphs [respectively]
+*XY equations like `x^2+y^2` MUST have an equal sign
 """,
         "als": [],
         "cat": "math"
@@ -535,7 +549,7 @@ OPS    [STR    ] - Other arguments
     }, "md": {
         "brf": "Sends the escaped contents of {messageID}",
         "usg": ";]md {mID}",
-        "dsc": "mID [INT] - Message ID",
+        "dsc": "mID [MESSAGE] - The target message, ID or URL",
         "als": [],
         "cat": "fun"
     }, "clrin": {
