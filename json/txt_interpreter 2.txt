@@ -1,0 +1,734 @@
+<NoneType> None ~ [0.92138ms] py3.7
+----------
+{
+   "gi": {
+        "cat": "dis",
+        "usg": ";]gi",
+        "brf": "Shows info about this guild",
+        "dsc": """\
+[NO ARGS FOR THS COMMAND]
+"""},   "pwr": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "data": {
+        "cat": "inf",
+        "usg": ";]data",
+        "brf": "Shows the data usage",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+    
+"""},   "cool": {
+        "cat": "fun",
+        "usg": ";]cool {member}",
+        "brf": "Gives someone a sneaky surprise",
+        "dsc": """\
+MEMBER [MEMBER] - The member you want to surprise, ping or name or ID
+"""},   "asci": {
+        "cat": "fun",
+        "usg": ";]asci",
+        "brf": "Just prints one of these cool ASCIImoji!",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "ping": {
+        "cat": "inf",
+        "usg": ";]ping",
+        "brf": "Sends the ping time",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "hangman": {
+        "cat": "fun",
+        "usg": ";]hangman",
+        "brf": "DONT Hang the man",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "play": {
+        "cat": "music",
+        "usg": ";]play {vc} {link}",
+        "brf": "Plays Music",
+        "dsc": """\
+LINK [TEXT] - Link to some file, youtube video, or is a youtube search
+> YOUTUBE SEARCH---
+> > Syntax ] ";]play {vc} yt-{search}"
+> > Add "-i={video number}" to get that result playing
+VC   [VC  ] - The VC I should join, name or ID
+"""},   "throw": {
+        "cat": "int",
+        "usg": ";]throw {member} {?reason}",
+        "brf": "Throws a {member} for a {reason}!",
+        "dsc": """\
+MEMBER [MEMBER] - The member you want to throw, name or ping or ID
+REASON [TEXT  ] - The reason for the throw
+"""},   "char": {
+        "cat": "oth",
+        "usg": ";]char {chars}",
+        "brf": "Shows unicode info on {char}",
+        "dsc": """\
+CHARS [TEXT] - The characters you want data on
+> If you want info on one character, you can see how to write it in various programming languages
+"""},   "emji": {
+        "cat": "fun",
+        "usg": ";]emji {emoji1} {emoji2} {...}",
+        "brf": "Steals an emoji for you",
+        "dsc": """\
+EMOJIx [EMOJI] - The emoji you want to steal, must be custom
+"""},   "info": {
+        "cat": "inf",
+        "usg": ";]info",
+        "brf": "Shows aditional bot info",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+    
+"""},   "mock": {
+        "cat": "fun",
+        "usg": ";]mock {?message}",
+        "brf": "iM nOt MoCkInG yOu",
+        "dsc": """\
+MESSAGE [MESSAGE] - The message you want me to mock, ID or URL
+> Will use the latest message in chat if not specified
+"""},   "hlepmod": {
+        "cat": "inf",
+        "usg": ";]helpmod",
+        "brf": "Brings up the mod help message",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+    
+"""},   "optn": {
+        "cat": "fun",
+        "usg": ";]choose {option1} | {option2} | {...}",
+        "brf": "I choose something for you!",
+        "dsc": """\
+OPTIONx [TEXT] - The option... duh
+"""},   "leave": {
+        "cat": "music",
+        "usg": ";]leave",
+        "brf": "Leaves the VC",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "kiss": {
+        "cat": "int",
+        "usg": ";]slap {member} {?reason}",
+        "brf": "Kisses a {member} for a {reason}!",
+        "dsc": """\
+MEMBER [MEMBER] - The member you want to kiss, name or ping or ID
+REASON [TEXT  ] - The reason for the kiss
+"""},   "bug": {
+        "cat": "inf",
+        "usg": ";]bug {txt}",
+        "brf": "Creates a bug report",
+        "dsc": """\
+TXT [STR] - The bug, preferably with the error and command
+"""},   "mi": {
+        "cat": "dis",
+        "usg": ";]mi {mbr}",
+        "brf": "Shows info on a given {member}",
+        "dsc": """\
+MBR [MEMBER] - The target member, ID or ping or name
+"""},   "quad": {
+        "cat": "math",
+        "usg": ";]quad {A} {B} {C}",
+        "brf": "Solves the quadratic formula",
+        "dsc": """\
+A, B, C [FLOAT] - Corrosponds to "Ax^2 + Bx + C"
+    
+"""},   "inv": {
+        "cat": "inf",
+        "usg": ";]inv",
+        "brf": "Invite for me and my support server",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+    
+"""},   "echo": {
+        "cat": "fun",
+        "usg": ";]echo {text}",
+        "brf": "Echo echo echo!",
+        "dsc": """\
+TEXT [TEXT] - What to echo
+"""},   "pause": {
+        "cat": "music",
+        "usg": ";]pause",
+        "brf": "Toggles the music",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "stats": {
+        "cat": "math",
+        "usg": ";]stats {data1} {data2} {...}",
+        "brf": "Gives statistics on inputed data",
+        "dsc": """\
+DATAx [NUMBER] - A number or a statistic
+"""},   "learn": {
+        "cat": "ai",
+        "usg": ";]learn {?text}",
+        "brf": "You can help me learn!",
+        "dsc": """\
+TEXT [TEXT] - Preset conversation, each message on new line
+"""},   "hlep": {
+        "cat": "inf",
+        "usg": ";]help {?com}",
+        "brf": "Brings up this message",
+        "dsc": """\
+COM [COMMAND NAME] - OPTIONAL: Brings up a help message for that specific command
+    
+"""},   "spam": {
+        "cat": "fun",
+        "usg": ";]spam {?num}",
+        "brf": "Spams {num} chars!",
+        "dsc": """\
+NUM [NUMBER] - How many chars to spam
+"""},   "text": {
+        "cat": "ai",
+        "usg": ";]text {convo}",
+        "brf": "You can have a conversation with me!",
+        "dsc": """\
+CONVO [TEXT] - The conversation
+"""},   "unpin0": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "find": {
+        "cat": "inf",
+        "usg": ";]find {fID}",
+        "brf": "Finds a meta object given an ID or name",
+        "dsc": """\
+fID [STR] - The name or ID of the thing to find
+    
+"""},   "slots": {
+        "cat": "fun",
+        "usg": ";]slots",
+        "brf": "Virtual Slot Machine",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "_2048": {
+        "cat": "fun",
+        "usg": ";]2048 {?size}",
+        "brf": "2048 but in Discord",
+        "dsc": """\
+SIZE [INT] - The size [is square] DEFAULT: 4
+"""},   "substitute": {
+        "cat": "math",
+        "usg": ";]substitute {num} {eq}",
+        "brf": "Substitutes a number in for X",
+        "dsc": """\
+NUM [NUMBER] - The thing X is equal to
+EQ  [TEXT  ] - The equation to solve
+"""},   "srvedit": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "pre": {
+        "cat": "mod",
+        "usg": ";]pre {pre}",
+        "brf": "Changes the prefix to {pre}",
+        "dsc": """\
+PRE [TEXT] - The new prefix
+"""},   "pin0": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "chng": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "pin": {
+        "cat": "mod",
+        "usg": ";]pin {message}",
+        "brf": "Pins a message for you, useful on mobile",
+        "dsc": """\
+MESSAGE [MESSAGE] - The message you wish to pin, ID or URL
+"""},   "ri": {
+        "cat": "dis",
+        "usg": ";]rol {role}",
+        "brf": "Displays info about a given {role}",
+        "dsc": """\
+ROLE [ROLE] - The target role, ping or name or ID
+"""},   "graph": {
+        "cat": "math",
+        "usg": ";]graph {?window} {eq1} {?ops} | {eq2} {?ops} | {...} {?ops}",
+        "brf": "Your personal graphing calculator",
+        "dsc": """\
+WINDOW [NUMBERS] - Set XMIN, XMAX, YMIN, YMAX in that order
+EQx    [TEXT   ] - The equation to graph
+OPS    [TEXT   ] - Other arguments
+> This list is long, check online for more details
+*Use '>=' and '<=' for 'at least' and 'at most' graphs [respectively]
+*XY equations like ​`x^2+y^2​` MUST have an equal sign
+"""},   "chnl": {
+        "cat": "dis",
+        "usg": ";]ci {channel}",
+        "brf": "Shows info about a given {channel}",
+        "dsc": """\
+CHANNEL [CHANNEL] - The target channel, name or ping or ID
+"""},   "edit": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "lines": {
+        "cat": "own",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "rev": {
+        "cat": "fun",
+        "usg": ";]rev {phrase}",
+        "brf": "esreveR",
+        "dsc": """\
+PHRASE [TEXT] - The stuff to reverse
+"""},   "rpn": {
+        "cat": "math",
+        "usg": ";]rpn {eq}",
+        "brf": "Reverse Polish Notation [1 1 +]",
+        "dsc": """\
+EQ [STR] - The RPN equation
+    
+"""},   "unpin": {
+        "cat": "mod",
+        "usg": ";]unpin {message}",
+        "brf": "Pins a message for you, useful on mobile",
+        "dsc": """\
+MESSAGE [MESSAGE] - The message you wish to unpin, ID or URL
+"""},   "mng": {
+        "cat": "mod",
+        "usg": ";]mng",
+        "brf": "Brings up a management interface",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "exe": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "md": {
+        "cat": "fun",
+        "usg": ";]md {message}",
+        "brf": "Sends the escaped contents of {message}",
+        "dsc": """\
+MESSAGE [MESSAGE] - The target message, ID or URL
+"""},   "vox": {
+        "cat": "fun",
+        "usg": ";]vox {text}",
+        "brf": "Phoentically spells words",
+        "dsc": """\
+TEXT [TEXT] - The text I should phoentically spell
+"""},   "factor": {
+        "cat": "math",
+        "usg": ";]factor {num}",
+        "brf": "Finds the factors and prime factors of {num}",
+        "dsc": """\
+NUM [INT] - The number to find the factors of
+"""},   "react": {
+        "cat": "fun",
+        "usg": ";]react {message} {reactions...}",
+        "brf": "Adds reactions quickly and easily",
+        "dsc": """\
+MESSAGE   [MESSAGE] - The message, URL or ID
+REACTIONS [ANY    ] - The reaction[s], can be letters, custom, or default
+    
+"""},   "captcha": {
+        "cat": "fun",
+        "usg": ";]captcha {member}",
+        "brf": "Are you a bot?",
+        "dsc": """\
+MEMBER [MEMBER] - The member to test, they may fail
+"""},   "_sysinfo": {
+        "cat": "inf",
+        "usg": ";]os",
+        "brf": "Shows what I'm running on",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+"""},   "roles": {
+        "cat": "mod",
+        "usg": ";]role {member1} {?member2} {...member} {role1} {?role2} {...role} {?reason}",
+        "brf": "Adds or removes {role} from {user} for a {reason}",
+        "dsc": """\
+MEMBER [MEMBER] - The target user, mention or name or ID
+ROLE   [ROLE  ] - The target role, mention or name or ID
+REASON [TEXT  ] - The reason for the action DEFAULT: "REQUESTED BY ] <name>"
+*All roles given will toggle the role presence on ALL members given
+"""},   "slap": {
+        "cat": "int",
+        "usg": ";]slap {member} {?reason}",
+        "brf": "Slaps a {member} for a {reason}!",
+        "dsc": """\
+MEMBER [MEMBER] - The member you want to slap, name or ping or ID
+REASON [STR   ] - The reason for the slap
+"""},   "hlepown": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "rld": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "nick0": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "ban": {
+        "cat": "mod",
+        "usg": ";]ban {member1} {member2} {...} {memberX} {?num} {?reason}",
+        "brf": "Bans {member} for {reason} and deletes their messages from the past {x} days",
+        "dsc": """\
+MEMBERx [MEMBER] - The target member[s], name or ping or ID
+NUM     [NUMBER] - Delete messages from the past {x} days
+REASON  [TEXT  ] - The reason for the ban
+"""},   "poll": {
+        "cat": "fun",
+        "usg": ";]poll {text}",
+        "brf": "Creates a poll",
+        "dsc": """\
+TEXT [TEXT] - The poll description
+"""},   "djq": {
+        "cat": "fun",
+        "usg": ";]djq",
+        "brf": "In rememberance of DJ Quzingler [BOT]",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "uld": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "emj": {
+        "cat": "dis",
+        "usg": ";]ei {emoji}",
+        "brf": "Sends info about a given {emoji}",
+        "dsc": """\
+EMOJI [EMOJI] - The CUSTOM emoji in question
+"""},   "ui": {
+        "cat": "dis",
+        "usg": ";]ui {usr}",
+        "brf": "Shows info for a given {user}",
+        "dsc": """\
+USR [MEMBER] - The member you want info on
+"""},   "simple": {
+        "cat": "math",
+        "usg": ";]simplify {eq}",
+        "brf": "Symplify complex equations",
+        "dsc": """\
+EQ [TEXT] - The equation to simplify
+"""},   "rad": {
+        "cat": "math",
+        "usg": ";]rad {D} {X}",
+        "brf": "Radical Reducers",
+        "dsc": """\
+D [INT] - Discriminator, aka X√>>D<<
+X [INT] - The radical, aka "square root" is 2 and "cube root" is 3
+
+    
+"""},   "code": {
+        "cat": "oth",
+        "usg": ";]code {lang} {code}",
+        "brf": "A public exec command to test your code!",
+        "dsc": """\
+LANG [STR] - The language to use
+> 'js' for JavaScript
+> 'py' for Python
+> 'tr' for Boolean Logic
+CODE [STR] - The code to execute
+"""},   "reddit": {
+        "cat": "fun",
+        "usg": ";]reddit {?subreddit} {?search}",
+        "brf": "Gives you a random post from a given {subreddit}",
+        "dsc": """\
+SUBREDDIT [TEXT] - The name of the subredditm /r/ is optional
+> /u/ is required to redditor feeds
+> also can be a link to a submission
+> /m/<multireddit>#<redditor> is needed for multireddits
+> > eg /m/CoolMultireddit#Redditor1010
+SEARCH    [TEXT] - What to search for
+"""},   "git": {
+        "cat": "inf",
+        "usg": ";]git",
+        "brf": "Shows the git repo",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+    
+"""},   "dnd": {
+        "cat": "fun",
+        "usg": ";]dnd",
+        "brf": "Rolls all the dice from DnD",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "fld": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "dump": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "ld": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "iedit": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "audit": {
+        "cat": "mod",
+        "usg": ";]audit",
+        "brf": "Edits channels and things",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "tag": {
+        "cat": "oth",
+        "usg": ";]tag {action} {?name} {?data}",
+        "brf": "Custom commands, kinda",
+        "dsc": """\
+ACTION [TEXT] - The action you want to take
+> Use the tag name to view the tag
+> Use ';]edit {name} {content}' to edit your tag
+> Use ';]add {name} {content}' to create a tag
+> Use ';]delete {name}' to delete your tag
+NAME   [TEXT] - Only used when adding or editing a tag
+DATA   [TEXT] - The content when adding or editing a tag
+
+    
+"""},   "rick": {
+        "cat": "fun",
+        "usg": ";]rick",
+        "brf": "Never gonna give you up!",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "load": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "kick": {
+        "cat": "mod",
+        "usg": ";]kick {member1} {member2} {...} {memberX} {?reason}",
+        "brf": "Kicks {member} for {reason}",
+        "dsc": """\
+MEMBERx [MEMBER] - The target member[s], name or ping or ID
+REASON  [TEXT  ] - The reason for the ban
+"""},   "factorial": {
+        "cat": "math",
+        "usg": ";]factorial {num}",
+        "brf": "Factorial!",
+        "dsc": """\
+NUM [INT] - The thing to factorialize
+"""},   "restart": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "hug": {
+        "cat": "int",
+        "usg": ";]hug {member} {?reason}",
+        "brf": "Hugs a {member} for a {reason}!",
+        "dsc": """\
+MEMBER [MEMBER] - The Member you want to hug, name or ping or ID
+REASON [TEXT  ] - The reason for the hug
+"""},   "snd": {
+        "cat": "fun",
+        "usg": ";]snd {channel} {text}",
+        "brf": "I send {text} to a given {channel}",
+        "dsc": """\
+CHANNEL [CHANNEL] - The channel you want the message in, name or ping or ID
+TEXT    [TEXT   ] - The text to send
+"""},   "calc": {
+        "cat": "math",
+        "usg": ";]calc {eq}",
+        "brf": "It is a calculator",
+        "dsc": """\
+EQ [STR] - The thing to solve
+    
+"""},   "mix": {
+        "cat": "ai",
+        "usg": ";]mix {action} {?args}",
+        "brf": "A noise generator with 2 inputs",
+        "dsc": """\
+ACTION [TEXT] - [slot1, slot2, imgs, view, slots, kill]
+> slot1 - Load an attached image into the "image" file
+> slot2 - Load an attached image into the "pattern" file
+> imgs  - View currently loaded images
+> view  - View the status of the current mix
+> slots - Start the mixing
+> kill  - Kills the current process if you started it
+ARGS   [TEXT] - [-iter=, -np]
+> -iter= - Set the number of iterations [max 120, min 5]
+>    -np - Do not ping when finished
+
+    
+"""},   "shell": {
+        "cat": "own",
+        "usg": ";]",
+        "brf": "",
+        "dsc": """\
+[NO ARGS FOR THIS COMMAND]
+"""},   "dl": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "ball8": {
+        "cat": "fun",
+        "usg": ";]8ball {question}",
+        "brf": "I definitely predict the future",
+        "dsc": """\
+QUESTION [STR] What do you want me to answer
+"""},   "draw": {
+        "cat": "fun",
+        "usg": ";]draw {?color} {?x1} {?y1} {?x2} {?y2} {...} {?xN} {?yN}",
+        "brf": "Have fun drawing with others!",
+        "dsc": """\
+COLOR  [TEXT] - The color you want to place, MUST BE HEX
+xN, yN [ANY ] - The XY coordinates [MAX - 127, MIN - 0]
+> You can use ranges like 0-16
+> You can be relative like ~1
+> You can use relative ranges like ~9-26
+*If no params are passed, the image is sent
+*If only coordinates are passed, the color at that coordinate is sent along with the image
+*ALL relative points are relative to YOUR last point
+"""},   "convert": {
+        "cat": "oth",
+        "usg": ";]convert {fmt} <attach a file or have an embedable link>",
+        "brf": "Converts a file to a {fmt} file!",
+        "dsc": """\
+FMT [TEXT] - The format to convert *to* eg "pdf"
+"""},   "blkjck": {
+        "cat": "fun",
+        "usg": ";]blkjck",
+        "brf": "Virtual Black Jack",
+        "dsc": """\
+[NO INPUT FOR THIS COMMAND]
+"""},   "mines": {
+        "cat": "fun",
+        "usg": ";]mines {?size} {?mines}",
+        "brf": "Sweep mines away",
+        "dsc": """\
+SIZE  [NUMBER] - X by X tiles
+MINES [NUMBER] - How many mines
+"""},   "rto": {
+        "cat": "math",
+        "usg": ";]rto {x} {y}",
+        "brf": "Reduces the ratio between {x} and {y}",
+        "dsc": """\
+X [INT] - The first number
+Y [INT] - The second number
+    
+"""},   "clr": {
+        "cat": "mod",
+        "usg": ";]clr {num}",
+        "brf": "Clears {num} messages from chat",
+        "dsc": """\
+NUM [NUMBER] - The number of messages to clear
+"""},   "nick": {
+        "cat": "mod",
+        "usg": ";]nick {member} {nickname}",
+        "brf": "Changes the nickname of a {member} to {this}",
+        "dsc": """\
+MEMBER   [MEMBER] - The target member, name or ping or ID
+NICKNAME [TEXT  ] - The nickname
+"""},   "ti": {
+        "cat": "dis",
+        "usg": ";]ti {message}",
+        "brf": "Displays info on a given {message}",
+        "dsc": """\
+MSG [MESSAGE] - The target message, ID or URL
+"""},   "clrin": {
+        "cat": "mod",
+        "usg": ";]clrin {message1} {message2}",
+        "brf": "Clears messages from {message1} to {message2} in chat [exclusively]",
+        "dsc": """\
+MESSAGEx [MESSAGE] - The messages to clear between, ID or URL
+"""},   "dir": {
+        "cat": "inf",
+        "usg": ";]dir {?path}",
+        "brf": "C:\> dir",
+        "dsc": """\
+?PATH [STR] - OPTIONAL: Path
+    
+"""},   "clrin0": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "clrto": {
+        "cat": "mod",
+        "usg": ";]clrto {message}",
+        "brf": "Clears all messages to a given {message} [exclusively]",
+        "dsc": """\
+MESSAGE [MESSAGE] - The message to clear to, ID or URL
+"""},   "clr0": {
+        "cat": "None",
+        "usg": "None",
+        "brf": "None",
+        "dsc": """\
+
+"""},   "coin": {
+        "cat": "fun",
+        "usg": ";]coin {?count}",
+        "brf": "Flips a virtual coin {x} times!",
+        "dsc": """\
+COUNT [NUMBER] - How many times the coin should be flipped
+"""},   "enbl": {
+        "cat": "mod",
+        "usg": ";]enbl {command}",
+        "brf": "Enables a {command}",
+        "dsc": """\
+COMMAND [TEXT] - The name of the command you want to enable
+"""},   "rng": {
+        "cat": "fun",
+        "usg": ";]rng {min} {max} {?count}",
+        "brf": "Prints rng from {min} to {max}, {count} times!",
+        "dsc": """\
+MIN   [NUMBER] - Minimum number
+MAX   [NUMBER] - Maximum number
+COUNT [NUMBER] - Number of numbers
+"""},   "cuddle": {
+        "cat": "int",
+        "usg": ";]cuddle {member} {?reason}",
+        "brf": "Cuddle with a {member} for a {reason}!",
+        "dsc": """\
+MEMBER [MEMBER] - The member you want to cuddle, name or ping or ID
+REASON [TEXT  ] - The reason for the cuddle
+"""},   "binary": {
+        "cat": "fun",
+        "usg": ";]binary {text}",
+        "brf": "Converts binary to text, and text to binary",
+        "dsc": """\
+TEXT [TEXT] - The stuff to convert to/from binary
+"""},   "dsbl": {
+        "cat": "mod",
+        "usg": ";]dsbl {command}",
+        "brf": "Disables a {command}",
+        "dsc": """\
+COMMAND [TEXT] - The name of the command you want to disable
+"""
+}
