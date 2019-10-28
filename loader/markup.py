@@ -31,7 +31,7 @@ for el in ls:
     
 ls = doc.select(".markhead")
 for el in ls:
-    el.innerHTML = markhead(el.innerHTML)
+    el.innerHTML = head(el.innerHTML)
     
 ls = doc.select(".markother")
 for el in ls:
