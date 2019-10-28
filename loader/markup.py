@@ -8,36 +8,36 @@ for el in ls:
 
 ls = doc.select(".markall")
 for el in ls:
-    el.innerHTML = mark(el.innerHTML)
+    el.innerHTML = strip(mark(el.innerHTML))
 
 ls = doc.select(".markinit")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
+    el.innerHTML = strip(init(el.innerHTML))
 
 ls = doc.select(".markelem")
 for el in ls:
-    el.innerHTML = elem(init(el.innerHTML))
+    el.innerHTML = strip(elem(init(el.innerHTML)))
 
 ls = doc.select(".marklink")
 for el in ls:
-    el.innerHTML = link(init(el.innerHTML))
+    el.innerHTML = strip(link(init(el.innerHTML)))
     
 ls = doc.select(".markbasic")
 for el in ls:
-    el.innerHTML = basic(init(el.innerHTML))
+    el.innerHTML = strip(basic(init(el.innerHTML)))
 
 ls = doc.select(".markadvan")
 for el in ls:
-    el.innerHTML = advan(init(el.innerHTML))
+    el.innerHTML = strip(advan(init(el.innerHTML)))
     
 ls = doc.select(".marksetup")
 for el in ls:
-    el.innerHTML = setup(init(el.innerHTML))
+    el.innerHTML = strip(setup(init(el.innerHTML)))
     
 ls = doc.select(".markhead")
 for el in ls:
-    el.innerHTML = head(init(el.innerHTML))
+    el.innerHTML = strip(head(init(el.innerHTML)))
     
 ls = doc.select(".markother")
 for el in ls:
-    el.innerHTML = other(init(el.innerHTML))
+    el.innerHTML = strip(other(init(el.innerHTML)))
