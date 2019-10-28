@@ -14,7 +14,7 @@ def sub(re, to, st):
     tmp = RegEx("\\\\(\\d+)")
     while String.new(to).search(tmp) != -1:
         to = String.new(to).replace(tmp, "$$$1") #Convert from PY Regex to JS Regex
-    re = RegEx(re)
+    re = RegEx(re)<
     while String.new(st).search(re) != -1:
         st = String.new(st).replace(re, to) #Doesn't stop until no matches are found
     return pyStr(st)
@@ -23,7 +23,11 @@ def link(st):
     st = " "+st
     ##/// LINKS
     if "<" in st:
-        st = sub(r"[^\\]\#\{(.*)\}\<(.*)\>", r"<a href='\2'><button \2<\/button>", st)
+        st = sub(r"[^\\]\#\{CS (.*)\|(.*)\|(.*)\}\<(.*)\>",
+                 r"<a href='\4'><button class='linky \1' style='\2'>\3<\/button><\/a>", st)
+        st = sub(r"[^\\]\#\{S (.*)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky' style='\1'>\2<\/button><\/a>", st)
+        st = sub(r"[^\\]\#\{C (.*)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky \1'>\2<\/button><\/a>", st)
+        st = sub(r"[^\\]\#\{(.*)\}\<(.*)\>", r"<a href='\2'><button class='linky'><\/button><\/a>", st)
         st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed src='\2' alt='\1'/>", st) # #[alt text]<link> 
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
         st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
