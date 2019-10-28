@@ -95,6 +95,13 @@ def elem(st):
     st = sub(r"\[\[\\[(.*)\]\]\]", r'<button \2<\/button">', st) # [[{style}button]]
     st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
     return st[1:]
+
+def strip(st):
+    while st.startswith(' ') or st.startswith('\u200b'):
+        st = st[1:]
+    while st.endswith(' ') or st.endswith('\u200b'):
+        st = st[:-1]
+    return st
     
 def mark(st):
     st = init(st)
