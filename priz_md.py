@@ -20,7 +20,6 @@ def sub(re, to, st):
     return pyStr(st)
 
 def mark(st):
-    
     ##/// INIT
     st = " "+st
     st = st.replace(" ", "\u200b \u200b")
@@ -29,6 +28,12 @@ def mark(st):
     st = sub(r":(.*);", r"<\1>", st) #Raw HTML editing
     st = sub(r";(.*):", r">\1<", st) #Raw HTML editing
     
+    ##/// LINKS
+    if "<" in st:
+        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link> 
+        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
+        st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
+
     ##/// BASICS
     st = sub(r"[^\\]\#(.+?)\#", r"<b>\1</b>", st) # #bolded#
     st = sub(r"[^\\]\*(.+?)\*", r"<i>\1</i>", st) # *italics*
@@ -51,14 +56,6 @@ def mark(st):
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
     st = st.replace(">-~-<", "<div class='mdline'>---</div>") # >-~-< sep
-    
-    ##/// LINKS
-    if "<" in st:
-        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link> 
-        st = sub(r"[^\\]\i\[(.*)\]\<(.*)\>", r'<img src="\2" alt="\1"\/>', st) # i[alt text]<source>
-        
-        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
-        st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
     
     ##/// ELEMENTS
     st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
