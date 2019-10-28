@@ -728,5 +728,5 @@ TEXT [TEXT] - The stuff to convert to/from binary
         "brf": "Disables a {command}",
         "dsc": """\
 COMMAND [TEXT] - The name of the command you want to disable
-"""
+"""}
 }
