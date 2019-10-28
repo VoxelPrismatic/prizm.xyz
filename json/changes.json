@@ -1,47 +1,35 @@
 {
     "10x27_2019":"""\
-> Updated the `;]graph` command
-> > Now parses quickly
-> > Now won't break when commands contain `e`
-> > Now shouldn't break when commands have `x(5x-3)` or similar
-> > Now can "emulate" calculators
-> > > `---ti84ce`, `---ti84cse` - The TI84 Color 320x240 calcs
-> > > `---ti82`, `---ti83`, `---ti84` - The TI8X Monochrome 96x64 calcs
-> > > `---ti73`, `---ti73se` - The same as the TI82-84
-> > > `---ti80` - The first TI Graphing calc
-> > > `---ti85`, `---ti86` - The TI8X Monochrome 128x64 calcs
-> > > `---ti89`, `---ti89t` - The TI8X Monochrome 160x100 calcs
-> > > `---ti92`, `---ti92ii` - The TI Voyage calcs
-> > > `---nspirecx`, `---nspirecxcas` - The TI nSpire Color calcs
-> > > `---nspire`, `---nspirecas` - The TI nSpire Monochrome calcs
-> > > `---fx7000g` - The Casio FX-7000G
-> > > `---hp24c`, `---hp24s` - The HP 24 Series calcs
-> > > `---hp48s`, `---hp49s` - The HP 48/49 Series calcs
-> > > `---hp50`, `---hp50g` - The HP 50 Series calcs
-> > > `---hpprime`, `---prime` - The HP Prime calculator that is still being made today
-> > > Emulation only changes colors, screen ratio/size, and graph step
+\> Updated the `;]graph` command
+\> > Now parses quickly
+\> > Now won't break when commands contain `e`
+\> > Now shouldn't break when commands have `x(5x-3)` or similar
+\> > Now can "emulate" calculators
+\> > > Honestly too many ill just paste the source code instead online
+\> > > Emulation only changes colors, screen ratio/size, and graph step
+\> > Added asymptote detection, add `--det` or `--asym` to the end of the equation
 
-> All commands have been updated
-> > They now have better documentation for non techies
-> > > `INT` and `FLOAT` have been changed to `NUMBER`
-> > > `STR` has been changed to `TEXT`
-> > > `ROLE`, `MESSAGE`, `MEMBER`, `CHANNEL`, and more provide info on how to obtain/input that data
-> > > `[NO ARGS...` has been changed to `[NO INPUT...`
+\> All commands have been updated
+\> > They now have better documentation for non techies
+\> > > `INT` and `FLOAT` have been changed to `NUMBER`
+\> > > `STR` has been changed to `TEXT`
+\> > > `ROLE`, `MESSAGE`, `MEMBER`, `CHANNEL`, and more provide info on how to obtain/input that data
+\> > > `[NO ARGS...` has been changed to `[NO INPUT...`
 
-> Renamed a few commands
-> > `;]emj` --> `;]ei`
-> > `;]gld` --> `;]gi`
-> > `;]msg` --> `;]ti`
-> > `;]chnl` --> `;]ci`
-> > `;]rol` --> `;]ri`
-> > `;]usr` --> `;]ui`
-> > `;]mbr` --> `;]mi`
+\> Renamed a few commands
+\> > `;]emj` --> `;]ei`
+\> > `;]gld` --> `;]gi`
+\> > `;]msg` --> `;]ti`
+\> > `;]chnl` --> `;]ci`
+\> > `;]rol` --> `;]ri`
+\> > `;]usr` --> `;]ui`
+\> > `;]mbr` --> `;]mi`
 
-> Fixed a few commands
-> > `;]rng` and `;]coin` now actually work
+\> Fixed a few commands
+\> > `;]rng` and `;]coin` now actually work
 
-> Added the `;]colors` command
-> > Displays a random color or displays a sample of a hex color provided
+\> Added the `;]colors` command
+\> > Displays a random color or displays a sample of a hex color provided
 """,
     "10x21_2019":"""\
 > Added the `;]convert` command!
