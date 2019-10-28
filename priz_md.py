@@ -19,21 +19,17 @@ def sub(re, to, st):
         st = String.new(st).replace(re, to) #Doesn't stop until no matches are found
     return pyStr(st)
 
-def mark(st):
-    ##/// INIT
+def link(st):
     st = " "+st
-    st = st.replace(" ", "\u200b \u200b")
-    st = st.replace("§", "\u200b")
-    st = st.replace("£", "\n")
-    st = sub(r";:(.*):;", r"<\1>", st) #Raw HTML editing
-    st = sub(r":;(.*);:", r">\1<", st) #Raw HTML editing
-    
     ##/// LINKS
     if "<" in st:
         st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link> 
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
         st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
+    return st[1:]
 
+def basic(st):
+    st = " "+st
     ##/// BASICS
     st = sub(r"[^\\]\#(.+?)\#", r"<b>\1</b>", st) # #bolded#
     st = sub(r"[^\\]\*(.+?)\*", r"<i>\1</i>", st) # *italics*
@@ -43,7 +39,10 @@ def mark(st):
     st = sub(r"[^\\]\>\-{2}(.+?)\-{2}\<", r"<sub>\1</sub>", st) # >--subscript--<
     st = sub(r"[^\\]\:{2}(.+?)\:{2}", r"<span class='oL'>\1</span>", st) # ::overline::
     st = sub(r"[^\\]\%(.+?)\%", r"<span class='spoil'>\1</span>", st) # %spoiler%
-    
+    return st[1:]
+
+def advan(st):
+    st = " "+st
     ##/// ADVANCED
     st = sub(r'[^\\]\"{3}\n?((.+|\n)?)\n?\"{3}', r"<span class='quoted'>\1</span>", st) # """↵quote block↵"""
     st = sub(r"[^\\]\!{3}\n?\[(\w+)\] *((.|\n)+?)\n?\!{3}", r"<span class='note_\1'>\2</span>", st) 
@@ -51,15 +50,27 @@ def mark(st):
     st = sub(r"[^\\]\;{3}\n?((.|\n)+)\n?\;{3}", r"<div class='mono dark' style='width: 90%;'>\1</div>", st)
          # ;;;code block;;;
     st = sub(r"[^\\]\`(.+?)\`", r"<span class='mono dark horz'>\1</span>", st) # `inline code`
-    
+    return st[1:]
+
+def setup(st):
+    st = " "+st
     ##/// ORGANIZE
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
     st = st.replace(">-~-<", "<div class='mdline'>---</div>") # >-~-< sep
-    
-    ##/// ELEMENTS
-    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
-    
+    return st[1:]
+
+def init(st):
+    st = " "+st
+    st = st.replace(" ", "\u200b \u200b")
+    st = st.replace("§", "\u200b")
+    st = st.replace("£", "\n")
+    st = sub(r";:(.*):;", r"<\1>", st) #Raw HTML editing
+    st = sub(r":;(.*);:", r">\1<", st) #Raw HTML editing
+    return st
+
+def head(st):
+    st = " "+st
     ##/// HEADERS
     if "&" in st:
         st = sub(r"\&{6}(.+)", r"<div class='head6'>#/ \1</div>", st) # &&&&&&Header 6
@@ -70,10 +81,25 @@ def mark(st):
         st = sub(r"\&{1}(.+)", r"<div class='head1'>##//// \1</div>", st) # &Header 1
     st = sub(r"(.+?)\n={3,}", r"<div class='head1'>##//// \1</div>", st) # header1 ↵ ===
     st = sub(r"(.+?)\n-{3,}", r"<div class='head2'>##/// \1</div>", st) # header2 ↵ ---
-    
+    return st
+
+def other(st):
+    st = " "+st
     ##/// OTHER
     st = st.replace("\n", "<br>") # newline
-    return st.replace("  ", " ").strip('\u200b ')
+    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
+    st.replace("  ", " ").strip('\u200b ')
+    return st
+
+def mark(st):
+    st = init(st)
+    st = link(st)
+    st = basic(st)
+    st = advan(st)
+    st = setup(st)
+    st = head(st)
+    st = other(st)
+    return st
     
     ##/// NOTES
     #[^\\] - Ignore backslashes
