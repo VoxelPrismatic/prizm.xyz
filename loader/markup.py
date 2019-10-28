@@ -9,6 +9,10 @@ ls = doc.select(".markinit")
 for el in ls:
     el.innerHTML = init(el.innerHTML)
 
+ls = doc.select(".markelem")
+for el in ls:
+    el.innerHTML = elem(el.innerHTML)
+
 ls = doc.select(".marklink")
 for el in ls:
     el.innerHTML = link(el.innerHTML)
