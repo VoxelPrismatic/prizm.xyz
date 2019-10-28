@@ -23,8 +23,8 @@ def link(st):
     st = " "+st
     ##/// LINKS
     if "<" in st:
-        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
-        st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
+        st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r'<a href="\2">\1</a>', st) # [name]<link>
+        st = sub(r"[^\\]\<\<(.*)\>\>", r'<a href="\1">\1</a>', st) # <<link>>
     return st[1:]
 
 def basic(st):
@@ -36,19 +36,19 @@ def basic(st):
     st = sub(r"[^\\]\_(.+?)\_", r"<u>\1</u>", st) # _underline_
     st = sub(r"[^\\]\>\+{2}(.+?)\+{2}\<", r"<sup>\1</sup>", st) # >++superscript++<
     st = sub(r"[^\\]\>\-{2}(.+?)\-{2}\<", r"<sub>\1</sub>", st) # >--subscript--<
-    st = sub(r"[^\\]\:{2}(.+?)\:{2}", r"<span class='oL'>\1</span>", st) # ::overline::
-    st = sub(r"[^\\]\%(.+?)\%", r"<span class='spoil'>\1</span>", st) # %spoiler%
+    st = sub(r"[^\\]\:{2}(.+?)\:{2}", r'<span class="oL">\1</span>', st) # ::overline::
+    st = sub(r"[^\\]\%(.+?)\%", r'<span class="spoil">\1</span>', st) # %spoiler%
     return st[1:]
 
 def advan(st):
     st = " "+st
     ##/// ADVANCED
-    st = sub(r'[^\\]\"{3}\n?((.+|\n)?)\n?\"{3}', r"<span class='quoted'>\1</span>", st) # """↵quote block↵"""
-    st = sub(r"[^\\]\!{3}\n?\[(\w+)\] *((.|\n)+?)\n?\!{3}", r"<span class='note_\1'>\2</span>", st) 
+    st = sub(r'[^\\]\"{3}\n?((.+|\n)?)\n?\"{3}', r'<span class="quoted">\1</span>', st) # """↵quote block↵"""
+    st = sub(r"[^\\]\!{3}\n?\[(\w+)\] *((.|\n)+?)\n?\!{3}", r'<span class="note_\1">\2</span>', st) 
          # !!![color] notice me senpai!!!
-    st = sub(r"[^\\]\;{3}\n?((.|\n)+)\n?\;{3}", r"<div class='mono dark' style='width: 90%;'>\1</div>", st)
+    st = sub(r"[^\\]\;{3}\n?((.|\n)+)\n?\;{3}", r'<div class="mono dark horz" style="width: 90%;">\1</div>', st)
          # ;;;code block;;;
-    st = sub(r"[^\\]\`(.+?)\`", r"<span class='mono dark horz'>\1</span>", st) # `inline code`
+    st = sub(r"[^\\]\`(.+?)\`", r'<span class="mono dark">\1</span>', st) # `inline code`
     return st[1:]
 
 def setup(st):
@@ -92,10 +92,10 @@ def other(st):
 def elem(st):
     st = " "+st
     st = sub(r"\@\<(.*)\>", r"<\1>", st) # @div@ --> <div>
-    st = sub(r"\%C\((.*)\)S\((.*)\)\[(.*)]\%", r"<button class='linky fullW \1' style='\2'>\3</button>", st)
-    st = sub(r"\%S\((.*)\)\[(.*)]\%", r"<button class='linky fullW' style='\1'>\2</button>", st)
-    st = sub(r"\%C\((.*)\)\[(.*)]\%", r"<button class='linky fullW \1'>\2</button>", st)
-    st = sub(r"\%[(.*)]\%", r"<button class='linky fullW'>\1</button>", st) # %[button]%
+    st = sub(r"\%C\((.*)\)S\((.*)\)\[(.*)\]\%", r"<button class='linky fullW \1' style='\2'>\3</button>", st)
+    st = sub(r"\%S\((.*)\)\[(.*)\]\%", r"<button class='linky fullW' style='\1'>\2</button>", st)
+    st = sub(r"\%C\((.*)\)\[(.*)\]\%", r"<button class='linky fullW \1'>\2</button>", st)
+    st = sub(r"\%\[(.*)\]\%", r"<button class='linky fullW'>\1</button>", st) # %[button]%
     return st[1:]
 
 def strip(st):
