@@ -66,8 +66,7 @@ def init(st):
     st = st.replace(" ", "\u200b \u200b")
     st = st.replace("§", "\u200b")
     st = st.replace("£", "\n")
-    st = sub(r";:(.*):;", r"<\1>", st) #Raw HTML editing
-    st = sub(r":;(.*);:", r">\1<", st) #Raw HTML editing
+    st = st.replace(";:", "<").replace(":;", ">")
     return st
 
 def head(st):
