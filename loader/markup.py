@@ -11,35 +11,28 @@ for el in ls:
 
 ls = doc.select(".markelem")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = elem(el.innerHTML)
+    el.innerHTML = elem(init(el.innerHTML))
 
 ls = doc.select(".marklink")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = link(el.innerHTML)
+    el.innerHTML = link(init(el.innerHTML))
     
 ls = doc.select(".markbasic")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = basic(el.innerHTML)
+    el.innerHTML = basic(init(el.innerHTML))
 
 ls = doc.select(".markadvan")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = advan(el.innerHTML)
+    el.innerHTML = advan(init(el.innerHTML))
     
 ls = doc.select(".marksetup")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = setup(el.innerHTML)
+    el.innerHTML = setup(init(el.innerHTML))
     
 ls = doc.select(".markhead")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = head(el.innerHTML)
+    el.innerHTML = head(init(el.innerHTML))
     
 ls = doc.select(".markother")
 for el in ls:
-    el.innerHTML = init(el.innerHTML)
-    el.innerHTML = other(el.innerHTML)
+    el.innerHTML = other(init(el.innerHTML))
