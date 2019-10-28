@@ -23,12 +23,6 @@ def link(st):
     st = " "+st
     ##/// LINKS
     if "<" in st:
-        st = sub(r"[^\\]\#\{CS ([\w\d ]+)\|([\w\d ]+)\|(.*)\}\<(.*)\>",
-                 r"<a href='\4'><button class='linky \1' style='\2'>\3</button></a>", st)
-        st = sub(r"[^\\]\#\{S ([\w\d ]+)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky' style='\1'>\2</button><\/a>", st)
-        st = sub(r"[^\\]\#\{C ([\w\d ]+)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky \1'>\2</button></a>", st)
-        st = sub(r"[^\\]\#\{(.*)\}\<(.*)\>", r"<a href='\2'><button class='linky'></button></a>", st)
-        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed src='\2' alt='\1'/>", st) # #[alt text]<link> 
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
         st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
     return st[1:]
@@ -98,8 +92,12 @@ def other(st):
 def elem(st):
     st = " "+st
     st = sub(r"\@(.*)\@", r"<\1>", st) # @div@ --> <div>
-    st = sub(r"\[\[\[(.*)\]\]\]", r'<button \2<\/button">', st) # [[{style}button]]
-    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
+    st = sub(r"\%C\((.*)\)S\((.*)\)\[(.*)]\%", r"<button class='linky fullW \1' style='\2'>\3</button>", st)
+    st = sub(r"\%S\((.*)\)\[(.*)]\%", r"<button class='linky fullW' style='\1'>\2</button>", st)
+    st = sub(r"\%C\((.*)\)\[(.*)]\%", r"<button class='linky fullW \1'>\2</button>", st)
+    st = sub(r"\%[(.*)]\%", r"<button class='linky fullW'>\1</button>", st) # %[button]%
+    st = 
+    st = sub(r"\{TAG (.+?)\}", r"<\1>\2</\1>", st) # {TAG div content} --> <div>content</div>
     return st[1:]
 
 def strip(st):
