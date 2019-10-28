@@ -23,7 +23,7 @@ def link(st):
     st = " "+st
     ##/// LINKS
     if "<" in st:
-        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link> 
+        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed src='\2' alt='\1'/>", st) # #[alt text]<link> 
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
         st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
     return st[1:]
