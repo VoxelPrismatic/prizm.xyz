@@ -23,10 +23,10 @@ def link(st):
     st = " "+st
     ##/// LINKS
     if "<" in st:
-        st = sub(r"[^\\]\#\{CS (.*)\|(.*)\|(.*)\}\<(.*)\>",
+        st = sub(r"[^\\]\#\{CS ([\w\d ]+)\|([\w\d ]+)\|(.*)\}\<(.*)\>",
                  r"<a href='\4'><button class='linky \1' style='\2'>\3</button></a>", st)
-        st = sub(r"[^\\]\#\{S (.*)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky' style='\1'>\2</button><\/a>", st)
-        st = sub(r"[^\\]\#\{C (.*)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky \1'>\2</button></a>", st)
+        st = sub(r"[^\\]\#\{S ([\w\d ]+)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky' style='\1'>\2</button><\/a>", st)
+        st = sub(r"[^\\]\#\{C ([\w\d ]+)\|(.*)\}\<(.*)\>", r"<a href='\3'><button class='linky \1'>\2</button></a>", st)
         st = sub(r"[^\\]\#\{(.*)\}\<(.*)\>", r"<a href='\2'><button class='linky'></button></a>", st)
         st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed src='\2' alt='\1'/>", st) # #[alt text]<link> 
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
