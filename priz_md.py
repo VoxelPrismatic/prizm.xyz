@@ -28,15 +28,15 @@ def mark(st):
     st = st.replace("£", "\n")
     st = sub(r":(.*);", r"<\1>", st) #Raw HTML editing
     
-    ##/// ELEMENTS
-    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
-    
     ##/// LINKS
     if "<" in st:
         st = sub(r"[^\\]\{(.*)\}\[(.*)\]\<(.*)\>", r'<\1 src="\3" alt="\2"\/>', st) # {tag}[alt text]<source>
         st = sub(r"[^\\]\[(.*)\]\<(.*)\>", r"<a href='\2'>\1</a>", st) # [name]<link>
         st = sub(r"[^\\]\<\<(.*)\>\>", r"<a href='\1'>\1</a>", st) # <<link>>
-        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link>
+        st = sub(r"[^\\]\#\[(.*)\]\<(.*)\>", r"<embed href='\2' alt='\1'/>", st) # #[alt text]<link> 
+    
+    ##/// ELEMENTS
+    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
     
     ##/// BASICS
     st = sub(r"[^\\]\#(.+?)\#", r"<b>\1</b>", st) # #bolded#
