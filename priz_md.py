@@ -56,7 +56,7 @@ def setup(st):
     ##/// ORGANIZE
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
-    st = st.replace(">-~-<", "<div class='mdsep'><div class='mdline'>---</div></sep>") # >-~-< sep
+    st = st.replace(">-~-<", "<div class='mdsep'><div class='mdline'>---</div></div>") # >-~-< sep
     st = st.replace("<-~->", "<div class='sep'>---</div>") # <-~-> invis sep
     return st[1:]
 
@@ -91,13 +91,11 @@ def other(st):
 
 def elem(st):
     st = " "+st
-    st = sub(r"\@(.*)\@", r"<\1>", st) # @div@ --> <div>
+    st = sub(r"\@\<(.*)\>", r"<\1>", st) # @div@ --> <div>
     st = sub(r"\%C\((.*)\)S\((.*)\)\[(.*)]\%", r"<button class='linky fullW \1' style='\2'>\3</button>", st)
     st = sub(r"\%S\((.*)\)\[(.*)]\%", r"<button class='linky fullW' style='\1'>\2</button>", st)
     st = sub(r"\%C\((.*)\)\[(.*)]\%", r"<button class='linky fullW \1'>\2</button>", st)
     st = sub(r"\%[(.*)]\%", r"<button class='linky fullW'>\1</button>", st) # %[button]%
-    st = 
-    st = sub(r"\{TAG (.+?)\}", r"<\1>\2</\1>", st) # {TAG div content} --> <div>content</div>
     return st[1:]
 
 def strip(st):
