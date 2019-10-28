@@ -58,7 +58,8 @@ def setup(st):
     ##/// ORGANIZE
     st = sub(r"\n[^\\]( *)(\d+)([.\)\]\}\-:;])* (.*)", r"\1\2] \3", st) # 1] Ordered list
     st = sub(r"\n[^\\]( *)([-\]>}.~+=])* (.*)", r"\1> \2", st) # > Unordered list
-    st = st.replace(">-~-<", "<div class='mdline'>---</div>") # >-~-< sep
+    st = st.replace(">-~-<", "<div class='mdsep'><div class='mdline'>---</div></sep>") # >-~-< sep
+    st = st.replace("<-~->", "<div class='sep'>---</div>") # <-~-> invis sep
     return st[1:]
 
 def init(st):
