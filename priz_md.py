@@ -87,12 +87,17 @@ def other(st):
     st = " "+st
     ##/// OTHER
     st = st.replace("\n", "<br>") # newline
-    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
     st.replace("  ", " ").strip('\u200b ')
     return st
 
+def elem(st):
+    st = " "+st
+    st = sub(r"\[\[\{(.*)\}(.*)\]\]", r'<button class="linky" style="\1">\2<\/button">', st) # [[{style}button]]
+    st = sub(r"\{TAG (\w+) (.+?)\}", r"<\1>\2<\/\1>", st) # {TAG div content} --> <div>content</div>
+    
 def mark(st):
     st = init(st)
+    st = elem(st)
     st = link(st)
     st = basic(st)
     st = advan(st)
