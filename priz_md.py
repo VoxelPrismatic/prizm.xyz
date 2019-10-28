@@ -25,8 +25,8 @@ def mark(st):
     st = st.replace(" ", "\u200b \u200b")
     st = st.replace("§", "\u200b")
     st = st.replace("£", "\n")
-    st = sub(r":(.*);", r"<\1>", st) #Raw HTML editing
-    st = sub(r";(.*):", r">\1<", st) #Raw HTML editing
+    st = sub(r";:(.*):;", r"<\1>", st) #Raw HTML editing
+    st = sub(r":;(.*);:", r">\1<", st) #Raw HTML editing
     
     ##/// LINKS
     if "<" in st:
