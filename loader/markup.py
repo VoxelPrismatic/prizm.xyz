@@ -1,5 +1,10 @@
 from priz_md import *
-from browser import document as doc
+from browser import document as doc, html
+
+ls = doc.select(".var")
+for el in ls:
+    doc <= html.DIV(el.innerHTML.split(':')[1], Id = el.innerHTML.split(':')[0])
+    el.innerHTML = ""
 
 ls = doc.select(".markall")
 for el in ls:
