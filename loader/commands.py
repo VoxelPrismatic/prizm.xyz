@@ -18,7 +18,7 @@ for com, cat, brf, usg, dsc, als in commands:
 &&&&&&ALIASES ] {als}
 >-~-<
 `{usg.strip()}`
->-~-<
+
 Usage Notes ---
 ;;;
 {dsc.strip()}
