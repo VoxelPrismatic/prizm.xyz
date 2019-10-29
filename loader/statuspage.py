@@ -3,7 +3,7 @@ from browser import document as doc, window as win, html
 online = None
 when = "7PM CST"
 history = {
-    "10x29_2019": "RAM usage is a bit high, so slow response times or even crashes may occur"
+    "10x29_2019": "RAM usage is a bit high, so slow response times or even crashes may occur",
     "10x22_2019": "The `embedify` module has a `SyntaxError` - Resolved issue",
     "10x21_2019": "There was a `NameError` issue in the main file - Resolved Issue",
     "10x17_2019": "PC was off [how?] - Resolved issue",
