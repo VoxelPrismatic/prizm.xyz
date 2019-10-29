@@ -114,7 +114,7 @@ def mark(st):
     st = setup(st)
     st = head(st)
     st = other(st)
-    return st
+    return strip(st)
     
     ##/// NOTES
     #[^\\] - Ignore backslashes
