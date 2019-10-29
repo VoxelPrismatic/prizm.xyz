@@ -1,4 +1,12 @@
 {
+    "10x29_2019":"""\
+> The following commands have been fixed and work for all mods
+> > `;]pre`
+> > `;]mng`
+> > `;]dsbl`
+> > `;]enbl`
+> > `;]audit`
+""",
     "10x27_2019":"""\
 > Updated the `;]graph` command
 > > Now parses quickly
