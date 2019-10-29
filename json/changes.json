@@ -1,35 +1,35 @@
 {
     "10x27_2019":"""\
-\> Updated the `;]graph` command
-\> > Now parses quickly
-\> > Now won't break when commands contain `e`
-\> > Now shouldn't break when commands have `x(5x-3)` or similar
-\> > Now can "emulate" calculators
-\> > > Honestly too many ill just paste the source code instead online
-\> > > Emulation only changes colors, screen ratio/size, and graph step
-\> > Added asymptote detection, add `--det` or `--asym` to the end of the equation
+> Updated the `;]graph` command
+> > Now parses quickly
+> > Now won't break when commands contain `e`
+> > Now shouldn't break when commands have `x(5x-3)` or similar
+> > Now can "emulate" calculators
+> > > Honestly too many ill just paste the source code instead online
+> > > Emulation only changes colors, screen ratio/size, and graph step
+> > Added asymptote detection, add `--det` or `--asym` to the end of the equation
 
-\> All commands have been updated
-\> > They now have better documentation for non techies
-\> > > `INT` and `FLOAT` have been changed to `NUMBER`
-\> > > `STR` has been changed to `TEXT`
-\> > > `ROLE`, `MESSAGE`, `MEMBER`, `CHANNEL`, and more provide info on how to obtain/input that data
-\> > > `[NO ARGS...` has been changed to `[NO INPUT...`
+> All commands have been updated
+> > They now have better documentation for non techies
+> > > `INT` and `FLOAT` have been changed to `NUMBER`
+> > > `STR` has been changed to `TEXT`
+> > > `ROLE`, `MESSAGE`, `MEMBER`, `CHANNEL`, and more provide info on how to obtain/input that data
+> > > `[NO ARGS...` has been changed to `[NO INPUT...`
 
-\> Renamed a few commands
-\> > `;]emj` --> `;]ei`
-\> > `;]gld` --> `;]gi`
-\> > `;]msg` --> `;]ti`
-\> > `;]chnl` --> `;]ci`
-\> > `;]rol` --> `;]ri`
-\> > `;]usr` --> `;]ui`
-\> > `;]mbr` --> `;]mi`
+> Renamed a few commands
+> > `;]emj` --> `;]ei`
+> > `;]gld` --> `;]gi`
+> > `;]msg` --> `;]ti`
+> > `;]chnl` --> `;]ci`
+> > `;]rol` --> `;]ri`
+> > `;]usr` --> `;]ui`
+> > `;]mbr` --> `;]mi`
 
-\> Fixed a few commands
-\> > `;]rng` and `;]coin` now actually work
+> Fixed a few commands
+> > `;]rng` and `;]coin` now actually work
 
-\> Added the `;]colors` command
-\> > Displays a random color or displays a sample of a hex color provided
+> Added the `;]colors` command
+> > Displays a random color or displays a sample of a hex color provided
 """,
     "10x21_2019":"""\
 > Added the `;]convert` command!
