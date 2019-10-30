@@ -1,4 +1,8 @@
 {
+    "10x30_2019":"""\
+> Logging now #ACTUALLY# works!!!!
+> > The issue was that the `bot` logging was actually a switch to turn the entire system off
+""",
     "10x29_2019":"""\
 > The following commands have been fixed and work for all mods
 > > `;]pre`
