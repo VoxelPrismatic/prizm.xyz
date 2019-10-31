@@ -4,5 +4,5 @@ content = {"OwO WHAT IS THIS?": "This is an empty FAQ because nobody asked any q
 
 element = doc["faq"]
 for key in content:
-    element <= html.DIV(key, Class="header", Id="faq_"+key.lower().replace(" ", "_")+"FAQ")
+    element <= html.DIV(key, Class="header", Id="faq_"+key.lower().replace(" ", "_"))
     element <= html.DIV(mark(content[key]), Class="content consect")
