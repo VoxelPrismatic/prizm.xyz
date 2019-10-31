@@ -26,7 +26,7 @@ Absolutely nobody. I don't exist and I never made anything.
 I'm an enthusiast, a programmer, and also non existent.
 I'm confused and don't know what to do, but this seems cool, so I'll continue doing it.
 Please keep in mind that I have no idea what I'm actually doing, so bugs will occur.""",
-          "WHY IS THIS SITE LAGGY?_lah":"""\
+          "WHY IS THIS SITE LAGGY?_lag":"""\
 Actually, it's because I don't know how to web design. I just asked for opinions, and you can always submit \
 your feedback over at [this link]<https://github.com/VoxelPrismatic/prizm.xyz/issues/new> ;]""",
           "WHEN ARE YOU WORKING ON IT?_work":"""\
@@ -35,5 +35,5 @@ Alsmost always... I love working on it. Many changes and bug fixes are made ever
 element = doc["about"]
 
 for key in content:
-    element <= html.DIV(key.split("_")[0], Class="header", Id=key.split("_")[1])
+    element <= html.DIV(key.split("_")[0], Class="header", Id="about_"+key.split("_")[1])
     element <= html.DIV(mark(content[key]), Class="content consect")
