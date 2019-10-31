@@ -9,7 +9,7 @@ commands = [(com, coms[com]["cat"], coms[com]["brf"],
              coms[com]["usg"], coms[com]["dsc"], 
              '`;]'+'`, `;]'.join(coms[com]["als"])+'`' if coms[com]["als"] else "`[NONE]`") for com in coms]
 for com, cat, brf, usg, dsc, als in commands:
-    lists <= html.BUTTON(f"{cat} - ;]{com}", Class = "tabby_link textR wMIN", Id = com)
+    lists <= html.BUTTON(f"{cat} - ;]{com}", Class = "tabby_link textR wMIN", Id = com+"COM")
     element <= html.DIV(
         mark(f"""\
 &&&THE `;]{com.strip()}` COMMAND
@@ -25,7 +25,7 @@ Usage Notes ---
 ;;;
 """)+"<br>", 
         Class = "tabby_sect", 
-        Id = "commands_"+com, 
+        Id = "commands_"+com+"COM",
         style={"display": "none"})
 win.comm()
 if doc.URL.split("#")[-1] in coms:
