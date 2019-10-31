@@ -1,4 +1,4 @@
-from browser import document ashttps://github.com/VoxelPrismatic/prizm.xyz/tree/master/loader doc
+from browser import document as doc
 url = doc.URL
 if "#" in url:
     area = url.split("#")[-1]
