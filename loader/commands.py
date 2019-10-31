@@ -1,7 +1,7 @@
 from browser import document as doc, html, window as win
 from priz_md import mark
 coms = eval(open('json/commands.json').read())
-doc["labels"].innerHTML = '|'.join(list(coms))
+doc["labels"].innerHTML = 'COM|'.join(list(coms))+"COM"
 element = doc["changes"]
 lists = doc["tabby"]
 
