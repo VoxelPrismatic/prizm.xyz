@@ -11,19 +11,19 @@ if "#" in url:
     elif area.startswith("about_"):
         doc["btn_about"].click()
         doc["about"].scrollIntoView()
-        elem = doc[area.split("_")[-1]]
+        elem = doc[area]
         if elem: elem.scrollIntoView()
             
     elif area.startswith("faq_"):
         doc["btn_faq"].click()
         doc["faq"].scrollIntoView()
-        elem = doc[area.split("_")[-1]]
+        elem = doc[area]
         if elem: elem.scrollIntoView()
         
     elif area.startswith("status_"):
         doc["btn_status"].click()
         doc["status"].scrollIntoView()
-        elem = doc[area.split("_")[-1]]
+        elem = doc[area]
         if elem: elem.scrollIntoView()
     
     elif area.startswith("commands_"):
