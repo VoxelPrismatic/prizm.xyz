@@ -2,7 +2,7 @@ from browser import document as doc, html, window as win
 from priz_md import mark
 content = eval(open("json/changes.json").read())
 
-doc["labels"].innerHTML = '|'.join(list(content))
+doc["labels"].innerHTML = 'UP|'.join(list(content))+"UP"
 element = doc["changes"]
 lists = doc["tabby"]
 
