@@ -23,7 +23,7 @@ Usage Notes ---
 ;;;
 {dsc.strip()}
 ;;;
-""")+"<br>", 
+"""+"#NOTICE ]# The {arg} stuff is a description of what to put, not what to write")+"<br>", 
         Class = "tabby_sect", 
         Id = "commands_"+com+"COM",
         style={"display": "none"})
