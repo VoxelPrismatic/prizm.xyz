@@ -1,4 +1,16 @@
-{
+{   "11x30_2019":"""\
+> Logging was fixed yet again
+> > Edited messages now works, but roles supposedly don't
+
+> Added the `;]triangle` command
+> > Solves your triangles
+
+> The graph command has been updated
+> > More colors and themes
+
+> Some math commands have been updated
+> > Better RegEx for equations and things
+""",
     "10x30_2019":"""\
 > Logging now #ACTUALLY# works!!!!
 > > The issue was that the `bot` logging was actually a switch to turn the entire system off
