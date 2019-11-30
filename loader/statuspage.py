@@ -2,11 +2,11 @@ from priz_md import mark
 from browser import document as doc, window as win, html
 import datetime as dt
 
-online = False
+online = True
 when = "4:30PM CST"
 
 history = {
-    "11x20_2019": "Linux power settings are not set up"
+    "11x20_2019": "Linux power settings are not set up - Resolved issue",
     "11x06_2019": "HDD died... waiting for a good SSD price to show up - Resolved issue",
     "10x31_2019": "There is a connection issue on my end - Resolved issue",
     "10x29_2019": "RAM usage is a bit high, so slow response times or even crashes may occur - Resolved issue",
