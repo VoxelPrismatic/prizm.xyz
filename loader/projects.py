@@ -8,7 +8,7 @@ for key in content:
     element <= html.DIV(
         mark(content[key]["nam"])+"<br>", 
         Class = "blue", 
-        Id = "projects_"+key["nam"]
+        Id = "projects_"+content[key]["nam"]
     )
     element <= html.DIV(
         mark(content[key]["dsc"])+"<br>", 
