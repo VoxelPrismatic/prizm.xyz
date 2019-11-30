@@ -8,15 +8,15 @@ for key in content:
     element <= html.DIV(
         mark(content[key]["nam"])+"<br>", 
         Class = "blue", 
-        Id = "projects_"+key["nam"],
+        Id = "projects_"+key["nam"]
     )
     element <= html.DIV(
         mark(content[key]["dsc"])+"<br>", 
-        Class = "lgrey", 
+        Class = "lgrey"
     )
     element <= html.DIV(
         mark(content[key]["oth"])+"<br>",
-        Class = "dgry", 
+        Class = "dgry"
     )
     element <= html.DIV(
         mark(content[key]["lnk"])+"<br>",
