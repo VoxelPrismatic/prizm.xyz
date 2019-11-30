@@ -1,0 +1,11 @@
+{
+    "1": {
+        "nam": "#] PRIZMATIC",
+        "dsc": "]  An API wrapper for Discord, Reddit, Matrix/Riot, and more!",
+        "oth": """\
+>  A nice replacement for the shitty API wrapper that I currently use,
+>  - discord.py
+""",
+        "lnk": "[GITHUB]<https://github.com/voxelprismatic/prizmatic> [DOCS]<https://voxelprismatic.github.io/prizmatic.docs>"
+    }
+}
