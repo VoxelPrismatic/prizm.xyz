@@ -2,10 +2,11 @@ from priz_md import mark
 from browser import document as doc, window as win, html
 import datetime as dt
 
-online = True
-when = "4:30PM CST"
+online = False
+when = "an unknown time"
 
 history = {
+    "12x07_2019": "Discord is experiencing issues, and the bot was manually shut down",
     "11x20_2019": "Linux power settings are not set up - Resolved issue",
     "11x06_2019": "HDD died... waiting for a good SSD price to show up - Resolved issue",
     "10x31_2019": "There is a connection issue on my end - Resolved issue",
