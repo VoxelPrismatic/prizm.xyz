@@ -1,4 +1,16 @@
-{   "11x30_2019":"""\
+{   
+    "12x28_2019":"""\
+> All math commands have been refreshed with new RegEx
+> > Also all math equations are now parsed by the same parser
+> > All math commands now have their answers unparsed as well so `1j` will be `1i`
+
+> Added new statuses
+
+> Fixed a bug where none of the math commands actually worked
+
+> Still working on the new `PRIZMATIC` module
+""",
+    "11x30_2019":"""\
 > Logging was fixed yet again
 > > Edited messages now works, but roles supposedly don't
 
